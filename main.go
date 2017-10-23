@@ -134,8 +134,16 @@ func (manager *ClientManager) send(client *Client){
 }
 func main(){
 	//read the input, either client or server
-	reader:=bufio.NewReader(os.Stdin);
-	fmt.Print("Choose server('1') or client(2): ")
+	reader:=bufio.NewReader(os.Stdin)
+	//fmt.Print("Choose server('1') or client(2): ")
+
+	//Interface for options of the server
+	fmt.Println("Choose an action: \n")
+	fmt.Println("1.Create a chatroom \n")
+	fmt.Println("2.List all existing chatrooms \n")
+	fmt.Println("3.Join a chatroom \n")
+	fmt.Println("4.Leave a chatroom \n")
+
 	//trusted command to read console
 	input,_,err:=reader.ReadRune()
 	if err!=nil{
