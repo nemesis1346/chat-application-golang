@@ -2,7 +2,6 @@ package main
 
 import(
 	"bufio"
-	"flag"
 	"fmt"
 	"net"
 	"os"
@@ -39,6 +38,7 @@ func startServerMode(){
 		if error !=nil{
 			fmt.Println(error)
 		}
+		//Here is adding the information of the connection to an instance of a client
 		client:=&Client{socket: connection, data: make(chan []byte)}
 		manager.register<-client
 		go manager.receive(client)
@@ -57,6 +57,7 @@ func startClientMode(){
 	for{
 		reader:=bufio.NewReader(os.Stdin)
 		message,_:=reader.ReadString('\n')
+		//TODO here i should create a username of the client fmt.Println(username);
 		connection.Write([]byte(strings.TrimRight(message,"\n")))
 	}
 
@@ -132,12 +133,30 @@ func (manager *ClientManager) send(client *Client){
 	}
 }
 func main(){
-	flagMode:=flag.String("mode","server","start in client or server mode")
-	flag.Parse()
-	if strings.ToLower(*flagMode)=="server"{
+	//read the input, either client or server
+	reader:=bufio.NewReader(os.Stdin)
+	//fmt.Print("Choose server('1') or client(2): ")
+
+	//Interface for options of the server
+	fmt.Println("Choose an action: \n")
+	fmt.Println("1.Create a chatroom \n")
+	fmt.Println("2.List all existing chatrooms \n")
+	fmt.Println("3.Join a chatroom \n")
+	fmt.Println("4.Leave a chatroom \n")
+
+	//trusted command to read console
+	input,_,err:=reader.ReadRune()
+	if err!=nil{
+		fmt.Println(err)
+	}
+	switch input {
+	case '1':
 		startServerMode()
-	}else{
+	case '2':
+		//options for client
+		//fmt.Print()
 		startClientMode()
+
 	}
 
 }
