@@ -5,6 +5,7 @@ import(
 	"bufio"
 	"os"
 	"net"
+	"encoding/json"
 )
 
 
@@ -27,22 +28,34 @@ func main(){
 
 	switch input {
 	case '1':
+		//we build the object to order the creation of chatroom
+		chatRoom:=&ChatRoom{
+			userName:"test",
+			chatName:"test",
+		}
+		createChatRoom(chatRoom)
 
 	}
 
 }
 
-func createChatroom(){
+func createChatRoom(chatRoom *ChatRoom){
 	//TODO PORT MUST BE DYNAMICALLY ADDED
-	connection, err:=net.Dial("tcp","localhost:12345")
+	connection, err:=net.Dial("tcp","localhost:12346")
 	if err!=nil{
 		fmt.Println(err)
 	}
-
+	message,err:=json.Marshal(chatRoom)
+	if err!=nil{
+		fmt.Println(err)
+	}
+	connection.Write(message)
 }
 
-type ChatRoom struct{
 
+type ChatRoom struct{
+	chatName string
+	userName string
 }
 
 type Message struct{
