@@ -40,6 +40,7 @@ func main(){
 }
 
 func createChatRoom(chatRoom *ChatRoom){
+	fmt.Println("is entering")
 	//TODO PORT MUST BE DYNAMICALLY ADDED
 	connection, err:=net.Dial("tcp","localhost:12346")
 	if err!=nil{
@@ -49,13 +50,14 @@ func createChatRoom(chatRoom *ChatRoom){
 	if err!=nil{
 		fmt.Println(err)
 	}
+	fmt.Println(message)
 	connection.Write(message)
 }
 
 
 type ChatRoom struct{
-	chatName string
-	userName string
+	chatName string `json:"chatName"`
+	userName string	`json:"userName"`
 }
 
 type Message struct{
