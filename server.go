@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"net"
-	json2 "encoding/json"
-	"io"
+
+	"encoding/json"
 )
 
 func main(){
@@ -24,15 +24,23 @@ func startServer(){
 			fmt.Println(err)
 			conn.Close()
 		}
-		//messageResult:=make([]byte,4096)
-		//length,err:=conn.Read(messageResult)
-		//if length>0{
-		//	//manage json
-		//	fmt.Println(string(messageResult))
-		//}
+		messageResult:=make([]byte,4096)
+		var messageResult2 map[string]interface{}
+		length,err:=conn.Read(messageResult)
+		if length>0{
+			//manage json
+			fmt.Print("respuesta:"+string(messageResult))
+		}
 
+		//prueba:=ChatRoom{
+		//	chatName: "",
+		//	userName: "",
+		//}
+		//json.Unmarshal(messageResult, messageResult2)
+		json.Unmarshal([]byte(string(messageResult)),&messageResult2)
 		//decode(conn)
 
+		fmt.Println("%v", messageResult2)
 		conn.Close()
 
 	}

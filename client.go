@@ -46,12 +46,17 @@ func createChatRoom(chatRoom *ChatRoom){
 	if err!=nil{
 		fmt.Println(err)
 	}
-	message,err:=json.Marshal(chatRoom)
+	//new try
+	contentToSend:=map[string]interface{}{
+		"userName":"test",
+		"chatName":"test",
+	}
+	message,err:=json.Marshal(contentToSend)
 	if err!=nil{
 		fmt.Println(err)
 	}
 	fmt.Println(message)
-	connection.Write(message)
+	connection.Write([]byte(string(message)))
 }
 
 
