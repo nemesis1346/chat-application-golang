@@ -6,6 +6,7 @@ import(
 	"os"
 	"net"
 	"encoding/json"
+	"strings"
 )
 
 
@@ -29,44 +30,38 @@ func main(){
 	switch input {
 	case '1':
 		//we build the object to order the creation of chatroom
-		chatRoom:=&ChatRoom{
-			userName:"test",
-			chatName:"test",
-		}
-		createChatRoom(chatRoom)
+		//chatRoom:=&ChatRoom{
+		//	userName:"test",
+		//	chatName:"test",
+		//}
+		createChatRoom()
 
 	}
 
 }
 
-func createChatRoom(chatRoom *ChatRoom){
-	fmt.Println("is entering")
+func createChatRoom(){
 	//TODO PORT MUST BE DYNAMICALLY ADDED
 	connection, err:=net.Dial("tcp","localhost:12346")
 	if err!=nil{
 		fmt.Println(err)
 	}
 	//new try
-	contentToSend:=map[string]interface{}{
-		"userName":"test",
-		"chatName":"test",
-	}
+	contentToSend:=Message{"test","test"}
 	message,err:=json.Marshal(contentToSend)
 	if err!=nil{
 		fmt.Println(err)
 	}
-	fmt.Println(message)
-	connection.Write([]byte(string(message)))
+	//fmt.Println(message)
+	//fmt.Println("Message send: "+string(message))
+	//fmt.Println(len([]byte(message)))
+	connection.Write([]byte(strings.TrimRight(string(message),"\n")))
 }
 
-
-type ChatRoom struct{
-	chatName string `json:"chatName"`
-	userName string	`json:"userName"`
-}
 
 type Message struct{
-
+	ChatName string `json:"chatName"`
+	UserName string `json:"userName"`
 }
 
 type ClientModel struct{
