@@ -32,7 +32,7 @@ func startServer(){
 			jsonResult:=bytes.Trim(buffer,"\x00")
 			//fmt.Println(correctMesage)
 
-			var msg ChatRoom
+			var msg OptionMessageServer
 
 			//We decode the byte array that contains the json
 			err=json.Unmarshal([]byte(string(jsonResult)), &msg)
@@ -41,7 +41,21 @@ func startServer(){
 			}
 
 			fmt.Println("jsonResponse: "+string(jsonResult))
-			fmt.Println(msg.ChatName)
+			fmt.Println(msg.UserName)
+			fmt.Println(msg.Data)
+
+			//MANAGE THE OPTIONS
+			switch msg.Option {
+			case "1":
+				createChatRoomServer(conn,msg.Data)
+			case "2":
+				listChatRoomServer(conn)
+			case "3":
+				joinChatRoomServer(conn)
+			case "4":
+				leaveChatRoomServer(conn)
+			}
+
 			conn.Close()
 		}
 		conn.Close()
@@ -51,3 +65,17 @@ type ChatRoom struct{
 	ChatName string `json:"chatName"`
 	UserName string `json:"userName"`
 }
+func createChatRoomServer(conn net.Conn, data string){
+
+}
+func listChatRoomServer(conn net.Conn){}
+func joinChatRoomServer(conn net.Conn){}
+func leaveChatRoomServer(conn net.Conn){}
+
+
+type OptionMessageServer struct{
+	Option string `json:"option"`
+	UserName string `json:"userName"`
+	Data string `json:"data"`
+}
+

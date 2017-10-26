@@ -11,61 +11,98 @@ import(
 
 
 func main(){
-	reader:=bufio.NewReader(os.Stdin)
+	//Introduce credentials
+	fmt.Println("Enter a username: ")
+	username:=bufio.NewReader(os.Stdin)
 
-	//Interface for options of the client
-	fmt.Println("Choose an action:")
-	fmt.Println("1.Create a chatroom")
-	fmt.Println("2.List all existing chatrooms ")
-	fmt.Println("3.Join a chatroom ")
-	fmt.Println("3.Send messages to chat rooms")
-	fmt.Println("5.Leave a chatroom ")
-
-	//reading the input
-	input,_,err:=reader.ReadRune()
+	inputUserObject,err:=username.ReadString('\n')
 	if err!=nil{
 		fmt.Println(err)
 	}
+	userObject:=UsernameStruct{
+		Username:string(inputUserObject)}
 
-	switch input {
-	case '1':
-		//we build the object to order the creation of chatroom
-		//chatRoom:=&ChatRoom{
-		//	userName:"test",
-		//	chatName:"test",
-		//}
-		createChatRoom()
+	for{
 
+		//Introduce options
+		option:=bufio.NewReader(os.Stdin)
+
+		//Interface for options of the client
+		fmt.Println("Choose an action:")
+		fmt.Println("1.Create a chatroom")
+		fmt.Println("2.List all existing chatrooms ")
+		fmt.Println("3.Join a chatroom ")
+		fmt.Println("4.Leave a chatroom \n")
+
+		fmt.Print("Choose option: ")
+		//reading the input
+		input,_,err:=option.ReadRune()
+		if err!=nil{
+			fmt.Println(err)
+		}
+
+		//TODO PORT MUST BE DYNAMICALLY ADDED
+		connection, err:=net.Dial("tcp","localhost:12346")
+		if err!=nil{
+			fmt.Println(err)
+		}
+
+		switch input {
+		case '1':
+			createChatRoom(connection, userObject)
+		case '2':
+			listChatRoom(connection,userObject)
+		case '3':
+			joinChatRoom(connection,userObject)
+		case '4':
+			leaveChatRoom(connection,userObject)
+		}
 	}
 
 }
 
-func createChatRoom(){
-	//TODO PORT MUST BE DYNAMICALLY ADDED
-	connection, err:=net.Dial("tcp","localhost:12346")
+func createChatRoom(conn net.Conn, userObject UsernameStruct){
+
+	chatOrder:=ChatStruct{ ChatName:"test"}
+	chatOrderJson,err:=json.Marshal(chatOrder)
 	if err!=nil{
 		fmt.Println(err)
 	}
-	//new try
-	contentToSend:=Message{"test","test"}
-	message,err:=json.Marshal(contentToSend)
+	fmt.Println(string(chatOrderJson))
+
+	//Create message general
+	jsonContent:= OptionMessageClient{
+		"1",
+		string(userObject.Username),
+		string(chatOrderJson)}
+
+	message,err:=json.Marshal(jsonContent)
 	if err!=nil{
 		fmt.Println(err)
 	}
 	//fmt.Println(message)
-	//fmt.Println("Message send: "+string(message))
+	//fmt.Println("OptionMessageClient send: "+string(message))
 	//fmt.Println(len([]byte(message)))
-	connection.Write([]byte(strings.TrimRight(string(message),"\n")))
+	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+}
+func listChatRoom(conn net.Conn, userObject UsernameStruct){
+
 }
 
+func joinChatRoom(conn net.Conn, userObject UsernameStruct){}
 
-type Message struct{
-	ChatName string `json:"chatName"`
+func leaveChatRoom(conn net.Conn, userObject UsernameStruct){}
+
+type UsernameStruct struct{
+	Username string `json:"username"`
+}
+
+type OptionMessageClient struct{
+	Option string `json:"option"`
 	UserName string `json:"userName"`
+	Data string `json:"data"`
 }
 
-type ClientModel struct{
-	username string
-	socket net.Conn
-	data chan[] byte
+type ChatStruct struct{
+	ChatName string `json:"chatName"`
 }
