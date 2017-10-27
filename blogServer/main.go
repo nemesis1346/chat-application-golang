@@ -1,4 +1,4 @@
-package main
+package blogServer
 
 import(
 	"bufio"
@@ -7,6 +7,7 @@ import(
 	"os"
 	"strings"
 )
+
 
 type Client struct{
 	socket net.Conn
@@ -27,7 +28,7 @@ func startServerMode(){
 		fmt.Println(error)
 	}
 	manager:=ClientManager{
-		clients: make(map[*Client]bool),
+		clients: make(map[*Client] bool),
 		broadcast:make(chan []byte),
 		register:make(chan *Client),
 		unregister:make(chan *Client),
@@ -49,6 +50,7 @@ func startServerMode(){
 func startClientMode(){
 	fmt.Println("Starting client...")
 	connection, error:=net.Dial("tcp","localhost:12345")
+
 	if error!=nil{
 		fmt.Println(error)
 	}
@@ -64,9 +66,16 @@ func startClientMode(){
 }
 
 
+func (client *Client) print(){
+	fmt.Println(client.data)
+}
 
 func(manager *ClientManager) start(){
 	for{
+		for k, v := range manager.clients {
+			fmt.Println("k:", k, "v:", v)
+			k.print()
+		}
 		select {
 		case connection:= <-manager.register:
 			manager.clients[connection]=true;

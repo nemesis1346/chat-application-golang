@@ -9,6 +9,10 @@ func main(){
 	startServer()
 }
 func startServer(){
+
+	//Here we initialize the slice of chatrooms(ServerManagers) , initializing of spaces in slice in 1
+	chatrooms:=make([]*ClientManagerServer,1)
+
 	fmt.Println("Starting server...")
 	//We create a listener
 	listener, err:=net.Listen("tcp",":12346")
@@ -47,7 +51,7 @@ func startServer(){
 			//MANAGE THE OPTIONS
 			switch msg.Option {
 			case "1":
-				createChatRoomServer(conn,msg.Data)
+				createChatRoomServer(conn,msg.Data,chatrooms)
 			case "2":
 				listChatRoomServer(conn)
 			case "3":
@@ -65,7 +69,8 @@ type ChatRoom struct{
 	ChatName string `json:"chatName"`
 	UserName string `json:"userName"`
 }
-func createChatRoomServer(conn net.Conn, data string){
+func createChatRoomServer(conn net.Conn, data string,chatrooms []*ChatRoomManagerServer){
+	//We create chatRoomStruct struct
 
 }
 func listChatRoomServer(conn net.Conn){}
@@ -79,3 +84,44 @@ type OptionMessageServer struct{
 	Data string `json:"data"`
 }
 
+type ClientServer struct{
+	socket net.Conn
+	infoClient chan[]byte
+	messages chan[]byte
+}
+
+type ChatRoomManagerServer struct{
+	nameChatRoom string
+	clients map[*ClientServer]bool
+	broadcast chan[]byte
+	register chan *ClientServer
+	unregister chan *ClientServer
+}
+
+func(manager *ChatRoomManagerServer) start(){
+	for{
+		select{
+		case connection:=<-manager.register:
+			manager.clients[connection]=true
+			fmt.Println("Added new connection")
+		case connection:=<-manager.unregister:
+			if _,ok:=manager.clients[connection];ok{
+				//TODO maybe here it is erasing the data, take a look to it
+				close(connection.messages)
+				close(connection.infoClient)
+				fmt.Println("A connection has terminated")
+			}
+		case message:=<-manager.broadcast:
+			for connection:=range manager.clients{
+				select{
+				case connection.messages<-message:
+				default:
+					//TODO maybe here it is erasing the data, take a look to it
+					close(connection.messages)
+					close(connection.infoClient)
+					delete(manager.clients, connection)
+				}
+			}
+		}
+	}
+}
