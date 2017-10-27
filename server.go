@@ -11,7 +11,7 @@ func main(){
 func startServer(){
 
 	//Here we initialize the slice of chatrooms(ServerManagers) , initializing of spaces in slice in 1
-	chatrooms:=make([]*ClientManagerServer,1)
+	chatrooms:=make([]*ChatRoomManagerServer,1)
 
 	fmt.Println("Starting server...")
 	//We create a listener
@@ -70,7 +70,11 @@ type ChatRoom struct{
 	UserName string `json:"userName"`
 }
 func createChatRoomServer(conn net.Conn, data string,chatrooms []*ChatRoomManagerServer){
+
 	//We create chatRoomStruct struct
+	//data is the name of the server in this option
+	//currentChatRoom:=ChatRoomManagerServer{nameChatRoom:data}
+	//append(chatrooms, currentChatRoom)
 
 }
 func listChatRoomServer(conn net.Conn){}
