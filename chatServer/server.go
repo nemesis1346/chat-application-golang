@@ -4,17 +4,21 @@ import (
 	"net"
 	"encoding/json"
 	"bytes"
+	"bufio"
+	"os"
+	"strings"
 )
 func main(){
 	startServer()
 }
 func startServer(){
-
 	//Here we initialize the slice of chatrooms(ServerManagers) , initializing of spaces in slice in 1
-	chatrooms:=make([]*ChatRoomManagerServer,1)
+	var chatrooms []*ChatRoomManagerServer
 
-	fmt.Println("Starting server...")
 	//We create a listener
+	fmt.Println("Starting server...")
+	fmt.Println("-----------------------")
+
 	listener, err:=net.Listen("tcp",":12346")
 	if err!=nil{
 		fmt.Println(err)
@@ -45,40 +49,75 @@ func startServer(){
 			}
 
 			fmt.Println("jsonResponse: "+string(jsonResult))
-			fmt.Println(msg.UserName)
-			fmt.Println(msg.Data)
+			fmt.Println("-----------------------")
 
 			//MANAGE THE OPTIONS
 			switch msg.Option {
 			case "1":
-				createChatRoomServer(conn,msg.Data,chatrooms)
+				temporaryChatRoom:=createChatRoomServer(conn,msg.Data,chatrooms)
+				chatrooms=append(chatrooms, temporaryChatRoom)
+				fmt.Println("New chatRoom Created: ",temporaryChatRoom.nameChatRoom)
+				fmt.Println("-----------------------")
+
 			case "2":
-				listChatRoomServer(conn)
+				listChatRoomServer(conn, chatrooms)
 			case "3":
-				joinChatRoomServer(conn)
+				joinChatRoomServer(conn,chatrooms)
 			case "4":
 				leaveChatRoomServer(conn)
 			}
 
-			conn.Close()
 		}
-		conn.Close()
+		//conn.Close()
 	}
 }
 type ChatRoom struct{
 	ChatName string `json:"chatName"`
 	UserName string `json:"userName"`
 }
-func createChatRoomServer(conn net.Conn, data string,chatrooms []*ChatRoomManagerServer){
-
+func createChatRoomServer(conn net.Conn, data string,chatrooms []*ChatRoomManagerServer)*ChatRoomManagerServer{
 	//We create chatRoomStruct struct
 	//data is the name of the server in this option
-	//currentChatRoom:=ChatRoomManagerServer{nameChatRoom:data}
-	//append(chatrooms, currentChatRoom)
+	currentChatRoom:=&ChatRoomManagerServer{nameChatRoom:data}
+	return currentChatRoom
+}
+
+func printSlice(s []*ChatRoomManagerServer) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+
+func listChatRoomServer(conn net.Conn, chatrooms[]*ChatRoomManagerServer){
+	//printSlice(chatrooms)
+	fmt.Println("LIST OF CHATS")
+
+	for _, chatroom:=range chatrooms{
+		fmt.Println("-------------------------")
+		if chatroom.nameChatRoom!=""{
+			fmt.Println("Name: ", chatroom.nameChatRoom)
+		}
+		if chatroom.clients!=nil{
+			fmt.Println("Clients: ",chatroom.clients)
+		}
+		fmt.Println("-------------------------")
+	}
+}
+func joinChatRoomServer(conn net.Conn,chatrooms[]*ChatRoomManagerServer){
+	//Introduce the name of the chat you want to join
+	listChatRoomServer(conn, chatrooms)
+	fmt.Print("SELECT THE NAME OF THE CHAT YOU WANT TO JOIN")
+	reader:=bufio.NewReader(os.Stdin)
+	chatName,_:=reader.ReadString('\n')
+	for _, chatroom:=range chatrooms{
+		if(strings.TrimRight(chatroom.nameChatRoom,"\n")==chatName){
+			fmt.Print("CHAT :",chatName)
+			fmt.Print(" INITIATED")
+			fmt.Println("-------------------------")
+			go chatroom.start()
+		}
+	}
 
 }
-func listChatRoomServer(conn net.Conn){}
-func joinChatRoomServer(conn net.Conn){}
 func leaveChatRoomServer(conn net.Conn){}
 
 

@@ -62,8 +62,13 @@ func main(){
 }
 
 func createChatRoom(conn net.Conn, userObject UsernameStruct){
+	//Input for creating a new chatroom
+	fmt.Print("Choose a name for the chatRoom: ")
+	reader:=bufio.NewReader(os.Stdin)
+	chatName,_:=reader.ReadString('\n')
 
-	chatOrder:=ChatStruct{ ChatName:"test"}
+	//We create the object
+	chatOrder:=ChatStruct{ ChatName:chatName}
 	chatOrderJson,err:=json.Marshal(chatOrder)
 	if err!=nil{
 		fmt.Println(err)
@@ -85,11 +90,43 @@ func createChatRoom(conn net.Conn, userObject UsernameStruct){
 	//fmt.Println(len([]byte(message)))
 	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
 }
-func listChatRoom(conn net.Conn, userObject UsernameStruct){
 
+func listChatRoom(conn net.Conn, userObject UsernameStruct){
+	//Create the instruction message for list all the chatrooms
+	jsonContent:=OptionMessageClient{"2",
+		string(userObject.Username),""}
+
+	message,err:=json.Marshal(jsonContent)
+	if err!=nil{
+		fmt.Println(err)
+	}
+	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
 }
 
-func joinChatRoom(conn net.Conn, userObject UsernameStruct){}
+func joinChatRoom(conn net.Conn, userObject UsernameStruct){
+	//Indicate to list all the chatrooms first to join
+	jsonContent:=OptionMessageClient{"2",
+		string(userObject.Username),""}
+	message,err:=json.Marshal(jsonContent)
+	if err!=nil{
+		fmt.Println(err)
+	}
+	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+
+	//Input to choose the chatroom to join
+	fmt.Print("Introduce the name of the chatRoom you want to join: ")
+	reader:=bufio.NewReader(os.Stdin)
+	chatName,_:=reader.ReadString('\n')
+	//Create the instruction message for joining a specific chatroom
+	jsonContent2:=OptionMessageClient{"3",
+		string(userObject.Username),chatName}
+	message2,err:=json.Marshal(jsonContent2)
+	if err!=nil{
+		fmt.Println(err)
+	}
+	fmt.Println("is getting here")
+	conn.Write([]byte(strings.TrimRight(string(message2),"\n")))
+}
 
 func leaveChatRoom(conn net.Conn, userObject UsernameStruct){}
 

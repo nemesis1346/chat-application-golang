@@ -51,6 +51,7 @@ func startClientMode(){
 	fmt.Println("Starting client...")
 	connection, error:=net.Dial("tcp","localhost:12345")
 
+
 	if error!=nil{
 		fmt.Println(error)
 	}
