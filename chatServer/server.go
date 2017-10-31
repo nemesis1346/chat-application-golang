@@ -66,9 +66,9 @@ func startServer(){
 			case "4":
 				leaveChatRoomServer(conn)
 			}
-
+			conn.Close()
 		}
-		//conn.Close()
+		conn.Close()
 	}
 }
 type ChatRoom struct{

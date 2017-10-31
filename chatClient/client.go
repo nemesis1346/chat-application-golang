@@ -85,9 +85,7 @@ func createChatRoom(conn net.Conn, userObject UsernameStruct){
 	if err!=nil{
 		fmt.Println(err)
 	}
-	//fmt.Println(message)
-	//fmt.Println("OptionMessageClient send: "+string(message))
-	//fmt.Println(len([]byte(message)))
+
 	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
 }
 
@@ -126,6 +124,31 @@ func joinChatRoom(conn net.Conn, userObject UsernameStruct){
 	}
 	fmt.Println("is getting here")
 	conn.Write([]byte(strings.TrimRight(string(message2),"\n")))
+
+	//Start to write messages
+	fmt.Println("Start sending messages......")
+	client:=&Client{socket:conn}
+	go client.receive()
+	for{
+		reader:=bufio.NewReader(os.Stdin)
+		message,_:=reader.ReadString('\n')
+		//TODO here i should create a username of the client fmt.Println(username);
+		conn.Write([]byte(strings.TrimRight(message,"\n")))
+	}
+
+}
+func(client *Client) receive(){
+	for{
+		message:=make([]byte, 4096)
+		length, err:=client.socket.Read(message)
+		if err!=nil{
+			client.socket.Close()
+			break
+		}
+		if length>0{
+			fmt.Println("RECEIVED: "+string(message))
+		}
+	}
 }
 
 func leaveChatRoom(conn net.Conn, userObject UsernameStruct){}
@@ -142,4 +165,9 @@ type OptionMessageClient struct{
 
 type ChatStruct struct{
 	ChatName string `json:"chatName"`
+}
+
+type Client struct{
+	socket net.Conn
+	data chan[]byte
 }
