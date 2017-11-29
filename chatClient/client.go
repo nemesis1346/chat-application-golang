@@ -19,6 +19,7 @@ func main(){
 	if err!=nil{
 		fmt.Println(err)
 	}
+	inputUserObject=inputUserObject[:len(inputUserObject)-1]
 	userObject:=UsernameStruct{
 		Username:string(inputUserObject)}
 
@@ -66,20 +67,20 @@ func createChatRoom(conn net.Conn, userObject UsernameStruct){
 	fmt.Print("Choose a name for the chatRoom: ")
 	reader:=bufio.NewReader(os.Stdin)
 	chatName,_:=reader.ReadString('\n')
-
+	chatName=chatName[:len(chatName)-1]
 	//We create the object
-	chatOrder:=ChatStruct{ ChatName:chatName}
-	chatOrderJson,err:=json.Marshal(chatOrder)
-	if err!=nil{
-		fmt.Println(err)
-	}
-	fmt.Println(string(chatOrderJson))
+	//chatOrder:=ChatStruct{ ChatName:chatName}
+	//chatOrderJson,err:=json.Marshal(chatOrder)
+	//if err!=nil{
+	//	fmt.Println(err)
+	//}
+	//fmt.Println(string(chatOrderJson))
 
 	//Create message general
 	jsonContent:= OptionMessageClient{
 		"1",
 		string(userObject.Username),
-		string(chatOrderJson)}
+		string(chatName)}
 
 	message,err:=json.Marshal(jsonContent)
 	if err!=nil{
@@ -103,7 +104,7 @@ func listChatRoom(conn net.Conn, userObject UsernameStruct){
 
 func joinChatRoom(conn net.Conn, userObject UsernameStruct){
 	//Indicate to list all the chatrooms first to join
-	jsonContent:=OptionMessageClient{"2",
+	jsonContent:=OptionMessageClient{"3",
 		string(userObject.Username),""}
 	message,err:=json.Marshal(jsonContent)
 	if err!=nil{
@@ -115,6 +116,7 @@ func joinChatRoom(conn net.Conn, userObject UsernameStruct){
 	fmt.Print("Introduce the name of the chatRoom you want to join: ")
 	reader:=bufio.NewReader(os.Stdin)
 	chatName,_:=reader.ReadString('\n')
+	chatName=chatName[:len(chatName)-1]
 	//Create the instruction message for joining a specific chatroom
 	jsonContent2:=OptionMessageClient{"3",
 		string(userObject.Username),chatName}
@@ -122,7 +124,6 @@ func joinChatRoom(conn net.Conn, userObject UsernameStruct){
 	if err!=nil{
 		fmt.Println(err)
 	}
-	fmt.Println("is getting here")
 	conn.Write([]byte(strings.TrimRight(string(message2),"\n")))
 
 	//Start to write messages
@@ -132,8 +133,10 @@ func joinChatRoom(conn net.Conn, userObject UsernameStruct){
 	for{
 		reader:=bufio.NewReader(os.Stdin)
 		message,_:=reader.ReadString('\n')
+		message=message[:len(message)]
 		//TODO here i should create a username of the client fmt.Println(username);
-		conn.Write([]byte(strings.TrimRight(message,"\n")))
+
+		conn.Write([]byte(strings.TrimRight(string(message),"\n")))
 	}
 
 }

@@ -4,8 +4,6 @@ import (
 	"net"
 	"encoding/json"
 	"bytes"
-	"bufio"
-	"os"
 	"strings"
 )
 func main(){
@@ -34,6 +32,10 @@ func startServer(){
 		buffer:=make([]byte,1024)
 
 		length,err:=conn.Read(buffer)
+		if err!=nil{
+			fmt.Println(err)
+			conn.Close()
+		}
 		if length>0{
 			//manage json
 			//We are filtering the nul points of the message to a json byte array
@@ -105,16 +107,55 @@ func listChatRoomServer(conn net.Conn, chatrooms[]*ChatRoomManagerServer){
 func joinChatRoomServer(conn net.Conn,chatrooms[]*ChatRoomManagerServer){
 	//Introduce the name of the chat you want to join
 	listChatRoomServer(conn, chatrooms)
-	fmt.Print("SELECT THE NAME OF THE CHAT YOU WANT TO JOIN")
-	reader:=bufio.NewReader(os.Stdin)
-	chatName,_:=reader.ReadString('\n')
-	for _, chatroom:=range chatrooms{
-		if(strings.TrimRight(chatroom.nameChatRoom,"\n")==chatName){
-			fmt.Print("CHAT :",chatName)
-			fmt.Print(" INITIATED")
-			fmt.Println("-------------------------")
-			go chatroom.start()
+	fmt.Println("SELECT THE NAME OF THE CHAT YOU WANT TO JOIN")
+
+
+		//We create a buffer
+		message:=make([]byte,1024)
+
+		length,err:=conn.Read(message)
+		if err!=nil{
+			fmt.Println(err)
+			conn.Close()
 		}
+		if length>0 {
+			jsonResult:=bytes.Trim(message,"\x00")
+
+			var msg OptionMessageServer
+
+			//We decode the byte array that contains the json
+			err=json.Unmarshal([]byte(string(jsonResult)), &msg)
+			if err!=nil{
+				fmt.Println(err)
+			}
+
+			fmt.Println("jsonResponse: "+string(jsonResult))
+			fmt.Println("-----------------------")
+
+			for _, chatroom := range chatrooms {
+				fmt.Println("msgData: "+msg.Data)
+				fmt.Println("list Name: "+chatroom.nameChatRoom)
+				if (strings.TrimRight(chatroom.nameChatRoom, "\n") == string(msg.Data)) {
+					fmt.Print("CHAT :", chatroom.nameChatRoom)
+					fmt.Print(" INITIATED")
+					fmt.Println("-------------------------")
+					//STARTING CHAT
+					//go chatroom.start()
+					//for{
+					//	message:=make([]byte,1024)
+					//	jsonResultMessage:=bytes.Trim(message,"\x00")
+					//	fmt.Println(jsonResultMessage)
+						//Here is adding the information of the connection to an instance of a client
+						//client:=&Client{socket: connection, data: make(chan []byte)}
+						//chatroom.register<-client
+						//go chatroom.receive(client)
+						//go chatroom.send(client)
+					//}
+				} else {
+					fmt.Println("CHAT DOESNT EXIST")
+				}
+			}
+
 	}
 
 }
