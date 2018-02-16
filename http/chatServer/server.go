@@ -17,8 +17,12 @@ func main() {
 	h := http.NewServeMux()
 
 	//DEFINITION OF METHODS
-	h.HandleFunc("/endpoint1", GetMessage)
-	h.HandleFunc("/", NoEndpoint)
+	h.HandleFunc("/endpoint1", createChatRoom)
+	h.HandleFunc("/createChatRoom", createChatRoom)
+	h.HandleFunc("/listChatRoom", listChatRoom)
+	h.HandleFunc("/joinChatRoom", jointChatRoom)
+	h.HandleFunc("/leaveChatRoom", leaveChatRoom)
+	h.HandleFunc("/", noEndpoint)
 
 	//LISTEN AND ERRORS
 	err := http.ListenAndServe(":8888", h)
@@ -28,14 +32,29 @@ func main() {
 }
 
 //Endpoint nil
-func NoEndpoint(w http.ResponseWriter, req *http.Request) {
+func noEndpoint(w http.ResponseWriter, req *http.Request) {
 	w.WriteHeader(404)
 	fmt.Fprintln(w, "You are lost, go home")
 }
 
-//My first endpoint
-func GetMessage(w http.ResponseWriter, req *http.Request) {
+//CreateChatRoom
+func createChatRoom(w http.ResponseWriter, req *http.Request) {
 	io.WriteString(w, "hello, world")
+
+}
+
+//ListChatRoom
+func listChatRoom(w http.ResponseWriter, req *http.Request) {
+
+}
+
+//Join ChatRoom
+func jointChatRoom(w http.ResponseWriter, req *http.Request) {
+
+}
+
+//Leave ChatRoom
+func leaveChatRoom(w http.ResponseWriter, req *http.Request) {
 
 }
 

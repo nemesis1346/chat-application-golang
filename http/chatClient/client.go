@@ -6,20 +6,11 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func main() {
 	fmt.Println("Starting client...")
-
-	//client example
-	resp, err := http.Get("http://localhost:8888/endpoint1")
-	if err != nil {
-		//handle error
-	}
-	defer resp.Body.Close()
-
-	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Println(body)
 
 	//Introduce credentials
 	fmt.Println("Enter a username: ")
@@ -69,6 +60,14 @@ func main() {
 
 func createChatRoom(userObject UsernameStruct) {
 	//HTTP POST OR GET
+	resp, err := http.Get("http://localhost:8888/endpoint1")
+	if err != nil {
+		//handle error
+	}
+	defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	fmt.Println(keepLines(string(body), 3))
 }
 func listChatRoom(userObject UsernameStruct) {
 
@@ -78,6 +77,11 @@ func joinChatRoom(userObject UsernameStruct) {
 }
 func leaveChatRoom(userObject UsernameStruct) {
 
+}
+
+func keepLines(s string, n int) string {
+	result := strings.Join(strings.Split(s, "\n")[:n], "\n")
+	return strings.Replace(result, "\r", "", -1)
 }
 
 type UsernameStruct struct {
