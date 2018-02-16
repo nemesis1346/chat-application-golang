@@ -2,9 +2,13 @@ package main
 
 import (
 	"bufio"
+	"bytes"
+	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 )
@@ -59,6 +63,16 @@ func main() {
 }
 
 func createChatRoom(userObject UsernameStruct) {
+	fmt.Println("----CREATE CHAT ROOM")
+	var c ClientObject
+	req, err := c.newRequest("POST", "/createChatRoom", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(req)
+
+}
+func listChatRoom(userObject UsernameStruct) {
 	//HTTP POST OR GET
 	resp, err := http.Get("http://localhost:8888/endpoint1")
 	if err != nil {
@@ -68,9 +82,6 @@ func createChatRoom(userObject UsernameStruct) {
 
 	body, err := ioutil.ReadAll(resp.Body)
 	fmt.Println(keepLines(string(body), 3))
-}
-func listChatRoom(userObject UsernameStruct) {
-
 }
 func joinChatRoom(userObject UsernameStruct) {
 
@@ -86,4 +97,54 @@ func keepLines(s string, n int) string {
 
 type UsernameStruct struct {
 	Username string `json:"username"`
+}
+
+type ClientObject struct {
+	BaseURL   *url.URL
+	UserAgent string
+
+	httpClient *http.Client
+}
+
+//This is a generic method to generate a request
+func (c *ClientObject) newRequest(method string, path string, body interface{}) (*http.Request, error) {
+	rel := &url.URL{
+		Host: "http://localhost:8888",
+		Path: path,
+	}
+	u := c.BaseURL.ResolveReference(rel)
+
+	var buf io.ReadWriter
+	if body != nil {
+		buf = new(bytes.Buffer)
+		err := json.NewEncoder(buf).Encode(body)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	req, err := http.NewRequest(method, u.String(), buf)
+	if err != nil {
+		return nil, err
+	}
+	if body != nil {
+		req.Header.Set("Content-Type", "application/json")
+	}
+	//Figure it out why do I need User Agent?
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", c.UserAgent)
+
+	return req, nil
+}
+
+//This is a generic method to make the calls
+func (c *ClientObject) do(req *http.Request, v interface{}) (*http.Response, error) {
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	err = json.NewDecoder(resp.Body).Decode(v)
+	return resp, err
 }
