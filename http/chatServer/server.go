@@ -45,6 +45,7 @@ func createChatRoom(w http.ResponseWriter, req *http.Request) {
 
 //ListChatRoom
 func listChatRoom(w http.ResponseWriter, req *http.Request) {
+	io.WriteString(w, "hello, world")
 
 }
 

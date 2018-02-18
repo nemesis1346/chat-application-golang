@@ -1,0 +1,868 @@
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:102: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:39: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:102: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:39: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:102: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:39: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:102: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:39: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:102: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:39: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:158: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:162: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:168: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:172: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:35: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:158: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:162: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:168: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:172: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:35: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:161: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:165: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:171: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:175: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:14: undefined: ChatRoomManagerServer
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:161: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:165: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:171: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:175: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:14: undefined: ChatRoomManagerServer
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:163: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:167: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:173: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:177: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:11: import "../chatServer" is a program, not an importable package
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:161: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:165: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:171: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:175: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:14: undefined: chatServer
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:163: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:167: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:173: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:177: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:11: cannot find package "../chatServer/server" in:
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:161: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:165: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:171: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:175: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:14: undefined: server
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:163: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:167: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:173: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:177: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:11: cannot find package "../chatServer/server" in:
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:163: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:167: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:173: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:177: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:11: cannot find package "chatServer/server" in any of:
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:163: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:167: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:173: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:177: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:11: cannot find package "tcp/chatServer/server" in any of:
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:158: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:162: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:168: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:172: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:35: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:158: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:162: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:168: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:172: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:35: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type ChatRoomManagerServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: undefined: w
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: exported type ChatRoomManagerServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:23: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:28: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: undefined: ChatRoomManagerServer
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:28: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:28: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: invalid receiver type *[]ChatRoom ([]ChatRoom is an unnamed type)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:28: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:24: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:28: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: syntax error: unexpected go at end of statement
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:27: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: syntax error: unexpected ( after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: syntax error: unexpected ( after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: syntax error: unexpected ( after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: syntax error: unexpected ( after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: missing len argument to make([]*ChatRoom)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []*ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []*ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: chatRooms.append undefined (type []ChatRoom has no field or method append)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: first argument to append must be slice; have *RequestChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *RequestChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:29: invalid indirect of ChatRoom literal (type ChatRoom)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:12: syntax error: unexpected =, expecting type
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: cannot use []ChatRoom literal (type []ChatRoom) as type []*ChatRoom in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: undefined: currentChatRoo
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:46: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: undefined: currentChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: too many arguments to return
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:46: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:46: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: cannot use 0 (type int) as type ChatRoom in append
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:46: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:20: cannot use 1 (type int) as type ChatRoom in append
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: cannot use currentChatRoom (type *ChatRoom) as type ChatRoom in append
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: first argument to append must be slice; have *ChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: cannot use currentChatRoom (type *ChatRoom) as type ChatRoom in append
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:32: currentChatRoom declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:47: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: no new variables on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: cannot use "ok" (type string) as type *ResponseChatRoom in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:47: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: no new variables on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: cannot use "ok" (type string) as type *ResponseChatRoom in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: too many arguments to return
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:11: undefined: serverAddress
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:11: client declared and not used
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: cannot use currentChatRoom (type *ChatRoom) as type ChatRoom in append
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:48: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: cannot use currentChatRoom (type *ChatRoom) as type ChatRoom in append
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:49: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:30: invalid indirect of ChatRoom literal (type ChatRoom)
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:49: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:33: cannot use currentChatRoom (type *ChatRoom) as type ChatRoom in append
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:17: undefined: Quotient
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:18: undefined: args
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:11: client declared and not used
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:16: undefined: Quotient
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:17: undefined: args
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:23: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:27: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:16: undefined: Quotient
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:17: undefined: args
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:17: syntax error: unexpected newline, expecting comma or }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:20: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:28: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:31: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:35: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:23: replyCall declared and not used
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:28: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:31: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:35: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:25: cannot use replyCall (type *rpc.Call) as type string in argument to fmt.Printf
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:28: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:31: exported type RequestChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:35: exported type ResponseChatRoom should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+

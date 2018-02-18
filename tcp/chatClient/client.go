@@ -1,32 +1,31 @@
 package main
 
-import(
-	"fmt"
+import (
 	"bufio"
-	"os"
-	"net"
 	"encoding/json"
+	"fmt"
+	"net"
+	"os"
 	"strings"
 )
 
-
-func main(){
+func main() {
 	//Introduce credentials
 	fmt.Println("Enter a username: ")
-	username:=bufio.NewReader(os.Stdin)
+	username := bufio.NewReader(os.Stdin)
 
-	inputUserObject,err:=username.ReadString('\n')
-	if err!=nil{
+	inputUserObject, err := username.ReadString('\n')
+	if err != nil {
 		fmt.Println(err)
 	}
-	inputUserObject=inputUserObject[:len(inputUserObject)-1]
-	userObject:=UsernameStruct{
-		Username:string(inputUserObject)}
+	inputUserObject = inputUserObject[:len(inputUserObject)-1]
+	userObject := UsernameStruct{
+		Username: string(inputUserObject)}
 
-	for{
+	for {
 
 		//Introduce options
-		option:=bufio.NewReader(os.Stdin)
+		option := bufio.NewReader(os.Stdin)
 
 		//Interface for options of the client
 		fmt.Println("Choose an action:")
@@ -37,14 +36,14 @@ func main(){
 
 		fmt.Print("Choose option: ")
 		//reading the input
-		input,_,err:=option.ReadRune()
-		if err!=nil{
+		input, _, err := option.ReadRune()
+		if err != nil {
 			fmt.Println(err)
 		}
 
 		//TODO PORT MUST BE DYNAMICALLY ADDED
-		connection, err:=net.Dial("tcp","localhost:12346")
-		if err!=nil{
+		connection, err := net.Dial("tcp", "localhost:12346")
+		if err != nil {
 			fmt.Println(err)
 		}
 
@@ -52,22 +51,22 @@ func main(){
 		case '1':
 			createChatRoom(connection, userObject)
 		case '2':
-			listChatRoom(connection,userObject)
+			listChatRoom(connection, userObject)
 		case '3':
-			joinChatRoom(connection,userObject)
+			joinChatRoom(connection, userObject)
 		case '4':
-			leaveChatRoom(connection,userObject)
+			leaveChatRoom(connection, userObject)
 		}
 	}
 
 }
 
-func createChatRoom(conn net.Conn, userObject UsernameStruct){
+func createChatRoom(conn net.Conn, userObject UsernameStruct) {
 	//Input for creating a new chatroom
 	fmt.Print("Choose a name for the chatRoom: ")
-	reader:=bufio.NewReader(os.Stdin)
-	chatName,_:=reader.ReadString('\n')
-	chatName=chatName[:len(chatName)-1]
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
 	//We create the object
 	//chatOrder:=ChatStruct{ ChatName:chatName}
 	//chatOrderJson,err:=json.Marshal(chatOrder)
@@ -77,100 +76,100 @@ func createChatRoom(conn net.Conn, userObject UsernameStruct){
 	//fmt.Println(string(chatOrderJson))
 
 	//Create message general
-	jsonContent:= OptionMessageClient{
+	jsonContent := OptionMessageClient{
 		"1",
 		string(userObject.Username),
 		string(chatName)}
 
-	message,err:=json.Marshal(jsonContent)
-	if err!=nil{
+	message, err := json.Marshal(jsonContent)
+	if err != nil {
 		fmt.Println(err)
 	}
 
-	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+	conn.Write([]byte(strings.TrimRight(string(message), "\n")))
 }
 
-func listChatRoom(conn net.Conn, userObject UsernameStruct){
+func listChatRoom(conn net.Conn, userObject UsernameStruct) {
 	//Create the instruction message for list all the chatrooms
-	jsonContent:=OptionMessageClient{"2",
-		string(userObject.Username),""}
+	jsonContent := OptionMessageClient{"2",
+		string(userObject.Username), ""}
 
-	message,err:=json.Marshal(jsonContent)
-	if err!=nil{
+	message, err := json.Marshal(jsonContent)
+	if err != nil {
 		fmt.Println(err)
 	}
-	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+	conn.Write([]byte(strings.TrimRight(string(message), "\n")))
 }
 
-func joinChatRoom(conn net.Conn, userObject UsernameStruct){
+func joinChatRoom(conn net.Conn, userObject UsernameStruct) {
 	//Indicate to list all the chatrooms first to join
-	jsonContent:=OptionMessageClient{"3",
-		string(userObject.Username),""}
-	message,err:=json.Marshal(jsonContent)
-	if err!=nil{
+	jsonContent := OptionMessageClient{"3",
+		string(userObject.Username), ""}
+	message, err := json.Marshal(jsonContent)
+	if err != nil {
 		fmt.Println(err)
 	}
-	conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+	conn.Write([]byte(strings.TrimRight(string(message), "\n")))
 
 	//Input to choose the chatroom to join
 	fmt.Print("Introduce the name of the chatRoom you want to join: ")
-	reader:=bufio.NewReader(os.Stdin)
-	chatName,_:=reader.ReadString('\n')
-	chatName=chatName[:len(chatName)-1]
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
 	//Create the instruction message for joining a specific chatroom
-	jsonContent2:=OptionMessageClient{"3",
-		string(userObject.Username),chatName}
-	message2,err:=json.Marshal(jsonContent2)
-	if err!=nil{
+	jsonContent2 := OptionMessageClient{"3",
+		string(userObject.Username), chatName}
+	message2, err := json.Marshal(jsonContent2)
+	if err != nil {
 		fmt.Println(err)
 	}
-	conn.Write([]byte(strings.TrimRight(string(message2),"\n")))
+	conn.Write([]byte(strings.TrimRight(string(message2), "\n")))
 
 	//Start to write messages
 	fmt.Println("Start sending messages......")
-	client:=&Client{socket:conn}
+	client := &Client{socket: conn}
 	go client.receive()
-	for{
-		reader:=bufio.NewReader(os.Stdin)
-		message,_:=reader.ReadString('\n')
-		message=message[:len(message)]
+	for {
+		reader := bufio.NewReader(os.Stdin)
+		message, _ := reader.ReadString('\n')
+		message = message[:len(message)]
 		//TODO here i should create a username of the client fmt.Println(username);
 
-		conn.Write([]byte(strings.TrimRight(string(message),"\n")))
+		conn.Write([]byte(strings.TrimRight(string(message), "\n")))
 	}
 
 }
-func(client *Client) receive(){
-	for{
-		message:=make([]byte, 4096)
-		length, err:=client.socket.Read(message)
-		if err!=nil{
+func (client *Client) receive() {
+	for {
+		message := make([]byte, 4096)
+		length, err := client.socket.Read(message)
+		if err != nil {
 			client.socket.Close()
 			break
 		}
-		if length>0{
-			fmt.Println("RECEIVED: "+string(message))
+		if length > 0 {
+			fmt.Println("RECEIVED: " + string(message))
 		}
 	}
 }
 
-func leaveChatRoom(conn net.Conn, userObject UsernameStruct){}
+func leaveChatRoom(conn net.Conn, userObject UsernameStruct) {}
 
-type UsernameStruct struct{
+type UsernameStruct struct {
 	Username string `json:"username"`
 }
 
-type OptionMessageClient struct{
-	Option string `json:"option"`
+type OptionMessageClient struct {
+	Option   string `json:"option"`
 	UserName string `json:"userName"`
-	Data string `json:"data"`
+	Data     string `json:"data"`
 }
 
-type ChatStruct struct{
+type ChatStruct struct {
 	ChatName string `json:"chatName"`
 }
 
-type Client struct{
+type Client struct {
 	socket net.Conn
-	data chan[]byte
+	data   chan []byte
 }

@@ -6,11 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -74,25 +72,27 @@ func createChatRoom(userObject UsernameStruct) {
 }
 func listChatRoom(userObject UsernameStruct) {
 	//HTTP POST OR GET
-	resp, err := http.Get("http://localhost:8888/endpoint1")
-	if err != nil {
-		//handle error
-	}
-	defer resp.Body.Close()
+	// resp, err := http.Get("http://localhost:8888/endpoint1")
+	// if err != nil {
+	// 	handle error
+	// }
+	// defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Println(keepLines(string(body), 3))
+	// body, err := ioutil.ReadAll(resp.Body)
+	// fmt.Println(keepLines(string(body), 3))
+	fmt.Println("----LIST CHAT ROOM")
+	var c ClientObject
+	req, err := c.newRequest("GET", "/listChatRoom", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(req)
 }
 func joinChatRoom(userObject UsernameStruct) {
 
 }
 func leaveChatRoom(userObject UsernameStruct) {
 
-}
-
-func keepLines(s string, n int) string {
-	result := strings.Join(strings.Split(s, "\n")[:n], "\n")
-	return strings.Replace(result, "\r", "", -1)
 }
 
 type UsernameStruct struct {
@@ -112,6 +112,8 @@ func (c *ClientObject) newRequest(method string, path string, body interface{}) 
 		Host: "http://localhost:8888",
 		Path: path,
 	}
+	fmt.Println(c)
+
 	u := c.BaseURL.ResolveReference(rel)
 
 	var buf io.ReadWriter
