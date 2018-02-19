@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("Starting client...")
-	client, err := rpc.DialHTTP("tcp", ":9999")
+	client, err := rpc.DialHTTP("tcp", "localhost:1234")
 	if err != nil {
 		log.Fatal("dialing:", err)
 	}
