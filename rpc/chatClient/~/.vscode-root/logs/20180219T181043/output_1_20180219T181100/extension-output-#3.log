@@ -1,0 +1,1920 @@
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:19: undefined: structs.RequestChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:22: undefined: structs.ResponseChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:21: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:25: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:28: struct field Id should be ID
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: cannot refer to unexported name ksuid.new
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:40: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: cannot refer to unexported name ksuid.new
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: undefined: ksuid.new
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: cannot use ksuid.New() (type ksuid.KSUID) as type string in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: cannot convert ksuid.New() (type ksuid.KSUID) to type string
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: multiple-value ksuid.NewRandom() in single-value context
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: multiple-value ksuid.NewRandom() in single-value context
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:54: cannot range over t (type *ChatRooms)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:54: cannot range over *t (type ChatRooms)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:54: t.ChatRooms undefined (type *ChatRooms has no field or method ChatRooms)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:54: chatRoom declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: undefined: structs.RequestListChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: undefined: structs.ResponseLisstChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: undefined: structs.RequestListChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: undefined: structs.ResponseListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:21: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:37: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: struct field Id should be ID
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:34: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:50: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:62: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:80: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:81: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: non-name t.Clients on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: syntax error: unexpected return, expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: non-name t.Clients on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: syntax error: unexpected return, expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: non-name t.Clients on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: syntax error: unexpected return, expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:87: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: syntax error: unexpected . after top level declaration
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: non-name t.Clients on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: syntax error: unexpected return, expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: syntax error: unexpected . after top level declaration
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: non-name t.Clients on left side of :=
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: syntax error: unexpected return, expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:88: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: t.Clients undefined (type *ChatRooms has no field or method Clients)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: t.Chats.Clients undefined (type []structs.ChatRoom has no field or method Clients)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: clients.ListChatRoom undefined (type []structs.ChatRoom has no field or method ListChatRoom)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: syntax error: unexpected ., expecting name or (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: clients.ListChatRoom undefined (type []structs.ChatRoom has no field or method ListChatRoom)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:63: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:68: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: (*ChatRooms).ListChatRoom redeclared in this block
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: method redeclared: ChatRooms.ListChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: not enough arguments in call to t.ListChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: clients declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:86: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: clients.Clients undefined (type []structs.ChatRoom has no field or method Clients)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: t.Chats.Clienst undefined (type []structs.ChatRoom has no field or method Clienst)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: t.Chats.Clients undefined (type []structs.ChatRoom has no field or method Clients)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: t.Chats.NameChatRoom undefined (type []structs.ChatRoom has no field or method NameChatRoom)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: syntax error: unexpected ], expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: syntax error: unexpected newline, expecting ]
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:71: syntax error: unexpected return at end of statement
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:85: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:69: clients declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:21: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:37: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:42: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:21: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:37: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:42: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:20: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:43: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:45: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:20: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:43: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:45: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:86: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: clients declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:86: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:70: t.Chats undefined (type *Clients has no field or method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:71: t.ListChatRoomPrint undefined (type *Clients has no field or method ListChatRoomPrint)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:20: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:42: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:44: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:71: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:89: receiver name chats should be consistent with previous receiver name t for ChatRooms
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:74: t.ListChatRoomPrint undefined (type *Clients has no field or method ListChatRoomPrint)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: syntax error: unexpected . after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:89: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: comment on exported method Client.AddClient should be of the form "AddClient ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: undefined: Client
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:89: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: cannot use clients.Clients (type []structs.Client) as type []structs.Clients in return argument
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:89: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:73: currentClient declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:51: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:59: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:89: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use []Clients literal (type []Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use new(Clients) (type *Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use new(structs.Clients) (type *structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use new(*structs.Clients) (type **structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use new(structs.Clients) (type *structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: syntax error: unexpected ], expecting expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use structs.Clients literal (type structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: syntax error: unexpected [, expecting name or (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: syntax error: unexpected newline, expecting comma or }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:54: syntax error: unexpected error at end of statement
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:58: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use []structs.Clients literal (type []structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use []structs.Clients literal (type *[]structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use []structs.Clients literal (type []structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: cannot use structs.Clients literal (type structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: type structs.Clients is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: type []structs.Clients is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:44: type []structs.Client is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: cannot use emptyClients (type *Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: cannot use emptyClients (type *Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: cannot use *emptyClients (type Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:41: type structs.Clients is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: invalid indirect of emptyClients (type structs.Clients)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:91: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:45: cannot use emptyClients (type structs.Clients) as type structs.Client in field value
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:20: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:42: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:44: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:62: syntax error: unexpected EOF, expecting }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:42: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:30: currentUserNameObject declared and not used
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:46: input declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:30: currentUserNameObject declared and not used
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: input declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:57: input declared and not used
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:53: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: createChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: leaveChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: userObject
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: createChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: leaveChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: userObject
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: createChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:73: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:75: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: leaveChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: userObject
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: undefined: userObject
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:84: syntax error: unexpected createChatRoomServer, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:77: syntax error: unexpected createChatRoomServer, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoomServer, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoomServer, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:80: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: syntax error: unexpected createChatRoom, expecting (
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:85: undefined: client
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:69: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:81: undefined: Client
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:89: undefined: request
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:68: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: undefined: Client
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:87: unknown field 'Username' in struct literal of type structs.RequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:91: undefined: request
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:68: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: undefined: Client
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:91: undefined: request
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:68: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:79: undefined: Client
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:68: undefined: clientrequestCreateChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: undefined: userObject
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: joinChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:72: undefined: userObject
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:92: missing function body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:92: cannot refer to unexported name structs._
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:92: syntax error: unexpected ), expecting name
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:94: syntax error: unexpected } after top level declaration
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:97: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:94: undefined: chatName
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:70: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:3: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:7: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:10: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:13: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:14: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:17: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:20: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:24: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:27: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:30: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:41: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:43: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:45: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:41: undefined: respon
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:52: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:52: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:52: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:71: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:74: cannot use currentUserNameObject (type structs.RequestCreateClient) as type structs.Client in argument to listChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:65: connection declared and not used
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:98: request declared and not used
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:100: response declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:91: request declared and not used
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:93: response declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: syntax error: mixed named and unnamed function parameters
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: syntax error: mixed named and unnamed function parameters
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: syntax error: mixed named and unnamed function parameters
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: syntax error: mixed named and unnamed function parameters
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:90: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:96: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:37: replyCall declared and not used
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:92: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:98: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:76: cannot convert "Length Clients: " to type int
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:76: invalid operation: "Length Clients: " + len(t.Clients) (mismatched types string and int)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:76: syntax error: unexpected newline, expecting comma or )
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:82: syntax error: unexpected { at end of statement
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:76: syntax error: unexpected newline, expecting comma or )
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:82: syntax error: unexpected { at end of statement
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:92: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:98: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:35: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:38: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:52: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:60: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:92: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:97: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:98: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: clients declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:93: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:98: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:93: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:98: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:52: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:37: replyCall declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:36: divCall declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:52: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:37: undefined: divCall
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:51: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:50: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:42: replyCall.Reply.Client undefined (type interface {} is interface with no methods)
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:42: replyCall.Client undefined (type *rpc.Call has no field or method Client)
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:53: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:55: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:54: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:101: invalid operation: "previous objects: " + clients (mismatched types string and *Clients)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:102: invalid operation: "current object: " + currentClient (mismatched types string and structs.Client)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:103: syntax error: unexpected newline, expecting comma or )
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:36: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:37: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:39: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:53: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:61: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:67: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:94: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:99: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:100: receiver name clients should be consistent with previous receiver name t for Clients
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+

@@ -1,0 +1,22 @@
+[2018-02-19 18:10:47.886] [exthost1] [info] extension host started
+[2018-02-19 18:10:47.924] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:10:47.924] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2018-02-19 18:10:48.043] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:10:48.043] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2018-02-19 18:10:48.198] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:10:48.198] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-02-19 18:10:48.228] [exthost1] [info] ExtensionService#_doActivateExtension wayou.vscode-todo-highlight {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:10:48.228] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nemesis1346/.vscode/extensions/wayou.vscode-todo-highlight-0.5.11/src/extension
+[2018-02-19 18:10:48.231] [exthost1] [info] eager extensions activated
+[2018-02-19 18:11:00.880] [exthost1] [info] extension host started
+[2018-02-19 18:11:00.926] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:11:00.926] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2018-02-19 18:11:01.002] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:11:01.002] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2018-02-19 18:11:01.082] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:11:01.082] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-02-19 18:11:01.092] [exthost1] [info] ExtensionService#_doActivateExtension wayou.vscode-todo-highlight {"startup":true,"activationEvent":"*"}
+[2018-02-19 18:11:01.092] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nemesis1346/.vscode/extensions/wayou.vscode-todo-highlight-0.5.11/src/extension
+[2018-02-19 18:11:01.095] [exthost1] [info] eager extensions activated
+[2018-02-19 18:11:13.578] [exthost1] [info] ExtensionService#_doActivateExtension lukehoban.Go {"startup":false,"activationEvent":"onLanguage:go"}
+[2018-02-19 18:11:13.578] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nemesis1346/.vscode/extensions/lukehoban.go-0.6.76/out/src/goMain

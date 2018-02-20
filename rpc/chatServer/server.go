@@ -2,22 +2,23 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"log"
 	"net"
 	"net/http"
 	"net/rpc"
-	"reflect"
+
+	"../../lib/ksuid-master"
+	"../structs"
 )
 
 //Global variables
 
-var chatRooms []ChatRoom
-
 func main() {
 
-	chatRoomRA := new(ChatRoomRA)
-	rpc.Register(chatRoomRA)
+	chatRooms := new(ChatRooms)
+	clients := new(Clients)
+	rpc.Register(chatRooms)
+	rpc.Register(clients)
 	rpc.HandleHTTP()
 	l, e := net.Listen("tcp", "localhost:1234")
 	if e != nil {
@@ -32,38 +33,51 @@ func main() {
 
 }
 
-type ChatRoomRA ChatRoom
+type ChatRooms structs.ChatRooms
+type Clients structs.Clients
 
-type ChatRoom struct {
-	nameChatRoom string
-}
-
-type RequestChatRoom struct {
-	nameChatRoom string
-}
-
-type ResponseChatRoom struct {
-	status string
-}
-
-//CreateChatRoom
-func (t *ChatRoomRA) CreateChatRoom(request *RequestChatRoom, response *ResponseChatRoom) error {
-	currentChatRoom := &ChatRoom{
-		nameChatRoom: request.nameChatRoom,
+//CreateChatRoom...
+func (t *ChatRooms) CreateChatRoom(request *structs.RequestCreateChatRoom,
+	response *structs.ResponseCreateChatRoom) error {
+	currentChatRoom := structs.ChatRoom{
+		NameChatRoom: request.NameChatRoom,
+		Id:           ksuid.New().String(),
+		Clients:      structs.Clients{},
 	}
-	fmt.Println(reflect.TypeOf(currentChatRoom))
-	//	chatRooms: = append(chatRooms, currentChatRoom)
-	response = &ResponseChatRoom{
-		status: "ok",
-	}
+	t.AddChat(currentChatRoom)
+	response.Status = "ok"
 
 	return nil
 }
 
 //ListChatRoom
-func listChatRoom(w http.ResponseWriter, req *http.Request) {
-	io.WriteString(w, "hello, world")
+func (t *ChatRooms) ListChatRoom(request *structs.RequestListChatRoom,
+	response *structs.ResponseListChatRoom) error {
+	for _, chatRoom := range t.Chats {
+		fmt.Println(chatRoom.NameChatRoom)
+	}
+	return nil
+}
+func (t *ChatRooms) ListChatRoomPrint() {
+	for _, chatRoom := range t.Chats {
+		fmt.Println(chatRoom.NameChatRoom)
+	}
+}
 
+//CreateClient
+func (t *Clients) CreateClient(request *structs.RequestCreateClient,
+	response *structs.ResponseCreateClient) error {
+
+	currentClient := structs.Client{
+		Username: request.Username,
+		Id:       ksuid.New().String(),
+	}
+	t.AddClient(currentClient)
+	fmt.Println("Client: " + currentClient.Username + " ID: " + currentClient.Id + " created...")
+	fmt.Println("Length Clients: " + string(len(t.Clients)))
+	response.Status = "ok"
+	response.Client = currentClient
+	return nil
 }
 
 //Join ChatRoom
@@ -74,4 +88,20 @@ func jointChatRoom(w http.ResponseWriter, req *http.Request) {
 //Leave ChatRoom
 func leaveChatRoom(w http.ResponseWriter, req *http.Request) {
 
+}
+
+//AddChat for append new chats
+func (chats *ChatRooms) AddChat(currentChat structs.ChatRoom) []structs.ChatRoom {
+	chats.Chats = append(chats.Chats, currentChat)
+	return chats.Chats
+}
+
+//AddClients for append new Clients
+func (clients *Clients) AddClient(currentClient structs.Client) []structs.Client {
+	fmt.Println("previous objects: ")
+	fmt.Println(clients)
+	fmt.Println("current object: ")
+	fmt.Println(currentClient)
+	clients.Clients = append(clients.Clients, currentClient)
+	return clients.Clients
 }

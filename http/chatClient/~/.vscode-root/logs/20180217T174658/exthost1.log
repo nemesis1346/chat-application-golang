@@ -20,3 +20,7 @@
 [2018-02-17 17:47:53.306] [exthost1] [info] eager extensions activated
 [2018-02-17 17:47:56.941] [exthost1] [info] ExtensionService#_doActivateExtension lukehoban.Go {"startup":false,"activationEvent":"onLanguage:go"}
 [2018-02-17 17:47:56.941] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nemesis1346/.vscode/extensions/lukehoban.go-0.6.76/out/src/goMain
+[2018-02-18 01:47:56.301] [exthost1] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2018-02-18 01:47:56.302] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/configuration-editing/out/extension
+[2018-02-18 01:47:56.350] [exthost1] [info] ExtensionService#_doActivateExtension vscode.json {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2018-02-18 01:47:56.350] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/json/client/out/jsonMain
