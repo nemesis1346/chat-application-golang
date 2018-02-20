@@ -22,7 +22,8 @@ type RequestCreateChatRoom struct {
 }
 
 type ResponseCreateChatRoom struct {
-	Status string
+	Status   string
+	ChatRoom ChatRoom
 }
 type RequestListChatRoom struct {
 	Username string
@@ -36,6 +37,36 @@ type RequestCreateClient struct {
 type ResponseCreateClient struct {
 	Status string
 	Client Client
+}
+type ResquestGetClient struct {
+	Username string
+}
+type ResponseGetClient struct {
+	Client Client
+}
+type RequestGetChatRoom struct {
+	ChatRoomName string
+}
+type ResponseGetChatRoom struct {
+	ChatRoom ChatRoom
+	Status   string
+}
+type RequestJoinChatRoom struct {
+	Client   Client
+	ChatRoom ChatRoom
+}
+type ResponseJoinChatRoom struct {
+	Client Client
+	Status string
+}
+type RequestLeaveChatRoom struct {
+	Client   Client
+	ChatRoom ChatRoom
+}
+type ResponseLeaveChatRoom struct {
+	Client   Client
+	ChatRoom ChatRoom
+	Status   string
 }
 
 type Client struct {

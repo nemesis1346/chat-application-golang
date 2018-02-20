@@ -70,3 +70,36 @@
 [2018-02-19 22:56:14.555] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
 [2018-02-19 22:56:29.985] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
 [2018-02-19 23:23:36.905] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-19 23:37:59.268] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-19 23:38:05.030] [renderer1] [error] Cannot read property 'map' of null: TypeError: Cannot read property 'map' of null
+	at goDeclaration_1.definitionLocation.then.res (/home/nemesis1346/.vscode/extensions/lukehoban.go-0.6.76/out/src/goSignature.js:64:51)
+	at <anonymous>
+[2018-02-19 23:47:13.938] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-19 23:47:21.090] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-19 23:47:40.716] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-19 23:51:29.216] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 00:09:51.359] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 09:46:59.430] [renderer1] [error] Cannot read property 'element' of undefined: TypeError: Cannot read property 'element' of undefined
+    at e.element (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:383:327)
+    at file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:410:523
+    at Array.map (native)
+    at e.open (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:410:493)
+    at e.onMouseDown (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:400:356)
+    at file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:159:849
+    at file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:159:622
+    at e.fire (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:161:76)
+    at HTMLDivElement.r (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:169:105)
+[2018-02-20 09:53:46.574] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 09:53:55.833] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 09:59:40.546] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:00:36.418] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:01:36.044] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:05:04.367] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:09:54.368] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:10:04.543] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:10:05.591] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:10:08.300] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:22:08.576] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:29:37.819] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:29:42.411] [renderer1] [error] An unknown error occurred. Please consult the log for more details.
+[2018-02-20 10:29:43.745] [renderer1] [error] An unknown error occurred. Please consult the log for more details.

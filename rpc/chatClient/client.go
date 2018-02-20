@@ -83,7 +83,7 @@ func createChatRoom(client *rpc.Client) {
 
 	var response structs.ResponseCreateChatRoom
 
-	divCall := client.Go("ChatRooms.CreateClient", request, &response, nil)
+	divCall := client.Go("ChatRooms.CreateChatRoom", request, &response, nil)
 	replyCall := <-divCall.Done // will be equal to divCall
 	fmt.Println(replyCall.Reply)
 }
