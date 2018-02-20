@@ -62,6 +62,8 @@ func (t *ChatRooms) ListChatRoom(request *structs.RequestListChatRoom,
 		fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
 		fmt.Println("")
 	}
+	response.ChatRooms.Chats = t.Chats
+	response.Status = "ok"
 	return nil
 }
 func (t *ChatRooms) ListChatRoomPrint() {
@@ -92,7 +94,7 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayClient := AddClientToChatRoom(request.Client, chatRoom.Clients)
 			chatRoom.Clients = arrayClient
-			fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
+			fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
 		}
 	}
@@ -105,22 +107,49 @@ func (t *ChatRooms) leaveChatRoom(request *structs.RequestLeaveChatRoom,
 	return nil
 }
 
+//Get Client
+func (t *Clients) GetClient(request *structs.RequestGetClient,
+	response *structs.ResponseGetClient) error {
+	var counter int
+	for _, client := range t.Clients {
+		counter++
+		if request.Username == client.Username {
+			response.Client = client
+			response.Status = "ok"
+
+			return nil
+		}
+	}
+	response.Status = "Not Found"
+	return nil
+}
+
+//GetChat
+func (t *ChatRooms) GetChatRoom(request *structs.RequestGetChatRoom,
+	response *structs.ResponseGetChatRoom) error {
+	for _, chatRoom := range t.Chats {
+		if request.ChatRoomName == chatRoom.NameChatRoom {
+			response.ChatRoom = chatRoom
+			response.Status = "ok"
+			return nil
+		}
+	}
+	response.Status = "Not Found"
+	return nil
+}
+
 //AddChat for append new chats
 func (chats *ChatRooms) AddChat(currentChat structs.ChatRoom) []structs.ChatRoom {
 	chats.Chats = append(chats.Chats, currentChat)
-	fmt.Println("Length: ")
+	fmt.Println("Length Chat: ")
 	fmt.Printf("%d\n", len(chats.Chats))
 	return chats.Chats
 }
 
 //AddClients for append new Clients
 func (clients *Clients) AddClient(currentClient structs.Client) []structs.Client {
-	// fmt.Println("previous objects: ")
-	// fmt.Println(clients)
-	// fmt.Println("current object: ")
-	// fmt.Println(currentClient)
 	clients.Clients = append(clients.Clients, currentClient)
-	fmt.Println("Length: ")
+	fmt.Println("Length Clients: ")
 	fmt.Printf("%d\n", len(clients.Clients))
 	return clients.Clients
 }

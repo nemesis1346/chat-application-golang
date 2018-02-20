@@ -29,7 +29,8 @@ type RequestListChatRoom struct {
 	Username string
 }
 type ResponseListChatRoom struct {
-	Status string
+	Status    string
+	ChatRooms ChatRooms
 }
 type RequestCreateClient struct {
 	Username string
@@ -38,11 +39,12 @@ type ResponseCreateClient struct {
 	Status string
 	Client Client
 }
-type ResquestGetClient struct {
+type RequestGetClient struct {
 	Username string
 }
 type ResponseGetClient struct {
 	Client Client
+	Status string
 }
 type RequestGetChatRoom struct {
 	ChatRoomName string

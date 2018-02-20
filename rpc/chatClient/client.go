@@ -65,6 +65,8 @@ func main() {
 			createChatRoom(client)
 		case '2':
 			listChatRoom(client, currentGlobalUser)
+		case '3':
+			joinChatRoom(client, currentGlobalUser)
 		}
 	}
 
@@ -85,16 +87,76 @@ func createChatRoom(client *rpc.Client) {
 
 	divCall := client.Go("ChatRooms.CreateChatRoom", request, &response, nil)
 	replyCall := <-divCall.Done // will be equal to divCall
-	fmt.Println(replyCall.Reply)
+	if replyCall.Error != nil {
+		fmt.Println(replyCall.Error)
+	}
+	fmt.Println(response.Status)
+
 }
 
+//To print in client the chats available
 func listChatRoom(client *rpc.Client, currentUser structs.Client) {
+
 	request := structs.RequestListChatRoom{
 		Username: string(currentUser.Username)}
 
-	var response structs.ResponseCreateChatRoom
+	var response structs.ResponseListChatRoom
 
 	divCall := client.Go("ChatRooms.ListChatRoom", request, &response, nil)
 	replyCall := <-divCall.Done // will be equal to divCall
-	fmt.Println(replyCall.Reply)
+	if replyCall.Error != nil {
+		fmt.Println(replyCall.Error)
+	}
+	fmt.Println("Status: " + response.Status)
+	fmt.Println("Chats available .....")
+	resultArray := response.ChatRooms.Chats
+	for _, chatRoom := range resultArray {
+		fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
+		fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+		fmt.Println("")
+	}
+
+}
+
+//Join some chatRoom
+func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
+
+	//Input of chatname
+	fmt.Print("Choose a name for joining chatRoom: ")
+
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
+
+	//First we get the chatRoom struct
+	requestGetChatRoom := structs.RequestGetChatRoom{
+		ChatRoomName: chatName,
+	}
+
+	var responseGetChatRoom structs.ResponseGetChatRoom
+
+	divCallGetChatRoom := client.Go("ChatRooms.GetChatRoom", requestGetChatRoom, &responseGetChatRoom, nil)
+	replyCallGetChatRoom := <-divCallGetChatRoom.Done // will be equal to divCall
+	if replyCallGetChatRoom.Error != nil {
+		fmt.Println(replyCallGetChatRoom.Error)
+	}
+
+	if responseGetChatRoom.Status == "ok" {
+		//Now we submit request for joining chatRoom
+		requestJoinChatRoom := structs.RequestJoinChatRoom{
+			Client:   currentUser,
+			ChatRoom: responseGetChatRoom.ChatRoom,
+		}
+
+		var responseJoinChatRoom structs.ResponseJoinChatRoom
+
+		divCallJoinChatRoom := client.Go("ChatRooms.JoinChatRoom", requestJoinChatRoom, &responseJoinChatRoom, nil)
+		replyCallJoinChatRoom := <-divCallJoinChatRoom.Done // will be equal to divCall
+		if replyCallJoinChatRoom.Error != nil {
+			fmt.Println(replyCallJoinChatRoom.Error)
+		}
+	} else {
+		fmt.Println("There was some error")
+	}
+
 }
