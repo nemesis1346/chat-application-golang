@@ -191,11 +191,17 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 		fmt.Println()
 
 		//Now we get the rest of the messages
-
+		fmt.Println("Previous messages....")
+		requestGetPreviousMessages := structs.RequestGetPreviousMessages{
+			ChatRoom: responseGetChatRoom.ChatRoom,
+			Client:   currentUser,
+		}
+		//var
+		//Now we start chating
+		fmt.Println("Start chating.....")
 		if responseJoinChatRoom.Status == "ok" {
 			for {
-				//Now we start chating
-				fmt.Println("Start chating.....")
+
 				readerMessage := bufio.NewReader(os.Stdin)
 				messageContent, _ := readerMessage.ReadString('\n')
 				messageContent = chatName[:len(chatName)-1]
