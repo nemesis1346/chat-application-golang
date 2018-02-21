@@ -189,6 +189,37 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 		fmt.Println()
 		fmt.Println("Client " + currentUser.Username + " joined to " + requestJoinChatRoom.ChatRoom.NameChatRoom)
 		fmt.Println()
+
+		//Now we get the rest of the messages
+
+		if responseJoinChatRoom.Status == "ok" {
+			for {
+				//Now we start chating
+				fmt.Println("Start chating.....")
+				readerMessage := bufio.NewReader(os.Stdin)
+				messageContent, _ := readerMessage.ReadString('\n')
+				messageContent = chatName[:len(chatName)-1]
+				//We submit request for the message
+				requestSaveMessage := structs.RequestSaveMessage{
+					Client:   currentUser,
+					Content:  messageContent,
+					ChatRoom: responseGetChatRoom.ChatRoom,
+				}
+				var responseSaveMessage structs.ResponseSaveMessage
+
+				divCallSaveMessage := client.Go("ChatRooms.JoinChatRoom", requestSaveMessage, &responseSaveMessage, nil)
+				replyCallSaveMesssage := <-divCallSaveMessage.Done // will be equal to divCall
+				if replyCallSaveMesssage.Error != nil {
+					fmt.Println(replyCallSaveMesssage.Error)
+				}
+				if responseSaveMessage.Status == "ok" {
+					fmt.Println("Username: " + responseSaveMessage.Content + " delivered")
+				} else {
+					fmt.Println("There was an error in saving message")
+				}
+			}
+		}
+
 	} else {
 		fmt.Println("There was some error")
 	}

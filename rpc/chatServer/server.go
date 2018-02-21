@@ -111,14 +111,50 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 			chatRoom.Clients = arrayClient
 			fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+			response.Status = "ok"
+			return nil
 		}
+	}
+	response.Status = "There is no chatRoom with that name"
+	return nil
+}
+
+//Save current message
+func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
+	response *structs.ResponseSaveMessage) error {
+	//First create message instance
+	currentMessage := structs.Message{
+		Id:           ksuid.New().String(),
+		Content:      request.Content,
+		Username:     request.Client.Username,
+		NameChatRoom: request.ChatRoom.NameChatRoom,
+	}
+	counterChat := 0
+	//Find the chat with the name from the request
+	for _, chatRoom := range t.Chats {
+		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
+			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
+			t.Chats[counterChat].Messages = arrayMessages
+			response.Content = request.Content
+			response.Status = "ok"
+			return nil
+		}
+		counterChat++
 	}
 	return nil
 }
 
-func (t *ChatRooms) SendMessages(request *structs.RequestSendMessages,
-	response *structs.ResponseSendMessages) {
-
+//Get list of previous messages
+func (t *ChatRooms) GetPreviousMessages(request *structs.RequestGetPreviousMessages,
+	response *structs.ResponseGetPreviousMessages) error {
+	for _, chatRoom := range t.Chats {
+		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
+			response.Messages = chatRoom.Messages
+			response.Status = "ok"
+			return nil
+		}
+	}
+	return nil
 }
 
 //Leave ChatRoom
@@ -139,7 +175,7 @@ func (t *ChatRooms) LeaveChatRoom(request *structs.RequestLeaveChatRoom,
 					t.Chats[counterChat].Clients = chatRoom.Clients
 					fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
 					fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
-					break
+					return nil
 				}
 			}
 			counterClient++
@@ -197,6 +233,13 @@ func (clients *Clients) AddClient(currentClient structs.Client) []structs.Client
 func AddClientToChatRoom(currentClient structs.Client, arrayClient structs.Clients) structs.Clients {
 	arrayResult := append(arrayClient.Clients, currentClient)
 	result := structs.Clients{Clients: arrayResult}
+	return result
+}
+
+//AddMessages
+func AddMessagesInChatRoom(currentMessage structs.Message, arrayMessage structs.Messages) structs.Messages {
+	arrayResult := append(arrayMessage.Messages, currentMessage)
+	result := structs.Messages{Messages: arrayResult}
 	return result
 }
 
