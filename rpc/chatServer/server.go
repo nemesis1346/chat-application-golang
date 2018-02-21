@@ -104,15 +104,17 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 //Leave ChatRoom
 func (t *ChatRooms) leaveChatRoom(request *structs.RequestLeaveChatRoom,
 	response *structs.ResponseLeaveChatRoom) error {
+	var counter int
+
+	counter++
+
 	return nil
 }
 
 //Get Client
 func (t *Clients) GetClient(request *structs.RequestGetClient,
 	response *structs.ResponseGetClient) error {
-	var counter int
 	for _, client := range t.Clients {
-		counter++
 		if request.Username == client.Username {
 			response.Client = client
 			response.Status = "ok"
