@@ -72,6 +72,15 @@ type ResponseLeaveChatRoom struct {
 	ChatRoom ChatRoom
 	Status   string
 }
+type RequestSendMessages struct {
+	Client   Client
+	Content  string
+	ChatRoom ChatRoom
+}
+type ResponseSendMessages struct {
+	Status  string
+	Content string
+}
 
 type Client struct {
 	Username string

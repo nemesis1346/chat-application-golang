@@ -76,7 +76,7 @@ func main() {
 		}
 	} else {
 		fmt.Println()
-		fmt.Println("Error: Username " + requestNewUser.Username + " already exists!!")
+		fmt.Println(response.Status)
 		fmt.Println()
 	}
 
@@ -194,6 +194,8 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 	}
 
 }
+
+//This method must be called when I am messaging
 func leaveChatRoom(client *rpc.Client, currentUser structs.Client) {
 
 	//First we show the user the active ChatRooms
@@ -233,7 +235,13 @@ func leaveChatRoom(client *rpc.Client, currentUser structs.Client) {
 		if replyCallLeaveChatRoom.Error != nil {
 			fmt.Println(replyCallLeaveChatRoom.Error)
 		}
+
 	} else {
 		fmt.Println("There was some error")
 	}
+}
+
+func sendMessage(client *rpc.Client, currentUser structs.Client,
+	currentChat structs.ChatRoom, message string) {
+
 }

@@ -116,6 +116,11 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 	return nil
 }
 
+func (t *ChatRooms) SendMessages(request *structs.RequestSendMessages,
+	response *structs.ResponseSendMessages) {
+
+}
+
 //Leave ChatRoom
 func (t *ChatRooms) LeaveChatRoom(request *structs.RequestLeaveChatRoom,
 	response *structs.ResponseLeaveChatRoom) error {
