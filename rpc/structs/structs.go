@@ -11,8 +11,10 @@ type ChatRoom struct {
 	Messages     Messages
 }
 type Message struct {
-	Id      string
-	Content string
+	Id           string
+	Content      string
+	Username     string
+	NameChatRoom string
 }
 type Messages struct {
 	Messages []Message
