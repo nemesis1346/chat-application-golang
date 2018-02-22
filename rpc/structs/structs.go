@@ -1,5 +1,7 @@
 package structs
 
+import "time"
+
 type ChatRooms struct {
 	Chats []ChatRoom
 }
@@ -15,6 +17,7 @@ type Message struct {
 	Content      string
 	Username     string
 	NameChatRoom string
+	Time         time.Time
 }
 type Messages struct {
 	Messages []Message
@@ -76,10 +79,11 @@ type RequestSaveMessage struct {
 	Client   Client
 	Content  string
 	ChatRoom ChatRoom
+	Time     time.Time
 }
 type ResponseSaveMessage struct {
-	Status  string
-	Content string
+	Status   string
+	Messages Messages
 }
 type RequestGetPreviousMessages struct {
 	ChatRoom ChatRoom

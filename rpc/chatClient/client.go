@@ -6,12 +6,14 @@ import (
 	"log"
 	"net/rpc"
 	"os"
+	"time"
 
 	"../structs"
 )
 
 func main() {
 
+	//We start client
 	fmt.Println("Starting client...")
 	client, err := rpc.DialHTTP("tcp", "localhost:1234")
 	if err != nil {
@@ -191,35 +193,52 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 		fmt.Println()
 
 		//Now we get the rest of the messages
-		fmt.Println("Previous messages....")
+		fmt.Println("Previous messages from " + responseGetChatRoom.ChatRoom.NameChatRoom + " ...")
 		requestGetPreviousMessages := structs.RequestGetPreviousMessages{
 			ChatRoom: responseGetChatRoom.ChatRoom,
 			Client:   currentUser,
 		}
-		//var
+		var responseGetPreviousMessages structs.ResponseGetPreviousMessages
+
+		divCallGetPreviousMessages := client.Go("ChatRooms.GetPreviousMessages", requestGetPreviousMessages, &responseGetPreviousMessages, nil)
+		replyCallGetPreviousMessages := <-divCallGetPreviousMessages.Done
+		if replyCallGetPreviousMessages.Error != nil {
+			fmt.Println(replyCallGetPreviousMessages.Error)
+		}
+		previousMessages := responseGetPreviousMessages.Messages.Messages
+		for _, message := range previousMessages {
+			fmt.Println(message.Username + ": " + message.Content)
+		}
 		//Now we start chating
+		fmt.Println()
 		fmt.Println("Start chating.....")
 		if responseJoinChatRoom.Status == "ok" {
 			for {
 
 				readerMessage := bufio.NewReader(os.Stdin)
 				messageContent, _ := readerMessage.ReadString('\n')
-				messageContent = chatName[:len(chatName)-1]
+				messageContent = messageContent[:len(messageContent)]
 				//We submit request for the message
+				//current message time
+				currentTime := time.Now()
 				requestSaveMessage := structs.RequestSaveMessage{
 					Client:   currentUser,
 					Content:  messageContent,
 					ChatRoom: responseGetChatRoom.ChatRoom,
+					Time:     currentTime,
 				}
 				var responseSaveMessage structs.ResponseSaveMessage
 
-				divCallSaveMessage := client.Go("ChatRooms.JoinChatRoom", requestSaveMessage, &responseSaveMessage, nil)
+				divCallSaveMessage := client.Go("ChatRooms.SaveMessage", requestSaveMessage, &responseSaveMessage, nil)
 				replyCallSaveMesssage := <-divCallSaveMessage.Done // will be equal to divCall
 				if replyCallSaveMesssage.Error != nil {
 					fmt.Println(replyCallSaveMesssage.Error)
 				}
 				if responseSaveMessage.Status == "ok" {
-					fmt.Println("Username: " + responseSaveMessage.Content + " delivered")
+					//Now we have to print all the messages between the previous message and the last message
+					for _, messageResult := range responseSaveMessage.Messages.Messages {
+						fmt.Println(messageResult.Username + ": " + messageResult.Content + " delivered")
+					}
 				} else {
 					fmt.Println("There was an error in saving message")
 				}

@@ -6,15 +6,21 @@ import (
 	"net"
 	"net/http"
 	"net/rpc"
+	"time"
 
 	"../../lib/ksuid-master"
 	"../structs"
 )
 
 //Global variables
+type ChatRooms structs.ChatRooms
+type Clients structs.Clients
+type Client structs.Client
+type ChatRoom structs.ChatRoom
 
 func main() {
 
+	//We start server
 	chatRooms := new(ChatRooms)
 	clients := new(Clients)
 	clients.Clients = []structs.Client{}
@@ -33,11 +39,6 @@ func main() {
 	}
 
 }
-
-type ChatRooms structs.ChatRooms
-type Clients structs.Clients
-type Client structs.Client
-type ChatRoom structs.ChatRoom
 
 //CreateChatRoom...
 func (t *ChatRooms) CreateChatRoom(request *structs.RequestCreateChatRoom,
@@ -109,7 +110,7 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayClient := AddClientToChatRoom(request.Client, chatRoom.Clients)
 			chatRoom.Clients = arrayClient
-			fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
+			fmt.Print("ChatRoom Joined: " + chatRoom.NameChatRoom + ", Number of Clients: ")
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
 			response.Status = "ok"
 			return nil
@@ -122,12 +123,14 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 //Save current message
 func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
 	response *structs.ResponseSaveMessage) error {
+	fmt.Println(request.Client.Username + ": " + request.Content)
 	//First create message instance
 	currentMessage := structs.Message{
 		Id:           ksuid.New().String(),
 		Content:      request.Content,
 		Username:     request.Client.Username,
 		NameChatRoom: request.ChatRoom.NameChatRoom,
+		Time:         request.Time,
 	}
 	counterChat := 0
 	//Find the chat with the name from the request
@@ -135,7 +138,19 @@ func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
 			t.Chats[counterChat].Messages = arrayMessages
-			response.Content = request.Content
+
+			//we compare the current input message time
+			//current server time
+			currentTimeServer := time.Now()
+			//Bundle of result messages
+			var resultMessages structs.Messages
+			//We iterate to get the last messages
+			for _, resultMessage := range arrayMessages.Messages {
+				if currentTimeServer.After(resultMessage.Time) {
+					resultMessages = AddMessagesInChatRoom(resultMessage, resultMessages)
+				}
+			}
+			response.Messages = resultMessages
 			response.Status = "ok"
 			return nil
 		}
