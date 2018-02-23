@@ -235,8 +235,10 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 					fmt.Println(replyCallSaveMesssage.Error)
 				}
 				if responseSaveMessage.Status == "ok" {
+					currentTimeChatClient := time.Now()
 					//Now we have to print all the messages between the previous message and the last message
 					for _, messageResult := range responseSaveMessage.Messages.Messages {
+						//if currentTimeChatClient{}
 						fmt.Println(messageResult.Username + ": " + messageResult.Content + " delivered")
 					}
 				} else {
