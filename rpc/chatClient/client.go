@@ -223,7 +223,7 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 				//First we detect the command exit
 				if strings.TrimRight(messageContent, "\n") == "exit" {
 					leaveChatRoom(client, currentUser, responseGetChatRoom.ChatRoom.NameChatRoom)
-					//continue
+					break
 				} else {
 					//We submit request for the message
 					//current message time
@@ -295,6 +295,7 @@ func leaveChatRoom(client *rpc.Client, currentUser structs.Client, chatName stri
 
 		if responseLeaveChatRoom.Status == "ok" {
 			fmt.Println("Username " + currentUser.Username + " has left chatRoom " + responseGetChatRoom.ChatRoom.NameChatRoom)
+			fmt.Println()
 		}
 	} else {
 		fmt.Println("There was some error")

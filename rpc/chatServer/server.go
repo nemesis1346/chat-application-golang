@@ -178,10 +178,10 @@ func (t *ChatRooms) LeaveChatRoom(request *structs.RequestLeaveChatRoom,
 			counterClient := 0
 			for _, client := range chatRoom.Clients.Clients {
 				if request.Client.Username == client.Username {
-					fmt.Println("Client erased: " + client.Username)
+					fmt.Println()
 					t.Chats[counterChat].Clients = DeleteClientFromChatRoom(t.Chats[counterChat].Clients, counterClient)
 					//t.Chats[counterChat].Clients = chatRoom.Clients
-					fmt.Println("ChatRoom: "+chatRoom.NameChatRoom+", Number of Clients: ", len(t.Chats[counterChat].Clients.Clients))
+					fmt.Println("Client  "+client.Username+"left ChatRoom: "+chatRoom.NameChatRoom+", Number of Clients: ", len(t.Chats[counterChat].Clients.Clients))
 					response.Status = "ok"
 					return nil
 				}
