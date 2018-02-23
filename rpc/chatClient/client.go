@@ -213,8 +213,10 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 		fmt.Println()
 		fmt.Println("Start chating.....")
 		if responseJoinChatRoom.Status == "ok" {
+			//last message time
+			var lastMessageTime time.Time
+			lastMessageTime = time.Now()
 			for {
-
 				readerMessage := bufio.NewReader(os.Stdin)
 				messageContent, _ := readerMessage.ReadString('\n')
 				messageContent = messageContent[:len(messageContent)]
@@ -235,15 +237,17 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 					fmt.Println(replyCallSaveMesssage.Error)
 				}
 				if responseSaveMessage.Status == "ok" {
-					currentTimeChatClient := time.Now()
-					//Now we have to print all the messages between the previous message and the last message
+					//We evaluate the messages according with the time
 					for _, messageResult := range responseSaveMessage.Messages.Messages {
-						//if currentTimeChatClient{}
-						fmt.Println(messageResult.Username + ": " + messageResult.Content + " delivered")
+						if lastMessageTime.Before(messageResult.Time) {
+							fmt.Println()
+							fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
+						}
 					}
 				} else {
 					fmt.Println("There was an error in saving message")
 				}
+				lastMessageTime = responseSaveMessage.Time
 			}
 		}
 

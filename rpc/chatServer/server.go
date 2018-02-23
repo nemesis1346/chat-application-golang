@@ -110,8 +110,7 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayClient := AddClientToChatRoom(request.Client, chatRoom.Clients)
 			chatRoom.Clients = arrayClient
-			fmt.Print("ChatRoom Joined: " + chatRoom.NameChatRoom + ", Number of Clients: ")
-			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+			fmt.Println("ChatRoom Joined: "+chatRoom.NameChatRoom+", Client: "+request.Client.Username+", Number of Clients: ", len(chatRoom.Clients.Clients))
 			response.Status = "ok"
 			return nil
 		}
@@ -123,7 +122,8 @@ func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 //Save current message
 func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
 	response *structs.ResponseSaveMessage) error {
-	fmt.Println(request.Client.Username + ": " + request.Content)
+	fmt.Println(request.Client.Username + ": " + request.Content + "  Time: " + request.Time.Format(time.RFC3339))
+
 	//First create message instance
 	currentMessage := structs.Message{
 		Id:           ksuid.New().String(),
@@ -138,20 +138,10 @@ func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
 			t.Chats[counterChat].Messages = arrayMessages
-
-			//we compare the current input message time
-			//current server time
-			currentTimeServer := time.Now()
-			//Bundle of result messages
-			var resultMessages structs.Messages
-			//We iterate to get the last messages
-			for _, resultMessage := range arrayMessages.Messages {
-				if currentTimeServer.After(resultMessage.Time) {
-					resultMessages = AddMessagesInChatRoom(resultMessage, resultMessages)
-				}
-			}
-			response.Messages = resultMessages
+			//We save the messages in the response
+			response.Messages = arrayMessages
 			response.Status = "ok"
+			response.Time = request.Time
 			return nil
 		}
 		counterChat++

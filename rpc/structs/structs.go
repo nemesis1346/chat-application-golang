@@ -84,6 +84,7 @@ type RequestSaveMessage struct {
 type ResponseSaveMessage struct {
 	Status   string
 	Messages Messages
+	Time     time.Time
 }
 type RequestGetPreviousMessages struct {
 	ChatRoom ChatRoom

@@ -4911,3 +4911,777 @@ Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
 
 Finished running tool: /usr/bin/go vet ./...
 
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:78: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:84: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:106: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:123: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:162: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:175: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:203: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:217: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:239: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:261: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:144: currentTimeServer declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:159: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:172: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:200: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:214: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:229: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:236: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:237: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:244: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:251: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:258: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:163: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:176: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:204: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:218: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:248: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:255: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:262: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:238: currentTimeChatClient declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:217: undefined: Time
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:217: lastMessageTime declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:217: lastMessageTime declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:251: responseSaveMessage.Time undefined (type structs.ResponseSaveMessage has no field or method Time)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:5: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:9: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:12: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:15: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:16: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:22: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:25: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:29: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:33: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:36: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:40: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:43: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:47: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:50: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:54: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:57: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:61: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:65: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:69: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:73: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:78: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:84: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:89: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:93: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:98: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:100: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/structs/structs.go:102: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:177: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:205: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:219: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:234: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:242: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:249: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:256: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:263: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:177: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:205: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:219: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:234: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:242: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:249: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:256: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:263: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:154: cannot use arrayMessages.Messages (type []structs.Message) as type structs.Messages in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:177: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:205: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:219: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:234: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:242: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:249: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:256: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:263: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:177: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:205: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:219: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:234: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:242: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:249: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:256: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:263: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:142: resultMessages declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:177: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:205: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:219: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:234: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:241: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:242: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:249: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:256: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:263: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:218: no new variables on left side of :=
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:217: lastMessageTime declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:217: lastMessageTime declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:143: syntax error: unexpected resultMessage, expecting comma or )
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:143: invalid operation: (resultMessage.Username + ": " + resultMessage.Content + "  Time: ") + resultMessage.Time (mismatched types string and time.Time)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: syntax error: unexpected newline, expecting comma or )
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: syntax error: unexpected newline, expecting comma or )
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: syntax error: unexpected newline, expecting comma or )
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:113: syntax error: unexpected ), expecting }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:118: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:113: syntax error: unexpected newline, expecting comma or )
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:123: syntax error: unexpected SaveMessage at end of statement
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:157: syntax error: unexpected error at end of statement
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:165: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: invalid operation: ("ChatRoom Joined: " + chatRoom.NameChatRoom + ", Client: " + request.Client.Username + ", Number of Clients: ") + len(chatRoom.Clients.Clients) (mismatched types string and int)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: invalid operation: ("ChatRoom Joined: " + chatRoom.NameChatRoom + ", Client: " + request.Client.Username + ", Number of Clients: ") + len(chatRoom.Clients.Clients) (mismatched types string and int)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:112: syntax error: unexpected ), expecting }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:118: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:14: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:16: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:42: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:65: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:77: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:83: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:105: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:78: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:84: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:106: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:155: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:168: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:196: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:210: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:225: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:232: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:233: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:240: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:247: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:254: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/client.go:59: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:78: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:84: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:106: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:153: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:166: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:194: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:208: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:223: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:230: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:231: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:238: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:245: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:252: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:78: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:84: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:106: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:151: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:164: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:192: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:206: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:221: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:228: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:229: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:236: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:243: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:250: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:15: comment on exported type ChatRooms should be of the form "ChatRooms ..." (with optional leading article)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:17: exported type Clients should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:18: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:19: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:43: comment on exported method ChatRooms.CreateChatRoom should be of the form "CreateChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:66: comment on exported method ChatRooms.ListChatRoom should be of the form "ListChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:78: exported method ChatRooms.ListChatRoomPrint should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:84: comment on exported method Clients.CreateClient should be of the form "CreateClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:106: comment on exported method ChatRooms.JoinChatRoom should be of the form "JoinChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:122: comment on exported method ChatRooms.SaveMessage should be of the form "SaveMessage ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:152: comment on exported method ChatRooms.GetPreviousMessages should be of the form "GetPreviousMessages ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:165: comment on exported method ChatRooms.LeaveChatRoom should be of the form "LeaveChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:193: comment on exported method Clients.GetClient should be of the form "GetClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:207: comment on exported method ChatRooms.GetChatRoom should be of the form "GetChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:222: receiver name chats should be consistent with previous receiver name t for ChatRooms
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:229: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:230: receiver name clients should be consistent with previous receiver name t for Clients
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:237: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:244: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatServer/server.go:251: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
