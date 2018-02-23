@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/rpc"
 	"os"
+	"strings"
 	"time"
 
 	"../structs"
@@ -72,8 +73,8 @@ func main() {
 				listChatRoom(client, currentGlobalUser)
 			case '3':
 				joinChatRoom(client, currentGlobalUser)
-			case '4':
-				leaveChatRoom(client, currentGlobalUser)
+				// case '4':
+				// 	leaveChatRoom(client, currentGlobalUser)
 			}
 		}
 	} else {
@@ -140,7 +141,6 @@ func listChatRoom(client *rpc.Client, currentUser structs.Client) {
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
 			fmt.Println("")
 		}
-		fmt.Println()
 	} else {
 		fmt.Println("There is no chats available")
 		fmt.Println()
@@ -210,8 +210,8 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 			fmt.Println(message.Username + ": " + message.Content)
 		}
 		//Now we start chating
-		fmt.Println()
 		fmt.Println("Start chating.....")
+		fmt.Println()
 		if responseJoinChatRoom.Status == "ok" {
 			//last message time
 			var lastMessageTime time.Time
@@ -220,34 +220,41 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 				readerMessage := bufio.NewReader(os.Stdin)
 				messageContent, _ := readerMessage.ReadString('\n')
 				messageContent = messageContent[:len(messageContent)]
-				//We submit request for the message
-				//current message time
-				currentTime := time.Now()
-				requestSaveMessage := structs.RequestSaveMessage{
-					Client:   currentUser,
-					Content:  messageContent,
-					ChatRoom: responseGetChatRoom.ChatRoom,
-					Time:     currentTime,
-				}
-				var responseSaveMessage structs.ResponseSaveMessage
-
-				divCallSaveMessage := client.Go("ChatRooms.SaveMessage", requestSaveMessage, &responseSaveMessage, nil)
-				replyCallSaveMesssage := <-divCallSaveMessage.Done // will be equal to divCall
-				if replyCallSaveMesssage.Error != nil {
-					fmt.Println(replyCallSaveMesssage.Error)
-				}
-				if responseSaveMessage.Status == "ok" {
-					//We evaluate the messages according with the time
-					for _, messageResult := range responseSaveMessage.Messages.Messages {
-						if lastMessageTime.Before(messageResult.Time) {
-							fmt.Println()
-							fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
-						}
-					}
+				//First we detect the command exit
+				if strings.TrimRight(messageContent, "\n") == "exit" {
+					leaveChatRoom(client, currentUser, responseGetChatRoom.ChatRoom.NameChatRoom)
+					//continue
 				} else {
-					fmt.Println("There was an error in saving message")
+					//We submit request for the message
+					//current message time
+					currentTime := time.Now()
+					requestSaveMessage := structs.RequestSaveMessage{
+						Client:   currentUser,
+						Content:  messageContent,
+						ChatRoom: responseGetChatRoom.ChatRoom,
+						Time:     currentTime,
+					}
+					var responseSaveMessage structs.ResponseSaveMessage
+
+					divCallSaveMessage := client.Go("ChatRooms.SaveMessage", requestSaveMessage, &responseSaveMessage, nil)
+					replyCallSaveMesssage := <-divCallSaveMessage.Done // will be equal to divCall
+					if replyCallSaveMesssage.Error != nil {
+						fmt.Println(replyCallSaveMesssage.Error)
+					}
+					if responseSaveMessage.Status == "ok" {
+						//We evaluate the messages according with the time
+						for _, messageResult := range responseSaveMessage.Messages.Messages {
+							if lastMessageTime.Before(messageResult.Time) {
+								fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
+								fmt.Println()
+							}
+						}
+					} else {
+						fmt.Println("There was an error in saving message")
+					}
+					lastMessageTime = responseSaveMessage.Time
 				}
-				lastMessageTime = responseSaveMessage.Time
+
 			}
 		}
 
@@ -258,18 +265,7 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 }
 
 //This method must be called when I am messaging
-func leaveChatRoom(client *rpc.Client, currentUser structs.Client) {
-
-	//First we show the user the active ChatRooms
-	fmt.Println("List of ChatRooms active")
-	listChatRoom(client, currentUser)
-
-	//Input of chatname to leave
-	fmt.Print("Choose a name for leaving chatRoom: ")
-
-	reader := bufio.NewReader(os.Stdin)
-	chatName, _ := reader.ReadString('\n')
-	chatName = chatName[:len(chatName)-1]
+func leaveChatRoom(client *rpc.Client, currentUser structs.Client, chatName string) {
 
 	//First we get the chatRoom struct
 	requestGetChatRoom := structs.RequestGetChatRoom{
@@ -283,7 +279,6 @@ func leaveChatRoom(client *rpc.Client, currentUser structs.Client) {
 	if replyCallGetChatRoom.Error != nil {
 		fmt.Println(replyCallGetChatRoom.Error)
 	}
-
 	if responseGetChatRoom.Status == "ok" {
 		//Now we submit request for leaving chatRoom
 		requestLeaveChatRoom := structs.RequestLeaveChatRoom{
@@ -298,12 +293,10 @@ func leaveChatRoom(client *rpc.Client, currentUser structs.Client) {
 			fmt.Println(replyCallLeaveChatRoom.Error)
 		}
 
+		if responseLeaveChatRoom.Status == "ok" {
+			fmt.Println("Username " + currentUser.Username + " has left chatRoom " + responseGetChatRoom.ChatRoom.NameChatRoom)
+		}
 	} else {
 		fmt.Println("There was some error")
 	}
-}
-
-func sendMessage(client *rpc.Client, currentUser structs.Client,
-	currentChat structs.ChatRoom, message string) {
-
 }

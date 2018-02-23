@@ -69,6 +69,7 @@ type ResponseJoinChatRoom struct {
 type RequestLeaveChatRoom struct {
 	Client   Client
 	ChatRoom ChatRoom
+	Status   string
 }
 type ResponseLeaveChatRoom struct {
 	Client   Client

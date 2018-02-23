@@ -106,14 +106,16 @@ func (t *Clients) CreateClient(request *structs.RequestCreateClient,
 //Join ChatRoom
 func (t *ChatRooms) JoinChatRoom(request *structs.RequestJoinChatRoom,
 	response *structs.ResponseJoinChatRoom) error {
+	counterChat := 0
 	for _, chatRoom := range t.Chats {
 		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
 			arrayClient := AddClientToChatRoom(request.Client, chatRoom.Clients)
-			chatRoom.Clients = arrayClient
-			fmt.Println("ChatRoom Joined: "+chatRoom.NameChatRoom+", Client: "+request.Client.Username+", Number of Clients: ", len(chatRoom.Clients.Clients))
+			t.Chats[counterChat].Clients = arrayClient
+			fmt.Println("ChatRoom Joined: "+chatRoom.NameChatRoom+", Client: "+request.Client.Username+", Number of Clients: ", len(t.Chats[counterChat].Clients.Clients))
 			response.Status = "ok"
 			return nil
 		}
+		counterChat++
 	}
 	response.Status = "There is no chatRoom with that name"
 	return nil
@@ -165,21 +167,22 @@ func (t *ChatRooms) GetPreviousMessages(request *structs.RequestGetPreviousMessa
 //Leave ChatRoom
 func (t *ChatRooms) LeaveChatRoom(request *structs.RequestLeaveChatRoom,
 	response *structs.ResponseLeaveChatRoom) error {
-
 	//First we find the chatRoom that name
 	counterChat := 0
 	for _, chatRoom := range t.Chats {
-		if request.ChatRoom.NameChatRoom == chatRoom.NameChatRoom {
+		fmt.Println("request chat name: " + request.ChatRoom.NameChatRoom + " current chat: " + chatRoom.NameChatRoom)
 
+		if request.ChatRoom.NameChatRoom == chatRoom.NameChatRoom {
 			//We find the client we want to erase
+			//THE PROBLEM IS THAT THE USER IS NOT IN THE CHATROOM WHEN JOINED
 			counterClient := 0
 			for _, client := range chatRoom.Clients.Clients {
 				if request.Client.Username == client.Username {
 					fmt.Println("Client erased: " + client.Username)
-					DeleteClientFromChatRoom(chatRoom.Clients, counterClient)
-					t.Chats[counterChat].Clients = chatRoom.Clients
-					fmt.Print("ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
-					fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+					t.Chats[counterChat].Clients = DeleteClientFromChatRoom(t.Chats[counterChat].Clients, counterClient)
+					//t.Chats[counterChat].Clients = chatRoom.Clients
+					fmt.Println("ChatRoom: "+chatRoom.NameChatRoom+", Number of Clients: ", len(t.Chats[counterChat].Clients.Clients))
+					response.Status = "ok"
 					return nil
 				}
 			}
@@ -221,16 +224,14 @@ func (t *ChatRooms) GetChatRoom(request *structs.RequestGetChatRoom,
 //AddChat for append new chats
 func (chats *ChatRooms) AddChat(currentChat structs.ChatRoom) []structs.ChatRoom {
 	chats.Chats = append(chats.Chats, currentChat)
-	fmt.Println("Length Chat: ")
-	fmt.Printf("%d\n", len(chats.Chats))
+	fmt.Println("Length Chat: ", len(chats.Chats))
 	return chats.Chats
 }
 
 //AddClients for append new Clients
 func (clients *Clients) AddClient(currentClient structs.Client) []structs.Client {
 	clients.Clients = append(clients.Clients, currentClient)
-	fmt.Println("Length Clients: ")
-	fmt.Printf("%d\n", len(clients.Clients))
+	fmt.Println("Length Clients: ", len(clients.Clients))
 	return clients.Clients
 }
 
