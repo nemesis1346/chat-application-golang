@@ -39,6 +39,9 @@ func noEndpoint(w http.ResponseWriter, req *http.Request) {
 
 //CreateChatRoom
 func createChatRoom(w http.ResponseWriter, req *http.Request) {
+	req.ParseForm()
+	fmt.Println(req.Form)
+	fmt.Println(req.Form.Get("q"))
 	io.WriteString(w, "hello, world")
 
 }

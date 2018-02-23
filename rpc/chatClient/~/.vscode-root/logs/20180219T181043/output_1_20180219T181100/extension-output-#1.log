@@ -7505,3 +7505,562 @@ git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 git remote --verbose
 git show :rpc/chatServer/server.go
 git show :rpc/structs/structs.go
+git add -A -- .
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git commit --quiet --allow-empty-message --file -
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git config --get commit.template
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git push
+To https://github.com/nemesis1346/chatAssignment.git
+   cd8a727..5bb8065  master -> master
+
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/chatServer/server.go
+git show :rpc/structs/structs.go
+git check-ignore -z --stdin
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git check-ignore -z --stdin
+git show :http/chatServer/server.go
+git check-ignore -z --stdin
+git show :http/chatClient/client.go
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/chatServer/server.go
+git show :http/chatClient/client.go
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :http/chatServer/server.go
+git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git show :http/chatClient/client.go
+git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git fetch
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+
+git show :http/chatServer/server.go
+git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+
+git show :http/chatClient/client.go
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatClient/client.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git fetch
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :rpc/structs/structs.go
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+
+git show :http/chatServer/server.go
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git check-ignore -z --stdin
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose
+git show :http/structs/structs.go
+git check-ignore -z --stdin
+git status -z -u
+git symbolic-ref --short HEAD
+git rev-parse master
+git rev-parse --symbolic-full-name --abbrev-ref master@{u}
+git rev-list --left-right master...origin/master
+git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+git remote --verbose

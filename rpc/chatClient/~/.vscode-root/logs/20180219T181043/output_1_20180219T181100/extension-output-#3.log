@@ -6696,3 +6696,242 @@ Finished running tool: /usr/bin/go vet ./...
 
 Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
 
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:83: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:83: syntax error: non-declaration statement outside function body
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:108: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:112: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:75: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:76: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:78: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: keepLines
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: too many errors
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:108: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:112: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:75: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:76: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:78: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: err
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: resp
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: keepLines
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: too many errors
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: syntax error: unexpected :, expecting := or = or comma
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:74: syntax error: unexpected } after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:108: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:112: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:79: undefined: body
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: keepLines
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: body
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:108: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:112: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:80: undefined: keepLines
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:111: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:115: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:98: c.newRequest undefined (type ClientObject has no field or method newRequest)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:111: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:115: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:105: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:109: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:37: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:42: arg req.GetBody in Print call is a function value, not a function call
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:42: arg req.ParseForm in Print call is a function value, not a function call
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:64: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:64: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:42: arg req.ParseForm in Print call is a function value, not a function call
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:42: arg req.ParseForm in Print call is a function value, not a function call
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:64: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:42: req.ParseForm evaluated but not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:64: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:44: req.Form.q undefined (type url.Values has no field or method q)
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:9: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:12: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:15: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:16: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:22: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:25: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:29: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:33: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:36: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:40: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:43: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:47: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:50: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:54: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:57: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:61: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:65: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:69: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:74: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:79: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:85: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:90: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:94: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:99: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:101: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:103: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
