@@ -7,6 +7,8 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
+	"time"
 
 	"../structs"
 )
@@ -120,9 +122,7 @@ func listChatRoom(currentUser structs.Client) {
 	//We execute the call to the server
 	bListChatRoom := new(bytes.Buffer)
 	json.NewEncoder(bListChatRoom).Encode(requestListChatRoom)
-
 	resListChatRoom, _ := http.Post("http://localhost:8888/listChatRoom", "application/json; charset=utf-8", bListChatRoom)
-
 	var bodyListChatRoom structs.ResponseListChatRoom
 	json.NewDecoder(resListChatRoom.Body).Decode(&bodyListChatRoom)
 
@@ -146,7 +146,116 @@ func listChatRoom(currentUser structs.Client) {
 
 }
 func joinChatRoom(currentUser structs.Client) {
+	//First we show the chats available
+	listChatRoom(currentUser)
 
+	//Input of chatname
+	fmt.Print("Choose a name for joining chatRoom: ")
+
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
+
+	//First we get the chatRoom struct
+	requestGetChatRoom := structs.RequestGetChatRoom{
+		ChatRoomName: chatName,
+	}
+	//We execute the call to the server to get the chatRoom
+	bGetChatRoom := new(bytes.Buffer)
+	json.NewEncoder(bGetChatRoom).Encode(requestGetChatRoom)
+	resGetChatRoom, _ := http.Post("http://localhost:8888/getChatRoom", "application/json; charset=utf-8", bGetChatRoom)
+	var bodyGetChatRoom structs.ResponseGetChatRoom
+	json.NewDecoder(resGetChatRoom.Body).Decode(&bodyGetChatRoom)
+
+	if bodyGetChatRoom.Status == "ok" {
+		//Now we submit request for joining chatRoom
+		requestJoinChatRoom := structs.RequestJoinChatRoom{
+			Client:   currentUser,
+			ChatRoom: bodyGetChatRoom.ChatRoom,
+		}
+		//We make the call to join to the chat room
+		bJoinChatRoom := new(bytes.Buffer)
+		json.NewEncoder(bJoinChatRoom).Encode(requestJoinChatRoom)
+		resJoinChatRoom, _ := http.Post("http://localhost:8888/joinChatRoom", "application/json; charset=utf-8", bJoinChatRoom)
+		var bodyJoinChatRoom structs.ResponseJoinChatRoom
+		json.NewDecoder(resJoinChatRoom.Body).Decode(&bodyJoinChatRoom)
+
+		//we evaluate any error
+		if bodyJoinChatRoom.Status == "ok" {
+
+			//we print the client joining
+			fmt.Println()
+			fmt.Println("Client " + currentUser.Username + " joined to " + requestJoinChatRoom.ChatRoom.NameChatRoom)
+			fmt.Println()
+
+			//Now we get the rest of the messages
+			fmt.Println("Previous messages from " + requestJoinChatRoom.ChatRoom.NameChatRoom + " ...")
+			requestGetPreviousMessages := structs.RequestGetPreviousMessages{
+				ChatRoom: requestJoinChatRoom.ChatRoom,
+				Client:   currentUser,
+			}
+			//We make the call for the previous messages
+			bPreviousMessages := new(bytes.Buffer)
+			json.NewEncoder(bPreviousMessages).Encode(requestGetPreviousMessages)
+			resPreviousMessages, _ := http.Post("http://localhost:8888/getPreviousMessages", "application/json; charset=utf-8", bPreviousMessages)
+			var bodyPreviousMessages structs.ResponseGetPreviousMessages
+			json.NewDecoder(resPreviousMessages.Body).Decode(&bodyPreviousMessages)
+
+			previousMessages := bodyPreviousMessages.Messages.Messages
+			for _, message := range previousMessages {
+				fmt.Println(message.Username + ": " + message.Content)
+			}
+			//Now we start chating
+			fmt.Println("Start chating.....")
+			fmt.Println()
+			//last message time
+			var lastMessageTime time.Time
+			lastMessageTime = time.Now()
+			for {
+				readerMessage := bufio.NewReader(os.Stdin)
+				messageContent, _ := readerMessage.ReadString('\n')
+				messageContent = messageContent[:len(messageContent)]
+				//First we detect the command exit
+				if strings.TrimRight(messageContent, "\n") == "exit" {
+					leaveChatRoom(currentUser, bodyGetChatRoom.ChatRoom.NameChatRoom)
+					break
+				} else {
+					//We submit request for the message
+					//current message time
+					currentTime := time.Now()
+					requestSaveMessage := structs.RequestSaveMessage{
+						Client:   currentUser,
+						Content:  messageContent,
+						ChatRoom: bodyGetChatRoom.ChatRoom,
+						Time:     currentTime,
+					}
+					//we make the call for saving messages
+					bSaveMessage := new(bytes.Buffer)
+					json.NewEncoder(bSaveMessage).Encode(requestSaveMessage)
+					resSaveMessage, _ := http.Post("http://localhost:8888/saveMessage", "application/json; charset=utf-8", bSaveMessage)
+					var bodySaveMessage structs.ResponseSaveMessage
+					json.NewDecoder(resSaveMessage.Body).Decode(&bodySaveMessage)
+
+					if bodySaveMessage.Status == "ok" {
+						//We evaluate the messages according with the time
+						for _, messageResult := range bodySaveMessage.Messages.Messages {
+							if lastMessageTime.Before(messageResult.Time) {
+								fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
+								fmt.Println()
+							}
+						}
+					} else {
+						fmt.Println("There was an error in saving message")
+					}
+					lastMessageTime = bodySaveMessage.Time
+				}
+			}
+		} else {
+			fmt.Println("There was some error in join chat room")
+		}
+	} else {
+		fmt.Println("There was some error in get chat room")
+	}
 }
 func leaveChatRoom(currentUser structs.Client, chatName string) {
 
