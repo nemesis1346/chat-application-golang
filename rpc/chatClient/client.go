@@ -73,8 +73,6 @@ func main() {
 				listChatRoom(client, currentGlobalUser)
 			case '3':
 				joinChatRoom(client, currentGlobalUser)
-				// case '4':
-				// 	leaveChatRoom(client, currentGlobalUser)
 			}
 		}
 	} else {

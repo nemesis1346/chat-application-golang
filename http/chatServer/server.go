@@ -18,6 +18,7 @@ type test int
 //type ChatRooms structs.ChatRooms
 
 var chatRooms structs.ChatRooms
+var clients structs.Clients
 
 func main() {
 
@@ -25,6 +26,7 @@ func main() {
 	h := http.NewServeMux()
 
 	//DEFINITION OF METHODS
+	h.HandleFunc("/createClient", createClient)
 	h.HandleFunc("/createChatRoom", createChatRoom)
 	h.HandleFunc("/listChatRoom", listChatRoom)
 	h.HandleFunc("/joinChatRoom", jointChatRoom)
@@ -44,29 +46,66 @@ func noEndpoint(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintln(w, "You are lost, go home")
 }
 
-//CreateChatRoom
-func createChatRoom(w http.ResponseWriter, req *http.Request) {
-	//First We get the parameters
-	var request structs.RequestCreateChatRoom
+//Create client
+func createClient(w http.ResponseWriter, req *http.Request) {
+	fmt.Println("entro aqui")
+	//First we get the parameters and parse the  request
+	var requestCreateClient structs.RequestCreateClient
 	if req.Body == nil {
 		http.Error(w, "Please send a request body", 400)
 		return
 	}
-	err := json.NewDecoder(req.Body).Decode(&request)
+	err := json.NewDecoder(req.Body).Decode(&requestCreateClient)
+	if err != nil {
+		fmt.Println(err.Error())
+		http.Error(w, err.Error(), 400)
+		return
+	}
+
+	var responseCreateClient structs.ResponseCreateClient
+
+	//We execute the creation of client
+	for _, client := range clients.Clients {
+		if requestCreateClient.Username == client.Username {
+			fmt.Println("Client " + requestCreateClient.Username + " already exists")
+			responseCreateClient.Status = "Failed, the Client " + requestCreateClient.Username + " already exists"
+		}
+	}
+	currentClient := structs.Client{
+		Username: requestCreateClient.Username,
+		Id:       ksuid.New().String(),
+	}
+	clients.Clients = AddClient(currentClient, clients)
+	fmt.Println("Client: " + currentClient.Username + " ID: " + currentClient.Id + " created...")
+	responseCreateClient.Status = "ok"
+	responseCreateClient.Client = currentClient
+
+	//We send the response back
+	json.NewEncoder(w).Encode(responseCreateClient)
+
+}
+
+//CreateChatRoom
+func createChatRoom(w http.ResponseWriter, req *http.Request) {
+	//First We get the parameters
+	var requestCreateChatRoom structs.RequestCreateChatRoom
+	if req.Body == nil {
+		http.Error(w, "Please send a request body", 400)
+		return
+	}
+	err := json.NewDecoder(req.Body).Decode(&requestCreateChatRoom)
 	if err != nil {
 		http.Error(w, err.Error(), 400)
 		return
 	}
-	fmt.Println(request.NameChatRoom)
-
 	//We execute the creation of the chat room
 	for _, chatRoom := range chatRooms.Chats {
-		if request.NameChatRoom == chatRoom.NameChatRoom {
-			fmt.Println("ChatRoom " + request.NameChatRoom + " already exists")
+		if requestCreateChatRoom.NameChatRoom == chatRoom.NameChatRoom {
+			fmt.Println("ChatRoom " + requestCreateChatRoom.NameChatRoom + " already exists")
 		}
 	}
 	currentChatRoom := structs.ChatRoom{
-		NameChatRoom: request.NameChatRoom,
+		NameChatRoom: requestCreateChatRoom.NameChatRoom,
 		Id:           ksuid.New().String(),
 		Clients:      structs.Clients{},
 	}
@@ -74,11 +113,11 @@ func createChatRoom(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("ChatRoom: " + currentChatRoom.NameChatRoom + " ID: " + currentChatRoom.Id + " created...")
 
 	//Now we respond to the client
-	response := structs.ResponseCreateChatRoom{
+	responseCreateChatRoom := structs.ResponseCreateChatRoom{
 		Status:   "ok",
 		ChatRoom: currentChatRoom,
 	}
-	json.NewEncoder(w).Encode(response)
+	json.NewEncoder(w).Encode(responseCreateChatRoom)
 
 }
 

@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"net/url"
 	"os"
 
 	"../structs"
@@ -24,44 +23,66 @@ func main() {
 		fmt.Println(err)
 	}
 	inputUserObject = inputUserObject[:len(inputUserObject)-1]
-	userObject := UsernameStruct{
+
+	//Now we create the client
+	requestCreateClient := structs.RequestCreateClient{
 		Username: string(inputUserObject)}
 
-	for {
+	bCreateClient := new(bytes.Buffer)
+	json.NewEncoder(bCreateClient).Encode(requestCreateClient)
 
-		//Introduce options
-		option := bufio.NewReader(os.Stdin)
+	resCreateClient, errorResCreateClient := http.Post("http://localhost:8888/createClient", "application/json; charset=utf-8", bCreateClient)
+	if errorResCreateClient != nil {
+		fmt.Println(errorResCreateClient)
+	}
+	var bodyCreateClient structs.ResponseCreateClient
+	fmt.Println(resCreateClient)
+	json.NewDecoder(resCreateClient.Body).Decode(&bodyCreateClient)
+	fmt.Println(bodyCreateClient.Status)
 
-		//Interface for options of the client
-		fmt.Println("Choose an action:")
-		fmt.Println("1.Create a chatroom")
-		fmt.Println("2.List all existing chatrooms ")
-		fmt.Println("3.Join a chatroom ")
-		fmt.Println("4.Leave a chatroom \n")
+	//If the call was successful and the client is created, we start chosing options
+	if bodyCreateClient.Status == "ok" {
+		fmt.Println()
+		fmt.Println("----User: " + bodyCreateClient.Client.Username + " created!!")
+		fmt.Println()
+		currentGlobalUser := bodyCreateClient.Client
+		fmt.Println("Current User: " + currentGlobalUser.Username + " Id: " + currentGlobalUser.Id)
 
-		fmt.Print("Choose option: ")
-		//reading the input
-		input, _, err := option.ReadRune()
-		if err != nil {
-			fmt.Println(err)
+		for {
+			//Introduce options
+			option := bufio.NewReader(os.Stdin)
+
+			//Interface for options of the client
+			fmt.Println("Choose an action:")
+			fmt.Println("1.Create a chatroom")
+			fmt.Println("2.List all existing chatrooms ")
+			fmt.Println("3.Join a chatroom ")
+			fmt.Println("4.Leave a chatroom \n")
+
+			fmt.Print("Choose option: ")
+			//reading the input
+			input, _, err := option.ReadRune()
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			//OPTIONS
+			switch input {
+			case '1':
+				createChatRoom()
+			case '2':
+				listChatRoom(currentGlobalUser)
+			case '3':
+				joinChatRoom(currentGlobalUser)
+			}
 		}
-
-		//OPTIONS
-		switch input {
-		case '1':
-			createChatRoom(userObject)
-		case '2':
-			listChatRoom(userObject)
-		case '3':
-			joinChatRoom(userObject)
-		case '4':
-			leaveChatRoom(userObject)
-		}
+	} else {
+		fmt.Println("There was some error in client creation")
 	}
 
 }
 
-func createChatRoom(userObject UsernameStruct) {
+func createChatRoom() {
 	//Input of chatname
 	fmt.Print("Choose a name for the chatRoom: ")
 
@@ -69,51 +90,35 @@ func createChatRoom(userObject UsernameStruct) {
 	chatName, _ := reader.ReadString('\n')
 	chatName = chatName[:len(chatName)-1]
 
-	request := structs.RequestCreateChatRoom{
+	requestCreateChatRoom := structs.RequestCreateChatRoom{
 		NameChatRoom: string(chatName)}
 
-	b := new(bytes.Buffer)
-	json.NewEncoder(b).Encode(request)
+	bCreateChatRoom := new(bytes.Buffer)
+	json.NewEncoder(bCreateChatRoom).Encode(requestCreateChatRoom)
 
-	res, _ := http.Post("http://localhost:8888/createChatRoom", "application/json; charset=utf-8", b)
+	resCreateChatRoom, _ := http.Post("http://localhost:8888/createChatRoom", "application/json; charset=utf-8", bCreateChatRoom)
 
-	var body structs.ResponseCreateChatRoom
-	json.NewDecoder(res.Body).Decode(&body)
-	fmt.Println(body.ChatRoom.NameChatRoom)
+	var bodyCreateChatRoom structs.ResponseCreateChatRoom
+	json.NewDecoder(resCreateChatRoom.Body).Decode(&bodyCreateChatRoom)
+
+	if bodyCreateChatRoom.Status == "ok" {
+		fmt.Println()
+		fmt.Println("----ChatCreated: " + bodyCreateChatRoom.Status)
+		fmt.Println("NameChatRoom: " + bodyCreateChatRoom.ChatRoom.NameChatRoom)
+		fmt.Println()
+	} else {
+		fmt.Println()
+		fmt.Println("----Error: " + bodyCreateChatRoom.Status)
+		fmt.Println()
+	}
 }
 
-func listChatRoom(userObject UsernameStruct) {
-	//HTTP POST OR GET
-	// resp, err := http.Get("http://localhost:8888/endpoint1")
-	// if err != nil {
-	// 	handle error
-	// }
-	// defer resp.Body.Close()
-
-	// body, err := ioutil.ReadAll(resp.Body)
-	// fmt.Println(keepLines(string(body), 3))
-	// fmt.Println("----LIST CHAT ROOM")
-	// var c ClientObject
-	// req, err := c.newRequest("GET", "/listChatRoom", nil)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-	// fmt.Println(req)
-}
-func joinChatRoom(userObject UsernameStruct) {
+func listChatRoom(currentUser structs.Client) {
 
 }
-func leaveChatRoom(userObject UsernameStruct) {
+func joinChatRoom(currentUser structs.Client) {
 
 }
+func leaveChatRoom(currentUser structs.Client, chatName string) {
 
-type UsernameStruct struct {
-	Username string `json:"username"`
-}
-
-type ClientObject struct {
-	BaseURL   *url.URL
-	UserAgent string
-
-	httpClient *http.Client
 }
