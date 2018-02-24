@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 
@@ -123,7 +122,31 @@ func createChatRoom(w http.ResponseWriter, req *http.Request) {
 
 //ListChatRoom
 func listChatRoom(w http.ResponseWriter, req *http.Request) {
-	io.WriteString(w, "hello, world")
+	//First We get the parameters
+	var requestListChatRoom structs.RequestListChatRoom
+	if req.Body == nil {
+		http.Error(w, "Please send a request body", 400)
+		return
+	}
+	err := json.NewDecoder(req.Body).Decode(&requestListChatRoom)
+	if err != nil {
+		http.Error(w, err.Error(), 400)
+		return
+	}
+	//We execute the creation of the chat room
+
+	for _, chatRoom := range chatRooms.Chats {
+		fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
+		fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+		fmt.Println("")
+	}
+
+	//we respond to the clinet
+	responseListChatRoom := structs.ResponseListChatRoom{
+		ChatRooms: chatRooms,
+		Status:    "ok",
+	}
+	json.NewEncoder(w).Encode(responseListChatRoom)
 
 }
 

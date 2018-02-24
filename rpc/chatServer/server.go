@@ -75,11 +75,6 @@ func (t *ChatRooms) ListChatRoom(request *structs.RequestListChatRoom,
 	response.Status = "ok"
 	return nil
 }
-func (t *ChatRooms) ListChatRoomPrint() {
-	for _, chatRoom := range t.Chats {
-		fmt.Println(chatRoom.NameChatRoom)
-	}
-}
 
 //CreateClient
 func (t *Clients) CreateClient(request *structs.RequestCreateClient,

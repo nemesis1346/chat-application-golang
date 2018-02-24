@@ -114,6 +114,35 @@ func createChatRoom() {
 }
 
 func listChatRoom(currentUser structs.Client) {
+	requestListChatRoom := structs.RequestListChatRoom{
+		Username: string(currentUser.Username)}
+
+	//We execute the call to the server
+	bListChatRoom := new(bytes.Buffer)
+	json.NewEncoder(bListChatRoom).Encode(requestListChatRoom)
+
+	resListChatRoom, _ := http.Post("http://localhost:8888/listChatRoom", "application/json; charset=utf-8", bListChatRoom)
+
+	var bodyListChatRoom structs.ResponseListChatRoom
+	json.NewDecoder(resListChatRoom.Body).Decode(&bodyListChatRoom)
+
+	fmt.Println()
+	fmt.Println("Chats available .....")
+	fmt.Println()
+
+	resultArray := bodyListChatRoom.ChatRooms.Chats
+
+	//Now we print the result
+	if len(resultArray) > 0 {
+		for _, chatRoom := range resultArray {
+			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + ", Number of Clients: ")
+			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+			fmt.Println("")
+		}
+	} else {
+		fmt.Println("There is no chats available")
+		fmt.Println()
+	}
 
 }
 func joinChatRoom(currentUser structs.Client) {
