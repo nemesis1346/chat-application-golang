@@ -2,6 +2,12 @@ package structs
 
 import "time"
 
+type BodyHttp struct {
+	// httpbin.org sends back key/value pairs, no map[string][]string
+	Headers map[string]string `json:"headers"`
+	Origin  string            `json:"origin"`
+}
+
 type ChatRooms struct {
 	Chats []ChatRoom
 }
@@ -27,8 +33,8 @@ type RequestCreateChatRoom struct {
 }
 
 type ResponseCreateChatRoom struct {
-	Status   string
-	ChatRoom ChatRoom
+	Status   string   `json:"Status"`
+	ChatRoom ChatRoom `json:"ChatRoom"`
 }
 type RequestListChatRoom struct {
 	Username string

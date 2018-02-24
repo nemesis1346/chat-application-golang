@@ -2,11 +2,14 @@ package main
 
 import (
 	"bufio"
+	"bytes"
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 	"os"
+
+	"../structs"
 )
 
 func main() {
@@ -59,22 +62,24 @@ func main() {
 }
 
 func createChatRoom(userObject UsernameStruct) {
-	fmt.Println("----CREATE CHAT ROOM")
-	// var c ClientObject
-	// req, err := c.newRequest("POST", "/createChatRoom", nil)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-	// fmt.Println(req)
+	//Input of chatname
+	fmt.Print("Choose a name for the chatRoom: ")
 
-	resp, err := http.PostForm("http://localhost:8888/createChatRoom",
-		url.Values{"q": {"github"}})
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Println("post:\n", string(body))
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
+
+	request := structs.RequestCreateChatRoom{
+		NameChatRoom: string(chatName)}
+
+	b := new(bytes.Buffer)
+	json.NewEncoder(b).Encode(request)
+
+	res, _ := http.Post("http://localhost:8888/createChatRoom", "application/json; charset=utf-8", b)
+
+	var body structs.ResponseCreateChatRoom
+	json.NewDecoder(res.Body).Decode(&body)
+	fmt.Println(body.ChatRoom.NameChatRoom)
 }
 
 func listChatRoom(userObject UsernameStruct) {

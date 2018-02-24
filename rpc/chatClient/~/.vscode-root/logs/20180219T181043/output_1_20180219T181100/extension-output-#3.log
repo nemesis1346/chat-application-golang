@@ -6935,3 +6935,1054 @@ Finished running tool: /usr/bin/go vet ./...
 
 Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
 
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:15: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:15: undefined: structs
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:17: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:69: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:24: undefined: createChatRoom
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:25: undefined: createChatRoom
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:17: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:24: undefined: createChatRoom
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:17: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:69: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:20: chatRooms declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:9: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:70: comment on exported function TestNumberDumper should be of the form "TestNumberDumper ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:41: chatRooms.Chats undefined (type chatRooms has no method Chats)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:104: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:108: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:70: cannot use chatName (type string) as type []string in map value
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:37: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:70: syntax error: unexpected ), expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:73: syntax error: unexpected newline, expecting comma or )
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:99: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:103: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:37: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:105: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:109: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:37: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: syntax error: unexpected ), expecting }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:94: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:88: undefined: ChatRooms
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported method Clients.AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:89: undefined: ChatRooms
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:54: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:54: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:54: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: type chatRooms is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:54: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: type chatRooms is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: should not use dot imports
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:8: imported and not used: "testing"
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: chatRooms.Chats undefined (type chatRooms has no method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:19: cannot use new([]structs.ChatRoom) (type *[]structs.ChatRoom) as type []structs.ChatRoom in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: chatRooms.Chats undefined (type chatRooms has no method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:19: syntax error: unexpected ], expecting expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:20: syntax error: unexpected newline, expecting ]
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:21: syntax error: unexpected h at end of statement
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: chatRooms.Chats undefined (type chatRooms has no method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: type chatRooms is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: chatRooms.Chats undefined (type chatRooms has no method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: type chatRooms is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:53: chatRooms.Chats undefined (type chatRooms has no method Chats)
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: type chatRooms is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:15: syntax error: unexpected ( after top level declaration
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:95: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:102: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:65: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:90: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:97: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:97: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:94: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:55: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:56: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:60: undefined: request
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:61: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:64: undefined: t
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:66: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:67: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:89: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:96: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:96: too many errors
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:109: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:113: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:69: undefined: structs
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:81: undefined: re
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:36: Println call ends with newline
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:111: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:115: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:38: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:83: undefined: re
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: exported type BodyHttp should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: type BodyHttp should be BodyHTTP
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:11: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:15: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:18: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:21: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:22: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:28: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:31: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:35: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:39: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:42: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:46: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:49: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:53: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:56: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:60: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:63: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:67: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:71: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:75: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:80: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:85: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:91: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:96: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:100: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:105: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:107: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:109: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:118: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:122: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:77: undefined: u
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:121: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:125: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:77: undefined: u
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:121: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:125: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:121: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:125: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:48: undefined: r
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:52: undefined: r
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:104: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: first argument to append must be slice; have struct { Clients []structs.Client }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:112: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:113: undefined: result
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:104: first argument to append must be slice; have struct { Chats []structs.ChatRoom }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: first argument to append must be slice; have struct { Clients []structs.Client }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:112: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:113: undefined: result
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: first argument to append must be slice; have struct { Clients []structs.Client }
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:112: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:113: undefined: result
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:111: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:112: undefined: result
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:113: undefined: result
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:57: response.Nam undefined (type structs.RequestCreateChatRoom has no field or method Nam)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:109: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:116: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:123: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:130: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:62: undefined: response
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:63: too many arguments to return
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:68: undefined: ksuid
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: chatRooms.AddChat undefined (type *structs.ChatRooms has no field or method AddChat)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: chatRooms.AddChat undefined (type *structs.ChatRooms has no field or method AddChat)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: chatRooms.AddChat undefined (type *structs.ChatRooms has no field or method AddChat)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms.Chats (type []structs.ChatRoom) as type structs.ChatRoom in argument to AddChat
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use currentChatRoom (type structs.ChatRoom) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms.Chats (type []structs.ChatRoom) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms.Chats) (type []structs.ChatRoom) as type *structs.ChatRooms in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms.Chats (type []structs.ChatRoom) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms (type *structs.ChatRooms) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type *structs.ChatRooms in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms (type *structs.ChatRooms) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, *chatRooms) (type []structs.ChatRoom) as type *structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type *structs.ChatRooms in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use chatRooms (type *structs.ChatRooms) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: type structs.ChatRooms is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:19: syntax error: unexpected newline, expecting comma or }
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:19: undefined: structs.Chat
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:74: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:19: type []structs.ChatRoom is not an expression
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:74: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:101: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:71: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:103: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:110: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:117: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:124: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:103: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:110: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:117: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:124: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type ChatRooms in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use chatRooms (type ChatRooms) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:18: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:103: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:110: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:117: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:124: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type ChatRooms in assignment
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use chatRooms (type ChatRooms) as type structs.ChatRooms in argument to AddChat
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:103: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:110: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:117: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:124: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:73: cannot use AddChat(currentChatRoom, chatRooms) (type []structs.ChatRoom) as type structs.ChatRooms in assignment
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:103: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:110: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:117: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:124: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:77: response declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:106: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:113: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:120: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:127: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:80: response declared and not used
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:108: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:115: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:122: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:129: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:81: type structs.ResponseCreateChatRoom is not an expression
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: exported type BodyHttp should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: type BodyHttp should be BodyHTTP
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:11: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:15: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:18: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:21: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:22: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:28: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:31: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:35: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:39: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:42: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:46: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:49: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:53: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:56: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:60: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:63: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:67: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:71: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:75: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:80: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:85: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:91: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:96: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:100: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:105: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:107: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:109: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:82: body.Status undefined (type structs.BodyHttp has no field or method Status)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:82: body.Chats undefined (type structs.ResponseCreateChatRoom has no field or method Chats)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:82: body.NameChatRoom undefined (type structs.ResponseCreateChatRoom has no field or method NameChatRoom)
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:120: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:124: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:110: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:114: exported type ClientObject should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatClient/client.go:40: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
