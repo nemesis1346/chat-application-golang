@@ -442,8 +442,23 @@
     "pickerWorkingDir": "/home/nemesis1346/Documents/UniversityProjects",
     "openedPathsList": {
         "workspaces": [
+            "/home/nemesis1346/Documents/UniversityProjects/chatAssignment",
             "/home/nemesis1346/Documents/UniversityProjects/chatAssignment"
         ],
         "files": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderPath": "/home/nemesis1346/Documents/UniversityProjects/chatAssignment",
+            "backupPath": "/home/nemesis1346/Documents/UniversityProjects/chatAssignment/rpc/chatClient/~/.vscode-root/Backups/0c947ade2a0dd789082895a047c76f26",
+            "uiState": {
+                "mode": 0,
+                "x": 65,
+                "y": 24,
+                "width": 1301,
+                "height": 744
+            }
+        }
     }
 }

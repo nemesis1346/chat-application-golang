@@ -39,8 +39,6 @@ func main() {
 	//LISTEN AND ERRORS
 	err := http.ListenAndServe(":8888", h)
 	log.Fatal(err)
-
-	//test := TestNumberDumper(1)
 }
 
 //Endpoint nil

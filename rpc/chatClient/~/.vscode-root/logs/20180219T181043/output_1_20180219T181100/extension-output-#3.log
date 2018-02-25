@@ -9198,3 +9198,166 @@ Finished running tool: /usr/bin/go vet ./...
 
 Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
 
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:158: exported type UsernameStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:162: exported type OptionMessageClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:168: exported type ChatStruct should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:172: exported type Client should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatClient/client.go:35: Println call ends with newline
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:77: syntax error: unexpected createChatRoomServer, expecting (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:84: syntax error: unexpected printSlice, expecting (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:89: syntax error: unexpected listChatRoomServer, expecting (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:104: syntax error: unexpected joinChatRoomServer, expecting (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:159: syntax error: unexpected leaveChatRoomServer, expecting (
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:182: syntax error: unexpected { at end of statement
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:188: syntax error: unexpected case, expecting }
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:76: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:163: exported type OptionMessageServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:169: exported type ClientServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:175: exported type ChatRoomManagerServer should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:9: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:12: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:15: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:16: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:22: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:25: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:29: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:33: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:36: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:40: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:43: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:47: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:50: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:54: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:57: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:61: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:65: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:69: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:74: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:79: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:85: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:90: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:94: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:99: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:101: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:103: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:5: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:9: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:12: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:15: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:16: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:22: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:25: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:29: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:33: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:36: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:40: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:43: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:47: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:50: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:54: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:57: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:61: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:65: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:69: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:74: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:79: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:85: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:90: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:94: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:99: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:101: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/structs/structs.go:103: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:5: exported type ChatRooms should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:9: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:12: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:15: exported type Message should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:16: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:22: exported type Messages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:25: exported type RequestCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:29: exported type ResponseCreateChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:33: exported type RequestListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:36: exported type ResponseListChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:40: exported type RequestCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:43: exported type ResponseCreateClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:47: exported type RequestGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:50: exported type ResponseGetClient should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:54: exported type RequestGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:57: exported type ResponseGetChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:61: exported type RequestJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:65: exported type ResponseJoinChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:69: exported type RequestLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:74: exported type ResponseLeaveChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:79: exported type RequestSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:85: exported type ResponseSaveMessage should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:90: exported type RequestGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:94: exported type ResponseGetPreviousMessages should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:99: exported type Client should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:101: struct field Id should be ID
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/structs/structs.go:103: exported type Clients should have comment or be unexported
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:345: comment on exported function AddClient should be of the form "AddClient ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:352: comment on exported function AddClientToChatRoom should be of the form "AddClientToChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:359: comment on exported function AddMessagesInChatRoom should be of the form "AddMessagesInChatRoom ..."
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/http/chatServer/server.go:366: comment on exported function DeleteClientFromChatRoom should be of the form "DeleteClientFromChatRoom ..."
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:76: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:163: exported type OptionMessageServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:169: exported type ClientServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:175: exported type ChatRoomManagerServer should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+
+Finished running tool: /usr/lib/go-1.6/bin/bin/golint
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:75: exported type ChatRoom should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:162: exported type OptionMessageServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:168: exported type ClientServer should have comment or be unexported
+/home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go:174: exported type ChatRoomManagerServer should have comment or be unexported
+
+Finished running tool: /usr/bin/go vet ./...
+
+Finished running tool: /usr/bin/go build -i -o /tmp/go-code-check .
+

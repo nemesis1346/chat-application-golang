@@ -2,11 +2,14 @@ package main
 
 import (
 	"bufio"
+	"encoding/gob"
 	"encoding/json"
 	"fmt"
 	"net"
 	"os"
 	"strings"
+
+	"../structs"
 )
 
 func main() {
@@ -19,45 +22,88 @@ func main() {
 		fmt.Println(err)
 	}
 	inputUserObject = inputUserObject[:len(inputUserObject)-1]
-	userObject := UsernameStruct{
-		Username: string(inputUserObject)}
+	// userObject := UsernameStruct{
+	// 	Username: string(inputUserObject)}
 
-	for {
-
-		//Introduce options
-		option := bufio.NewReader(os.Stdin)
-
-		//Interface for options of the client
-		fmt.Println("Choose an action:")
-		fmt.Println("1.Create a chatroom")
-		fmt.Println("2.List all existing chatrooms ")
-		fmt.Println("3.Join a chatroom ")
-		fmt.Println("4.Leave a chatroom \n")
-
-		fmt.Print("Choose option: ")
-		//reading the input
-		input, _, err := option.ReadRune()
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		//TODO PORT MUST BE DYNAMICALLY ADDED
-		connection, err := net.Dial("tcp", "localhost:12346")
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		switch input {
-		case '1':
-			createChatRoom(connection, userObject)
-		case '2':
-			listChatRoom(connection, userObject)
-		case '3':
-			joinChatRoom(connection, userObject)
-		case '4':
-			leaveChatRoom(connection, userObject)
-		}
+	//Test for tcp
+	optionMessage := structs.OptionMessage{
+		Option: "1",
+		Status: "ok",
 	}
+	//optBinBuffer := new(bytes.Buffer)
+	connOption, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	gobRequestOption := gob.NewEncoder(connOption)
+
+	gobRequestOption.Encode(optionMessage)
+
+	// create a temp buffer
+	// tmp := make([]byte, 500)
+
+	// for {
+
+	// 	_, err = connOption.Read(tmp)
+	// 	fmt.Println(tmp)
+	// 	tmpbuff := bytes.NewBuffer(tmp)
+	// 	fmt.Println(tmpbuff)
+
+	// 	tmpstruct := new(structs.OptionMessage)
+
+	// 	// creates a decoder object
+	// 	gobobj := gob.NewDecoder(connOption)
+
+	// 	// decodes buffer and unmarshals it into a Message struct
+	// 	gobobj.Decode(tmpstruct)
+
+	// 	// lets print out!
+	// 	fmt.Println(tmpstruct)
+	// }
+	//bytesBeingSent := optBinBuffer.Bytes()
+	//bytesBeingSent = bytesBeingSent[:len(bytesBeingSent)-1]
+	//fmt.Println(bytesBeingSent)
+
+	//bytesBeingSent = bytes.Trim(bytesBeingSent, "\x00")
+	//connOption.Write(bytesBeingSent)
+
+	// for {
+
+	// 	//Introduce options
+	// 	option := bufio.NewReader(os.Stdin)
+
+	// 	//Interface for options of the client
+	// 	fmt.Println("Choose an action:")
+	// 	fmt.Println("1.Create a chatroom")
+	// 	fmt.Println("2.List all existing chatrooms ")
+	// 	fmt.Println("3.Join a chatroom ")
+	// 	fmt.Println("4.Leave a chatroom \n")
+
+	// 	fmt.Print("Choose option: ")
+	// 	//reading the input
+	// 	input, _, err := option.ReadRune()
+	// 	if err != nil {
+	// 		fmt.Println(err)
+	// 	}
+
+	// 	//TODO PORT MUST BE DYNAMICALLY ADDED
+	// 	connection, err := net.Dial("tcp", "localhost:12346")
+	// 	if err != nil {
+	// 		fmt.Println(err)
+	// 	}
+
+	// 	switch input {
+	// 	case '1':
+	// 		createChatRoom(connection, userObject)
+	// 	case '2':
+	// 		listChatRoom(connection, userObject)
+	// 	case '3':
+	// 		joinChatRoom(connection, userObject)
+	// 	case '4':
+	// 		leaveChatRoom(connection, userObject)
+	// 	}
+	// }
 
 }
 
@@ -85,7 +131,7 @@ func createChatRoom(conn net.Conn, userObject UsernameStruct) {
 	if err != nil {
 		fmt.Println(err)
 	}
-
+	fmt.Println("sending: " + string(message))
 	conn.Write([]byte(strings.TrimRight(string(message), "\n")))
 }
 
