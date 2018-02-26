@@ -1,3 +1,4 @@
+file:///home/nemesis1346/Documents/UniversityProjects/chatAssignment/tcp/chatServer/server.go
 package main
 
 import (
@@ -57,7 +58,7 @@ func main() {
 		case "3":
 			joinChatRoom(conn)
 		}
-		conn.Close()
+		
 	}
 	conn.Close()
 }
