@@ -12,11 +12,7 @@ import (
 	"../structs"
 )
 
-//type message struct{}
-type test int
-
 //type ChatRooms structs.ChatRooms
-
 var chatRooms structs.ChatRooms
 var clients structs.Clients
 
