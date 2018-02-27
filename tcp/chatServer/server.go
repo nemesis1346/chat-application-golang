@@ -15,31 +15,17 @@ var chatRooms structs.ChatRooms
 var clients structs.Clients
 
 func main() {
+	chatRooms = structs.ChatRooms{}
+	clients = structs.Clients{}
+	clients.Clients = []structs.Client{}
 
 	//We create a listener
 	fmt.Println("Starting server...")
 	fmt.Println("-----------------------")
-	listener, err := net.Listen("tcp", ":12346/createClient")
+	listener, err := net.Listen("tcp", ":12346")
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	//now we create new client
-
-	//We create a buffer
-	// tmp := make([]byte, 1024)
-	// fmt.Println(tmp)
-
-	// _, err = conn.Read(tmp)
-	// fmt.Println(tmp)
-
-	//We take off extra zeros
-	//tmp = bytes.Trim(tmp, "\x00")
-
-	//fmt.Println(tmp)
-
-	//Temporal buffer for incomming messages
-	//tmpBuffer := bytes.NewBuffer(tmp)
 
 	//Incomming option messages
 	for {
@@ -53,45 +39,60 @@ func main() {
 		//create a decoder object
 		gobRequestOption := gob.NewDecoder(conn)
 		error := gobRequestOption.Decode(requestOption)
-		fmt.Println(error)
-		fmt.Println(requestOption.Option)
+		if error != nil {
+			fmt.Println(error)
+		}
+		fmt.Println("Option: " + requestOption.Option)
 		switch requestOption.Option {
 		case "1":
-			createChatRoom(conn)
+			createClient(conn, requestOption)
 		case "2":
-			listChatRoom(conn)
+			createChatRoom(conn)
 		case "3":
+			listChatRoom(conn)
+		case "4":
 			joinChatRoom(conn)
 		}
-		conn.Close()
 	}
+
 }
 
-func createClient(conn net.Conn, requestCreateClient structs.Client) {
-	var responseCreateClient structs.ResponseCreateClient
+func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
+
+	flagExists := false
+	username := requestCreateClient.Data["Username"]
 
 	//We execute the creation of client
 	for _, client := range clients.Clients {
-		if requestCreateClient.Username == client.Username {
-			fmt.Println("Client " + requestCreateClient.Username + " already exists")
-			responseCreateClient.Status = "Failed, the Client " + requestCreateClient.Username + " already exists"
+		if username == client.Username {
+			flagExists = true
 		}
-		currentClient := structs.Client{
-			Username: requestCreateClient.Username,
-			Id:       ksuid.New().String(),
-		}
-		clients.Clients = AddClient(currentClient, clients)
-		fmt.Println("Client: " + currentClient.Username + " ID: " + currentClient.Id + " created...")
-		responseCreateClient.Status = "ok"
-		responseCreateClient.Client = currentClient
 	}
+	currentClient := structs.Client{
+		Username: username,
+		Id:       ksuid.New().String(),
+	}
+	clients.Clients = AddClient(currentClient, clients)
+	fmt.Println("Client: " + currentClient.Username + " ID: " + currentClient.Id + " created...")
+
+	//we send respond back
+	mapResCreateClient := make(map[string]string)
+	if !flagExists {
+		mapResCreateClient["Status"] = "ok"
+	} else {
+		mapResCreateClient["Status"] = "Client already exists"
+	}
+	responseCreateClient := structs.OptionMessage{
+		Option: "response",
+		Data:   mapResCreateClient,
+	}
+	gobResCreateClient := gob.NewEncoder(conn)
+	gobResCreateClient.Encode(responseCreateClient)
 
 }
 
 func createChatRoom(conn net.Conn) {
-
-	fmt.Print("create chat room")
-	conn.Close()
+	fmt.Println("entra aqui")
 
 }
 func listChatRoom(conn net.Conn) {

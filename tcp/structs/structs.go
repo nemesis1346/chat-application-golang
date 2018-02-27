@@ -4,7 +4,7 @@ import "time"
 
 type OptionMessage struct {
 	Option string
-	Status string
+	Data   map[string]string
 }
 
 type ChatRooms struct {

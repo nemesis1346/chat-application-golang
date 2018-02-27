@@ -13,43 +13,31 @@ import (
 func main() {
 	//Introduce credentials
 	fmt.Println("Enter a username: ")
-	username := bufio.NewReader(os.Stdin)
 
+	//optBinBuffer := new(bytes.Buffer)
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	username := bufio.NewReader(os.Stdin)
 	inputUserObject, err := username.ReadString('\n')
 	if err != nil {
 		fmt.Println(err)
 	}
 	inputUserObject = inputUserObject[:len(inputUserObject)-1]
-	// userObject := UsernameStruct{
-	// 	Username: string(inputUserObject)}
 
-	// create a temp buffer
-	// tmp := make([]byte, 500)
+	//We create request for create client
+	//We send the option over the connection
+	mapCreateClient := make(map[string]string)
+	mapCreateClient["Username"] = string(inputUserObject)
 
-	// for {
-
-	// 	_, err = connOption.Read(tmp)
-	// 	fmt.Println(tmp)
-	// 	tmpbuff := bytes.NewBuffer(tmp)
-	// 	fmt.Println(tmpbuff)
-
-	// 	tmpstruct := new(structs.OptionMessage)
-
-	// 	// creates a decoder object
-	// 	gobobj := gob.NewDecoder(connOption)
-
-	// 	// decodes buffer and unmarshals it into a Message struct
-	// 	gobobj.Decode(tmpstruct)
-
-	// 	// lets print out!
-	// 	fmt.Println(tmpstruct)
-	// }
-	//bytesBeingSent := optBinBuffer.Bytes()
-	//bytesBeingSent = bytesBeingSent[:len(bytesBeingSent)-1]
-	//fmt.Println(bytesBeingSent)
-
-	//bytesBeingSent = bytes.Trim(bytesBeingSent, "\x00")
-	//connOption.Write(bytesBeingSent)
+	optionCreateClient := structs.OptionMessage{
+		Option: "1",
+		Data:   mapCreateClient,
+	}
+	gobRequestCreateClient := gob.NewEncoder(conn)
+	gobRequestCreateClient.Encode(optionCreateClient)
 
 	for {
 		//Interface for options of the client
@@ -57,7 +45,6 @@ func main() {
 		fmt.Println("1.Create a chatroom")
 		fmt.Println("2.List all existing chatrooms ")
 		fmt.Println("3.Join a chatroom ")
-		fmt.Println("4.Leave a chatroom \n")
 
 		fmt.Print("Choose option: ")
 
@@ -69,24 +56,6 @@ func main() {
 			fmt.Println(err)
 		}
 
-		//We send the option over the connection
-		optionMessage := structs.OptionMessage{
-			Option: string(inputOption),
-		}
-		//optBinBuffer := new(bytes.Buffer)
-		conn, err := net.Dial("tcp", "localhost:12346")
-		if err != nil {
-			fmt.Println(err)
-		}
-		gobRequestOption := gob.NewEncoder(conn)
-		gobRequestOption.Encode(optionMessage)
-
-		// 	//TODO PORT MUST BE DYNAMICALLY ADDED
-		// 	connection, err := net.Dial("tcp", "localhost:12346")
-		// 	if err != nil {
-		// 		fmt.Println(err)
-		// 	}
-
 		switch inputOption {
 		case '1':
 			createChatRoom(conn)
@@ -95,13 +64,47 @@ func main() {
 		case '3':
 			joinChatRoom(conn)
 		}
-		conn.Close()
 	}
+	conn.Close()
 
 }
 
 func createChatRoom(conn net.Conn) {
+	//Input of chatname
+	fmt.Print("Choose a name for the chatRoom: ")
 
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
+
+	//We create the map
+	mapCreateChatRoom := make(map[string]string)
+	mapCreateChatRoom["NameChatRoom"] = string(chatName)
+
+	//We send the option over the connection
+	optionMessage := structs.OptionMessage{
+		Option: "2",
+		Data:   mapCreateChatRoom,
+	}
+	gobRequestOption := gob.NewEncoder(conn)
+	gobRequestOption.Encode(optionMessage)
+	//We listen the response
+	for {
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobRequestOption := gob.NewDecoder(conn)
+		error := gobRequestOption.Decode(response)
+		if error != nil {
+			fmt.Println(error)
+		}
+		if response.Data["Status"] == "ok" {
+			fmt.Println("ChatRoom: " + chatName + " created ...")
+			break
+		} else {
+			fmt.Println("Error: " + response.Data["Status"])
+			break
+		}
+	}
 }
 
 func listChatRoom(conn net.Conn) {
