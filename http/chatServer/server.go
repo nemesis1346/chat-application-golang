@@ -16,6 +16,8 @@ import (
 var chatRooms structs.ChatRooms
 var clients structs.Clients
 
+//var bundleMessages structs.Messages
+
 func main() {
 
 	fmt.Println("Starting server...")
@@ -30,6 +32,7 @@ func main() {
 	h.HandleFunc("/saveMessage", saveMessage)
 	h.HandleFunc("/getChatRoom", getChatRoom)
 	h.HandleFunc("/getPreviousMessages", getPreviousMessages)
+	h.HandleFunc("/getMessages", getMessages)
 	h.HandleFunc("/", noEndpoint)
 
 	//LISTEN AND ERRORS
@@ -41,6 +44,50 @@ func main() {
 func noEndpoint(w http.ResponseWriter, req *http.Request) {
 	w.WriteHeader(404)
 	fmt.Fprintln(w, "You are lost, go home")
+}
+
+//Get Messages
+func getMessages(w http.ResponseWriter, req *http.Request) {
+	//First We get the parameters
+	var requestGetMessages structs.RequestGetMessages
+	if req.Body == nil {
+		http.Error(w, "Please send a request body", 400)
+		return
+	}
+	err := json.NewDecoder(req.Body).Decode(&requestGetMessages)
+	if err != nil {
+		http.Error(w, err.Error(), 400)
+		return
+	}
+
+	var responseGetMessages structs.ResponseGetMessages
+	responseGetMessages.Status = "There is no previous messages"
+
+	//Now we get the messages
+	counterChat := 0
+
+	for _, chatRoom := range chatRooms.Chats {
+		if chatRoom.NameChatRoom == requestGetMessages.ChatRoom.NameChatRoom {
+			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
+				arrayMessages := structs.Messages{}
+				println("resquest time: " + requestGetMessages.Time.Format(time.RFC3339))
+				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
+					println("message " + message.Content + "  " + message.Time.Format(time.RFC3339))
+					if message.Time.After(requestGetMessages.Time) {
+						arrayMessages = AddMessagesInChatRoom(message, chatRoom.Messages)
+					}
+				}
+				println(len(arrayMessages.Messages))
+
+				responseGetMessages.Messages = arrayMessages
+				responseGetMessages.Status = "ok"
+			}
+			break
+		}
+		counterChat++
+	}
+	//we send back the response to the client
+	json.NewEncoder(w).Encode(responseGetMessages)
 }
 
 //Create client
@@ -204,7 +251,7 @@ func saveMessage(w http.ResponseWriter, req *http.Request) {
 		Content:      requestSaveMessage.Content,
 		Username:     requestSaveMessage.Client.Username,
 		NameChatRoom: requestSaveMessage.ChatRoom.NameChatRoom,
-		Time:         requestSaveMessage.Time,
+		Time:         time.Now(),
 	}
 
 	var responseSaveMessage structs.ResponseSaveMessage
@@ -220,7 +267,7 @@ func saveMessage(w http.ResponseWriter, req *http.Request) {
 			//We save the messages in the response
 			responseSaveMessage.Messages = arrayMessages
 			responseSaveMessage.Status = "ok"
-			responseSaveMessage.Time = requestSaveMessage.Time
+			responseSaveMessage.Time = requestSaveMessage.Time //TODO: maybe i dont need this
 			break
 		}
 		counterChat++

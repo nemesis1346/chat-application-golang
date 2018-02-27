@@ -10,7 +10,7 @@ type ChatRoom struct {
 	NameChatRoom string
 	Clients      Clients
 	Id           string
-	Messages     Messages
+	Messages     Messages // all messages
 }
 type Message struct {
 	Id           string
@@ -92,6 +92,15 @@ type RequestGetPreviousMessages struct {
 	Client   Client
 }
 type ResponseGetPreviousMessages struct {
+	Messages Messages
+	Status   string
+}
+type RequestGetMessages struct {
+	ChatRoom ChatRoom
+	Client   Client
+	Time     time.Time
+}
+type ResponseGetMessages struct {
 	Messages Messages
 	Status   string
 }
