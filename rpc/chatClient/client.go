@@ -12,6 +12,9 @@ import (
 	"../structs"
 )
 
+//var time
+var currentTime time.Time
+
 func main() {
 
 	//We start client
@@ -80,7 +83,32 @@ func main() {
 		fmt.Println(response.Status)
 		fmt.Println()
 	}
+}
 
+//listen incomming messages
+func listenMessages(client *rpc.Client, currentUser structs.Client, chatRoom structs.ChatRoom) {
+	for {
+		request := structs.RequestGetMessages{
+			ChatRoom: chatRoom,
+			Client:   currentUser,
+			Time:     currentTime,
+		}
+		var response structs.ResponseGetMessages
+
+		divCall := client.Go("ChatRooms.GetMessages", request, &response, nil)
+		replyCall := <-divCall.Done // will be equal to divCall
+		if replyCall.Error != nil {
+			fmt.Println(replyCall.Error)
+		}
+		if len(response.Messages.Messages) > 0 {
+			for _, messageResult := range response.Messages.Messages {
+				fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
+
+			}
+			currentTime = time.Now()
+		}
+		time.Sleep(time.Second / 2)
+	}
 }
 
 func createChatRoom(client *rpc.Client) {
@@ -207,13 +235,17 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 		for _, message := range previousMessages {
 			fmt.Println(message.Username + ": " + message.Content)
 		}
-		//Now we start chating
-		fmt.Println("Start chating.....")
-		fmt.Println()
+
 		if responseJoinChatRoom.Status == "ok" {
-			//last message time
-			var lastMessageTime time.Time
-			lastMessageTime = time.Now()
+
+			//current message time TODO: the time should be the last time of the message
+			currentTime = time.Now()
+			//Now we start chating
+			fmt.Println("Start chating.....")
+			fmt.Println()
+			//Start listening messages
+			go listenMessages(client, currentUser, responseGetChatRoom.ChatRoom)
+
 			for {
 				readerMessage := bufio.NewReader(os.Stdin)
 				messageContent, _ := readerMessage.ReadString('\n')
@@ -225,7 +257,6 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 				} else {
 					//We submit request for the message
 					//current message time
-					currentTime := time.Now()
 					requestSaveMessage := structs.RequestSaveMessage{
 						Client:   currentUser,
 						Content:  messageContent,
@@ -239,21 +270,16 @@ func joinChatRoom(client *rpc.Client, currentUser structs.Client) {
 					if replyCallSaveMesssage.Error != nil {
 						fmt.Println(replyCallSaveMesssage.Error)
 					}
-					if responseSaveMessage.Status == "ok" {
-						//We evaluate the messages according with the time
-						for _, messageResult := range responseSaveMessage.Messages.Messages {
-							if lastMessageTime.Before(messageResult.Time) {
-								fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
-								fmt.Println()
-							}
-						}
-					} else {
+					if responseSaveMessage.Status != "ok" {
 						fmt.Println("There was an error in saving message")
 					}
-					lastMessageTime = responseSaveMessage.Time
+					messagesResponse := responseSaveMessage.Messages.Messages
+					currentTime = messagesResponse[len(messagesResponse)-1].Time
 				}
 
 			}
+		} else {
+			fmt.Println("You couldnt join")
 		}
 
 	} else {

@@ -95,6 +95,15 @@ type ResponseGetPreviousMessages struct {
 	Messages Messages
 	Status   string
 }
+type RequestGetMessages struct {
+	ChatRoom ChatRoom
+	Client   Client
+	Time     time.Time
+}
+type ResponseGetMessages struct {
+	Messages Messages
+	Status   string
+}
 
 type Client struct {
 	Username string

@@ -40,6 +40,30 @@ func main() {
 
 }
 
+//Get messages
+func (t *ChatRooms) GetMessages(request *structs.RequestGetMessages,
+	response *structs.ResponseGetMessages) error {
+	//Now we get the messages
+	counterChat := 0
+	for _, chatRoom := range t.Chats {
+		if chatRoom.NameChatRoom == request.ChatRoom.NameChatRoom {
+			if len(t.Chats[counterChat].Messages.Messages) > 0 {
+				arrayMessages := structs.Messages{}
+				for _, message := range t.Chats[counterChat].Messages.Messages {
+					if message.Time.After(request.Time) {
+						arrayMessages = AddMessagesInChatRoom(message, arrayMessages)
+					}
+				}
+				response.Messages = arrayMessages
+				response.Status = "ok"
+				break
+			}
+		}
+		counterChat++
+	}
+	return nil
+}
+
 //CreateChatRoom...
 func (t *ChatRooms) CreateChatRoom(request *structs.RequestCreateChatRoom,
 	response *structs.ResponseCreateChatRoom) error {
@@ -127,7 +151,7 @@ func (t *ChatRooms) SaveMessage(request *structs.RequestSaveMessage,
 		Content:      request.Content,
 		Username:     request.Client.Username,
 		NameChatRoom: request.ChatRoom.NameChatRoom,
-		Time:         request.Time,
+		Time:         time.Now(),
 	}
 	counterChat := 0
 	//Find the chat with the name from the request

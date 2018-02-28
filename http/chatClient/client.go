@@ -233,12 +233,12 @@ func joinChatRoom(currentUser structs.Client) {
 
 			previousMessages := bodyPreviousMessages.Messages.Messages
 
-			//current message time TODO: the time should be the last time of the message
-			currentTime = time.Now()
-
 			for _, message := range previousMessages {
 				fmt.Println(message.Username + ": " + message.Content)
 			}
+
+			//current message time TODO: the time should be the last time of the message
+			currentTime = time.Now()
 			//Now we start chating
 			fmt.Println("Start chating.....")
 			fmt.Println()
