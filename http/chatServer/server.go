@@ -70,15 +70,11 @@ func getMessages(w http.ResponseWriter, req *http.Request) {
 		if chatRoom.NameChatRoom == requestGetMessages.ChatRoom.NameChatRoom {
 			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
 				arrayMessages := structs.Messages{}
-				println("resquest time: " + requestGetMessages.Time.Format(time.RFC3339))
 				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
-					println("message " + message.Content + "  " + message.Time.Format(time.RFC3339))
 					if message.Time.After(requestGetMessages.Time) {
-						arrayMessages = AddMessagesInChatRoom(message, chatRoom.Messages)
+						arrayMessages = AddMessagesInChatRoom(message, arrayMessages)
 					}
 				}
-				println(len(arrayMessages.Messages))
-
 				responseGetMessages.Messages = arrayMessages
 				responseGetMessages.Status = "ok"
 			}

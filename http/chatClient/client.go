@@ -13,7 +13,11 @@ import (
 	"../structs"
 )
 
+//var time
+var currentTime time.Time
+
 func main() {
+
 	fmt.Println("Starting client...")
 
 	//Introduce credentials
@@ -38,9 +42,7 @@ func main() {
 		fmt.Println(errorResCreateClient)
 	}
 	var bodyCreateClient structs.ResponseCreateClient
-	fmt.Println(resCreateClient)
 	json.NewDecoder(resCreateClient.Body).Decode(&bodyCreateClient)
-	fmt.Println(bodyCreateClient.Status)
 
 	//If the call was successful and the client is created, we start chosing options
 	if bodyCreateClient.Status == "ok" {
@@ -90,7 +92,7 @@ func listenMessages(currentUser structs.Client, chatRoom structs.ChatRoom) {
 		requestGetMessages := structs.RequestGetMessages{
 			ChatRoom: chatRoom,
 			Client:   currentUser,
-			Time:     time.Now(),
+			Time:     currentTime,
 		}
 
 		bGetMessages := new(bytes.Buffer)
@@ -103,9 +105,11 @@ func listenMessages(currentUser structs.Client, chatRoom structs.ChatRoom) {
 		if len(bodyGetMessages.Messages.Messages) > 0 {
 			for _, messageResult := range bodyGetMessages.Messages.Messages {
 				fmt.Println(messageResult.Username + ": " + messageResult.Content + "  Time: " + messageResult.Time.Format(time.RFC3339))
+
 			}
+			currentTime = time.Now()
 		}
-		time.Sleep(5 * time.Second)
+		time.Sleep(time.Second / 2)
 	}
 }
 
@@ -229,11 +233,8 @@ func joinChatRoom(currentUser structs.Client) {
 
 			previousMessages := bodyPreviousMessages.Messages.Messages
 
-			//var time
-			//var currentTime time.Time
-
 			//current message time TODO: the time should be the last time of the message
-			//currentTime = time.Now()
+			currentTime = time.Now()
 
 			for _, message := range previousMessages {
 				fmt.Println(message.Username + ": " + message.Content)
@@ -259,7 +260,7 @@ func joinChatRoom(currentUser structs.Client) {
 						Client:   currentUser,
 						Content:  messageContent,
 						ChatRoom: bodyGetChatRoom.ChatRoom,
-						Time:     time.Now(),
+						Time:     currentTime,
 					}
 					//we make the call for saving messages
 					bSaveMessage := new(bytes.Buffer)
@@ -271,9 +272,9 @@ func joinChatRoom(currentUser structs.Client) {
 					if bodySaveMessage.Status != "ok" {
 						fmt.Println("There was an error in saving message")
 					}
-					//messagesResponse := bodySaveMessage.Messages.Messages
-					//currentTime = messagesResponse[len(messagesResponse)-1].Time
-					//fmt.Println(currentTime)
+					messagesResponse := bodySaveMessage.Messages.Messages
+					currentTime = messagesResponse[len(messagesResponse)-1].Time
+
 				}
 			}
 		} else {
@@ -285,5 +286,37 @@ func joinChatRoom(currentUser structs.Client) {
 }
 
 func leaveChatRoom(currentUser structs.Client, chatName string) {
+	//First we get the chatRoom struct
+	requestGetChatRoom := structs.RequestGetChatRoom{
+		ChatRoomName: chatName,
+	}
 
+	//we make the call for getting the chat room
+	bGetChatRoom := new(bytes.Buffer)
+	json.NewEncoder(bGetChatRoom).Encode(requestGetChatRoom)
+	resGetChatRoom, _ := http.Post("http://localhost:8888/getChatRoom", "application/json; charset=utf-8", bGetChatRoom)
+	var bodyGetChatRoom structs.ResponseGetChatRoom
+	json.NewDecoder(resGetChatRoom.Body).Decode(&bodyGetChatRoom)
+
+	if bodyGetChatRoom.Status == "ok" {
+		//Now we submit request for leaving chatRoom
+		requestLeaveChatRoom := structs.RequestLeaveChatRoom{
+			Client:   currentUser,
+			ChatRoom: bodyGetChatRoom.ChatRoom,
+		}
+
+		//we make the call for getting the chat room
+		bLeaveChatRoom := new(bytes.Buffer)
+		json.NewEncoder(bLeaveChatRoom).Encode(requestLeaveChatRoom)
+		resLeaveChatRoom, _ := http.Post("http://localhost:8888/leaveChatRoom", "application/json; charset=utf-8", bLeaveChatRoom)
+		var bodyLeaveChatRoom structs.ResponseLeaveChatRoom
+		json.NewDecoder(resLeaveChatRoom.Body).Decode(&bodyLeaveChatRoom)
+
+		if bodyLeaveChatRoom.Status == "ok" {
+			fmt.Println("Username " + currentUser.Username + " has left chatRoom " + bodyGetChatRoom.ChatRoom.NameChatRoom)
+			fmt.Println()
+		}
+	} else {
+		fmt.Println("There was some error")
+	}
 }
