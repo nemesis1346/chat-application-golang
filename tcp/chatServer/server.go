@@ -139,6 +139,9 @@ func listChatRoom(conn net.Conn) {
 	mapResListChatRoom := make(map[string]string)
 	mapResListChatRoom["Status"] = "ok"
 
+	//Save all chatrooms in the following map indexes
+	//TODO: finish the list
+
 	responseListChatRoom := structs.OptionMessage{
 		Option: "response",
 		Data:   mapResListChatRoom,

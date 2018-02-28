@@ -92,8 +92,8 @@ func createChatRoom(conn net.Conn) {
 	for {
 		response := new(structs.OptionMessage)
 		//create a decoder object
-		gobRequestOption := gob.NewDecoder(conn)
-		error := gobRequestOption.Decode(response)
+		gobResponseOption := gob.NewDecoder(conn)
+		error := gobResponseOption.Decode(response)
 		if error != nil {
 			fmt.Println(error)
 		}
@@ -108,7 +108,36 @@ func createChatRoom(conn net.Conn) {
 }
 
 func listChatRoom(conn net.Conn) {
+	//we make the request
+	mapListChatRoom := make(map[string]string)
 
+	optionMessage := structs.OptionMessage{
+		Option: "1",
+		Data:   mapListChatRoom,
+	}
+	gobReqListChatRoom := gob.NewEncoder(conn)
+	gobReqListChatRoom.Encode(optionMessage)
+	//we listen to the response
+	for {
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobResponse := gob.NewDecoder(conn)
+		error := gobResponse.Decode(response)
+		if error != nil {
+			fmt.Println(error)
+		}
+		fmt.Println("Chats available....")
+		if response.Data["Status"] == "ok" {
+			chatRooms := response.Data
+			for k, v := range chatRooms {
+				fmt.Println("NameChatRoom:", k, "NumberClients:", v)
+			}
+			break
+		} else {
+			fmt.Println("Error: " + response.Data["Status"])
+			break
+		}
+	}
 }
 func joinChatRoom(conn net.Conn) {
 
