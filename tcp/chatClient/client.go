@@ -140,5 +140,16 @@ func listChatRoom(conn net.Conn) {
 	}
 }
 func joinChatRoom(conn net.Conn) {
+	//we make the request
+	mapJoinChatRoom := make(map[string]string)
+	optionMessage := structs.OptionMessage{
+		Option: "1",
+		Data:   mapJoinChatRoom,
+	}
+
+}
+
+//Get messages
+func getMessages() {
 
 }

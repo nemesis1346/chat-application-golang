@@ -54,6 +54,10 @@ func main() {
 			joinChatRoom(conn, requestOption)
 		case "5":
 			leaveChatRoom(conn, requestOption)
+		case "6":
+			saveMessage(conn, requestOption)
+		case "7":
+			getMessages(conn, requestOption)
 		}
 	}
 }
@@ -243,6 +247,16 @@ func getClientLocal(username string) structs.Client {
 		}
 	}
 	return result
+}
+
+//Save message
+func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
+
+}
+
+//Get messages
+func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
+
 }
 
 //AddChat for append new chats
