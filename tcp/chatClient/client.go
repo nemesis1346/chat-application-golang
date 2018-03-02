@@ -58,18 +58,23 @@ func main() {
 
 		switch inputOption {
 		case '1':
-			createChatRoom(conn)
+			createChatRoom()
 		case '2':
-			listChatRoom(conn)
+			listChatRoom()
 		case '3':
-			joinChatRoom(conn)
+			joinChatRoom()
 		}
 	}
 	conn.Close()
 
 }
 
-func createChatRoom(conn net.Conn) {
+func createChatRoom() {
+	//we call the connection
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
 	//Input of chatname
 	fmt.Print("Choose a name for the chatRoom: ")
 
@@ -107,12 +112,17 @@ func createChatRoom(conn net.Conn) {
 	}
 }
 
-func listChatRoom(conn net.Conn) {
+func listChatRoom() {
+	//we call the connection
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
 	//we make the request
 	mapListChatRoom := make(map[string]string)
 
 	optionMessage := structs.OptionMessage{
-		Option: "1",
+		Option: "3",
 		Data:   mapListChatRoom,
 	}
 	gobReqListChatRoom := gob.NewEncoder(conn)
@@ -139,14 +149,50 @@ func listChatRoom(conn net.Conn) {
 		}
 	}
 }
-func joinChatRoom(conn net.Conn) {
+func joinChatRoom() {
+	//we call the connection
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
+	//First we show the chats available
+	listChatRoom()
+
+	//Input of chatname
+	fmt.Print("Choose a name for joining chatRoom: ")
+
+	reader := bufio.NewReader(os.Stdin)
+	chatName, _ := reader.ReadString('\n')
+	chatName = chatName[:len(chatName)-1]
+
 	//we make the request
 	mapJoinChatRoom := make(map[string]string)
+
+	mapJoinChatRoom["NameChatRoom"] = string(chatName)
+
 	optionMessage := structs.OptionMessage{
-		Option: "1",
+		Option: "4",
 		Data:   mapJoinChatRoom,
 	}
-
+	gobReqJoinChatRoom := gob.NewEncoder(conn)
+	gobReqJoinChatRoom.Encode(optionMessage)
+	//we listen the response
+	for {
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobResponse := gob.NewDecoder(conn)
+		error := gobResponse.Decode(response)
+		if error != nil {
+			fmt.Println(error)
+		}
+		if response.Data["Status"] == "ok" {
+			fmt.Println("Client joined to  " + string(chatName))
+			break
+		} else {
+			fmt.Println("Error: " + response.Data["Status"])
+			break
+		}
+	}
 }
 
 //Get messages

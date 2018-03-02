@@ -94,11 +94,11 @@ func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
 	}
 	gobResCreateClient := gob.NewEncoder(conn)
 	gobResCreateClient.Encode(responseCreateClient)
-
 }
 
 func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage) {
 	flagExists := false
+	fmt.Println("entra aqui")
 	nameChatRoom := requestCreateChatRoom.Data["NameChatRoom"]
 	//We execute the creation of the chat room
 	for _, chatRoom := range chatRooms.Chats {
