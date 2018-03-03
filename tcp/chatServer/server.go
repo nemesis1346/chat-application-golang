@@ -53,10 +53,12 @@ func main() {
 		case "4":
 			joinChatRoom(conn, requestOption)
 		case "5":
-			leaveChatRoom(conn, requestOption)
+			getPreviousMessages(conn)
 		case "6":
-			saveMessage(conn, requestOption)
+			leaveChatRoom(conn, requestOption)
 		case "7":
+			saveMessage(conn, requestOption)
+		case "8":
 			getMessages(conn, requestOption)
 		}
 	}
@@ -133,15 +135,22 @@ func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage)
 }
 
 func listChatRoom(conn net.Conn) {
-	//we print all the available chats
-	for _, chatRoom := range chatRooms.Chats {
-		fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
-		fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
-		fmt.Println("")
-	}
-	//we send respond back
 	mapResListChatRoom := make(map[string]string)
-	mapResListChatRoom["Status"] = "ok"
+
+	//we print all the available chats
+	if len(chatRooms.Chats) > 0 {
+		mapResListChatRoom["Status"] = "ok"
+		//we send respond back
+		for _, chatRoom := range chatRooms.Chats {
+
+			mapResListChatRoom[chatRoom.NameChatRoom] = string(len(chatRoom.Clients.Clients))
+			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
+			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+			fmt.Println("")
+		}
+	} else {
+		mapResListChatRoom["Status"] = "There is not chatRooms available"
+	}
 
 	//Save all chatrooms in the following map indexes
 	//TODO: finish the list
@@ -152,6 +161,10 @@ func listChatRoom(conn net.Conn) {
 	}
 	gobResListChatRoom := gob.NewEncoder(conn)
 	gobResListChatRoom.Encode(responseListChatRoom)
+}
+
+func getPreviousMessages(conn net.Conn) {
+
 }
 func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	//First We get the parameters
@@ -178,11 +191,11 @@ func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	//we send the response back to the client
 	mapResJoinChatRoom := make(map[string]string)
 
-	if !flagExists {
+	if flagExists {
 		mapResJoinChatRoom["Status"] = "ok"
 
 	} else {
-		mapResJoinChatRoom["Status"] = "Client already exists"
+		mapResJoinChatRoom["Status"] = "There is no chat with that name"
 	}
 	responseJoinChatRoom := structs.OptionMessage{
 		Option: "response",

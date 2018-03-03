@@ -39,34 +39,56 @@ func main() {
 	gobRequestCreateClient := gob.NewEncoder(conn)
 	gobRequestCreateClient.Encode(optionCreateClient)
 
+	flagResponse := false
+	//We listen the response
 	for {
-		//Interface for options of the client
-		fmt.Println("Choose an action:")
-		fmt.Println("1.Create a chatroom")
-		fmt.Println("2.List all existing chatrooms ")
-		fmt.Println("3.Join a chatroom ")
-
-		fmt.Print("Choose option: ")
-
-		//Introduce options
-		option := bufio.NewReader(os.Stdin)
-		//reading the input
-		inputOption, _, err := option.ReadRune()
-		if err != nil {
-			fmt.Println(err)
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobResponseOption := gob.NewDecoder(conn)
+		error := gobResponseOption.Decode(response)
+		if error != nil {
+			fmt.Println(error)
 		}
-
-		switch inputOption {
-		case '1':
-			createChatRoom()
-		case '2':
-			listChatRoom()
-		case '3':
-			joinChatRoom()
+		if response.Data["Status"] == "ok" {
+			fmt.Println("User " + string(inputUserObject) + " created ...")
+			fmt.Println()
+			flagResponse = true
+			break
+		} else {
+			fmt.Println("Error: " + response.Data["Status"])
+			flagResponse = false
+			break
 		}
 	}
-	conn.Close()
+	if flagResponse {
+		for {
+			//Interface for options of the client
+			fmt.Println("Choose an action:")
+			fmt.Println("1.Create a chatroom")
+			fmt.Println("2.List all existing chatrooms ")
+			fmt.Println("3.Join a chatroom ")
 
+			fmt.Print("Choose option: ")
+
+			//Introduce options
+			option := bufio.NewReader(os.Stdin)
+			//reading the input
+			inputOption, _, err := option.ReadRune()
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			switch inputOption {
+			case '1':
+				createChatRoom()
+			case '2':
+				listChatRoom()
+			case '3':
+				joinChatRoom()
+			}
+		}
+		conn.Close()
+	}
 }
 
 func createChatRoom() {
@@ -103,7 +125,9 @@ func createChatRoom() {
 			fmt.Println(error)
 		}
 		if response.Data["Status"] == "ok" {
+			fmt.Println()
 			fmt.Println("ChatRoom: " + chatName + " created ...")
+			fmt.Println()
 			break
 		} else {
 			fmt.Println("Error: " + response.Data["Status"])
@@ -137,10 +161,13 @@ func listChatRoom() {
 			fmt.Println(error)
 		}
 		fmt.Println("Chats available....")
+		fmt.Println()
 		if response.Data["Status"] == "ok" {
+			delete(response.Data, "Status")
 			chatRooms := response.Data
 			for k, v := range chatRooms {
 				fmt.Println("NameChatRoom:", k, "NumberClients:", v)
+				fmt.Println()
 			}
 			break
 		} else {
@@ -150,13 +177,13 @@ func listChatRoom() {
 	}
 }
 func joinChatRoom() {
+	//First we show the chats available
+	listChatRoom()
 	//we call the connection
 	conn, err := net.Dial("tcp", "localhost:12346")
 	if err != nil {
 		fmt.Println(err)
 	}
-	//First we show the chats available
-	listChatRoom()
 
 	//Input of chatname
 	fmt.Print("Choose a name for joining chatRoom: ")
