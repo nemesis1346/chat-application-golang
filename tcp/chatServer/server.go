@@ -4,6 +4,7 @@ import (
 	"encoding/gob"
 	"fmt"
 	"net"
+	"time"
 
 	"../../lib/ksuid-master"
 
@@ -53,7 +54,7 @@ func main() {
 		case "4":
 			joinChatRoom(conn, requestOption)
 		case "5":
-			getPreviousMessages(conn)
+			getPreviousMessages(conn, requestOption)
 		case "6":
 			leaveChatRoom(conn, requestOption)
 		case "7":
@@ -142,7 +143,6 @@ func listChatRoom(conn net.Conn) {
 		mapResListChatRoom["Status"] = "ok"
 		//we send respond back
 		for _, chatRoom := range chatRooms.Chats {
-
 			mapResListChatRoom[chatRoom.NameChatRoom] = string(len(chatRoom.Clients.Clients))
 			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
@@ -152,8 +152,7 @@ func listChatRoom(conn net.Conn) {
 		mapResListChatRoom["Status"] = "There is not chatRooms available"
 	}
 
-	//Save all chatrooms in the following map indexes
-	//TODO: finish the list
+	//We send back the response to the client
 
 	responseListChatRoom := structs.OptionMessage{
 		Option: "response",
@@ -163,7 +162,37 @@ func listChatRoom(conn net.Conn) {
 	gobResListChatRoom.Encode(responseListChatRoom)
 }
 
-func getPreviousMessages(conn net.Conn) {
+func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.OptionMessage) {
+	//First we get the parameters
+	nameChatRoom := requestGetPreviousMessages.Data["NameChatRoom"]
+
+	//We create the response
+	resGetPreviousMessages := make(map[string]string)
+
+	//Now we get the previous messages
+	var arrayMessages structs.Messages
+
+	for _, chatRoom := range chatRooms.Chats {
+		if chatRoom.NameChatRoom == nameChatRoom {
+			arrayMessages = chatRoom.Messages
+			resGetPreviousMessages["Status"] = "ok"
+			break
+		}
+	}
+	if len(arrayMessages.Messages) > 0 {
+		for _, message := range arrayMessages.Messages {
+			resGetPreviousMessages[message.Username] = message.Content
+		}
+	} else {
+		resGetPreviousMessages["Status"] = "There are not previous messages..."
+	}
+	//We send the response back
+	resPreviousMessages := structs.OptionMessage{
+		Option: "response",
+		Data:   resGetPreviousMessages,
+	}
+	gobResPreviousMessages := gob.NewEncoder(conn)
+	gobResPreviousMessages.Encode(resPreviousMessages)
 
 }
 func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
@@ -264,12 +293,86 @@ func getClientLocal(username string) structs.Client {
 
 //Save message
 func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
+	//First we get the parameters
+	content := requestSaveMessage.Data["Content"]
+	username := requestSaveMessage.Data["Username"]
+	nameChatRoom := requestSaveMessage.Data["NameChatRoom"]
 
+	//First create message instance
+	currentMessage := structs.Message{
+		Id:           ksuid.New().String(),
+		Content:      content,
+		Username:     username,
+		NameChatRoom: nameChatRoom,
+		Time:         time.Now(),
+	}
+
+	//Initial value of response
+	mapResSaveMessage := make(map[string]string)
+	mapResSaveMessage["Status"] = "There was a problem in saving the message"
+
+	counterChat := 0
+	//Find the chat with the name from the request
+	for _, chatRoom := range chatRooms.Chats {
+		if chatRoom.NameChatRoom == nameChatRoom {
+			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
+			chatRooms.Chats[counterChat].Messages = arrayMessages
+			//We save the messages in the response
+			mapResSaveMessage["Status"] = "ok"
+			break
+		}
+		counterChat++
+	}
+	//we send the response back to the client
+
+	responseSaveMessage := structs.OptionMessage{
+		Option: "response",
+		Data:   mapResSaveMessage,
+	}
+	gobResSaveMessage := gob.NewEncoder(conn)
+	gobResSaveMessage.Encode(responseSaveMessage)
 }
 
 //Get messages
 func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
+	//First we get the parameters
+	timeRequestString := requestGetMessages.Data["Time"]
+	nameChatRoom := requestGetMessages.Data["NameChatRoom"]
 
+	layout := time.RFC3339
+	timestamp, error := time.Parse(layout, timeRequestString)
+	if error != nil {
+		fmt.Println(error)
+	}
+
+	//Variables to respond
+	mapResGetMessages := make(map[string]string)
+	mapResGetMessages["Status"] = "We could not get the messages"
+	//Now we get the messages
+	counterChat := 0
+
+	for _, chatRoom := range chatRooms.Chats {
+		if chatRoom.NameChatRoom == nameChatRoom {
+			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
+				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
+					if message.Time.After(timestamp) {
+						mapResGetMessages[message.Username] = message.Content
+					}
+				}
+				mapResGetMessages["Status"] = "ok"
+			}
+			break
+		}
+		counterChat++
+	}
+	//we send the response back to the client
+
+	responseGetMessages := structs.OptionMessage{
+		Option: "response",
+		Data:   mapResGetMessages,
+	}
+	gobResGetMessages := gob.NewEncoder(conn)
+	gobResGetMessages.Encode(responseGetMessages)
 }
 
 //AddChat for append new chats

@@ -6,9 +6,14 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"strings"
+	"time"
 
 	"../structs"
 )
+
+//var time
+var currentTime time.Time
 
 func main() {
 	//Introduce credentials
@@ -84,7 +89,7 @@ func main() {
 			case '2':
 				listChatRoom()
 			case '3':
-				joinChatRoom()
+				joinChatRoom(string(inputUserObject))
 			}
 		}
 		conn.Close()
@@ -176,7 +181,7 @@ func listChatRoom() {
 		}
 	}
 }
-func joinChatRoom() {
+func joinChatRoom(username string) {
 	//First we show the chats available
 	listChatRoom()
 	//we call the connection
@@ -204,6 +209,7 @@ func joinChatRoom() {
 	gobReqJoinChatRoom := gob.NewEncoder(conn)
 	gobReqJoinChatRoom.Encode(optionMessage)
 	//we listen the response
+	flagResJoinChatRoom := false
 	for {
 		response := new(structs.OptionMessage)
 		//create a decoder object
@@ -213,16 +219,132 @@ func joinChatRoom() {
 			fmt.Println(error)
 		}
 		if response.Data["Status"] == "ok" {
+			fmt.Println()
 			fmt.Println("Client joined to  " + string(chatName))
+			fmt.Println()
+			flagResJoinChatRoom = true
 			break
 		} else {
 			fmt.Println("Error: " + response.Data["Status"])
 			break
 		}
 	}
+	if flagResJoinChatRoom {
+		getPreviousMessages(string(chatName))
+
+		//current message time TODO: the time should be the last time of the message
+		currentTime = time.Now()
+		//Now we start chating
+		fmt.Println("Start chating.....")
+		fmt.Println()
+
+		go listenMessages(username, string(chatName)) //Start listening messages
+
+		//We stay in a loop for chating
+		for {
+			connChating, err := net.Dial("tcp", "localhost:12346")
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			readerMessage := bufio.NewReader(os.Stdin)
+			messageContent, _ := readerMessage.ReadString('\n')
+			messageContent = messageContent[:len(messageContent)]
+			//First we detect the command exit
+			if strings.TrimRight(messageContent, "\n") == "exit" {
+				leaveChatRoom(username, string(chatName))
+				break
+			} else {
+				//We submit request for the message
+				mapSaveMessage := make(map[string]string)
+				mapSaveMessage["Username"] = username
+				mapSaveMessage["Content"] = messageContent
+				mapSaveMessage["NameChatRoom"] = string(chatName)
+				mapSaveMessage["Time"] = currentTime.Format(time.RFC3339)
+
+				requestSaveMessage := structs.OptionMessage{
+					Option: "7",
+					Data:   mapJoinChatRoom,
+				}
+
+				//we make the call for saving messages
+				gobReqSaveMessage := gob.NewEncoder(connChating)
+				gobReqSaveMessage.Encode(requestSaveMessage)
+
+				for {
+					response := new(structs.OptionMessage)
+					//create a decoder object
+					gobResponse := gob.NewDecoder(conn)
+					error := gobResponse.Decode(response)
+					if error != nil {
+						fmt.Println(error)
+					}
+					if response.Data["Status"] != "ok" {
+						fmt.Println("There was an error in saving message")
+
+					} else {
+						//We update the time stamp of the last message
+						layoutTimeLast := time.RFC3339
+						currentTime, error = time.Parse(layoutTimeLast, response.Data["TimeLast"])
+						if error != nil {
+							fmt.Println(error)
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
 
-//Get messages
-func getMessages() {
+//Listen constantly messages
+func listenMessages(username string, nameChatRoom string) {
 
+}
+
+//Leave chat room
+func leaveChatRoom(username string, nameChatRoom string) {
+
+}
+
+//Get previous messages
+func getPreviousMessages(nameChatRoom string) {
+	//we call the connection
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	//we make the request
+	mapGetPreviousMessages := make(map[string]string)
+
+	mapGetPreviousMessages["NameChatRoom"] = nameChatRoom
+
+	optionMessage := structs.OptionMessage{
+		Option: "5",
+		Data:   mapGetPreviousMessages,
+	}
+	gobReqGetPreviousMessages := gob.NewEncoder(conn)
+	gobReqGetPreviousMessages.Encode(optionMessage)
+	//We get the previous messages
+	for {
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobResponse := gob.NewDecoder(conn)
+		error := gobResponse.Decode(response)
+		if error != nil {
+			fmt.Println(error)
+		}
+		if response.Data["Status"] == "ok" {
+			delete(response.Data, "Status")
+			message := response.Data
+			for k, v := range message {
+				fmt.Println("Username:", k, " message: ", v)
+				fmt.Println()
+			}
+			break
+		} else {
+			fmt.Println(response.Data["Status"])
+		}
+	}
 }
