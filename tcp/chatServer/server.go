@@ -4,6 +4,7 @@ import (
 	"encoding/gob"
 	"fmt"
 	"net"
+	"strconv"
 	"time"
 
 	"../../lib/ksuid-master"
@@ -25,17 +26,23 @@ func main() {
 	fmt.Println("-----------------------")
 	listener, err := net.Listen("tcp", ":12346")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("[Listener]\t", err)
 	}
-
-	//Incomming option messages
 	for {
 		//We accept the connection
 		conn, err := listener.Accept()
 		if err != nil {
-			fmt.Println(err)
+			fmt.Printf("[Connection]\t", err)
 			conn.Close()
 		}
+		go handleClient(conn)
+	}
+
+}
+func handleClient(conn net.Conn) {
+	//Incomming option messages
+	for {
+
 		requestOption := new(structs.OptionMessage)
 		//create a decoder object
 		gobRequestOption := gob.NewDecoder(conn)
@@ -62,6 +69,7 @@ func main() {
 			getMessages(conn, requestOption)
 		}
 	}
+
 }
 
 func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
@@ -96,7 +104,6 @@ func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
 	}
 	gobResCreateClient := gob.NewEncoder(conn)
 	gobResCreateClient.Encode(responseCreateClient)
-	conn.Close()
 }
 
 func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage) {
@@ -133,7 +140,6 @@ func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage)
 	}
 	gobResCreateChatRoom := gob.NewEncoder(conn)
 	gobResCreateChatRoom.Encode(responseCreateChatRoom)
-	conn.Close()
 }
 
 func listChatRoom(conn net.Conn) {
@@ -144,7 +150,8 @@ func listChatRoom(conn net.Conn) {
 		mapResListChatRoom["Status"] = "ok"
 		//we send respond back
 		for _, chatRoom := range chatRooms.Chats {
-			mapResListChatRoom[chatRoom.NameChatRoom] = string(len(chatRoom.Clients.Clients))
+			stringLength := strconv.Itoa(len(chatRoom.Clients.Clients))
+			mapResListChatRoom[chatRoom.NameChatRoom] = stringLength
 			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
 			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
 			fmt.Println("")
@@ -161,7 +168,6 @@ func listChatRoom(conn net.Conn) {
 	}
 	gobResListChatRoom := gob.NewEncoder(conn)
 	gobResListChatRoom.Encode(responseListChatRoom)
-	conn.Close()
 }
 
 func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.OptionMessage) {
@@ -195,7 +201,6 @@ func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.Opti
 	}
 	gobResPreviousMessages := gob.NewEncoder(conn)
 	gobResPreviousMessages.Encode(resPreviousMessages)
-	conn.Close()
 }
 func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	//First We get the parameters
@@ -234,7 +239,6 @@ func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	}
 	gobResJoinChatRoom := gob.NewEncoder(conn)
 	gobResJoinChatRoom.Encode(responseJoinChatRoom)
-	conn.Close()
 }
 
 func leaveChatRoom(conn net.Conn, requestLeaveChatRoom *structs.OptionMessage) {
@@ -323,6 +327,7 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 			fmt.Println(username + " :" + content + " Time: " + currentMessage.Time.Format(time.RFC3339))
 
 			mapResSaveMessage["Status"] = "ok"
+			mapResSaveMessage["TimeLast"] = currentMessage.Time.Format(time.RFC3339)
 			break
 		}
 		counterChat++
@@ -335,7 +340,6 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 	}
 	gobResSaveMessage := gob.NewEncoder(conn)
 	gobResSaveMessage.Encode(responseSaveMessage)
-	conn.Close()
 }
 
 //Get messages
@@ -361,7 +365,7 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
 				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
 					if message.Time.After(timestamp) {
-						mapResGetMessages[message.Username] = message.Content
+						mapResGetMessages[message.Username] = message.Content + " Time: " + string(message.Time.Format(time.RFC3339))
 					}
 				}
 				mapResGetMessages["Status"] = "ok"
@@ -378,7 +382,6 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	}
 	gobResGetMessages := gob.NewEncoder(conn)
 	gobResGetMessages.Encode(responseGetMessages)
-	conn.Close()
 }
 
 //AddChat for append new chats

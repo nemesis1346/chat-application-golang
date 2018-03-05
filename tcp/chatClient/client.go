@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -72,25 +73,36 @@ func main() {
 			fmt.Println("1.Create a chatroom")
 			fmt.Println("2.List all existing chatrooms ")
 			fmt.Println("3.Join a chatroom ")
+			fmt.Println("4.Exit Program ")
 
 			fmt.Print("Choose option: ")
 
 			//Introduce options
-			option := bufio.NewReader(os.Stdin)
-			//reading the input
-			inputOption, _, err := option.ReadRune()
+			reader := bufio.NewReader(os.Stdin)
+			input, err := reader.ReadString('\n')
 			if err != nil {
-				fmt.Println(err)
+				fmt.Printf("[InputReader]\t", err)
 			}
 
-			switch inputOption {
-			case '1':
-				createChatRoom()
-			case '2':
-				listChatRoom()
-			case '3':
-				joinChatRoom(string(inputUserObject))
+			inputNumber, err := strconv.Atoi(input[0:(len(input) - 1)])
+			if err != nil {
+				fmt.Printf("[InputNumber]\t", err)
 			}
+
+			switch inputNumber {
+			case 1:
+				createChatRoom()
+			case 2:
+				listChatRoom()
+			case 3:
+				joinChatRoom(string(inputUserObject))
+			case 4:
+				conn.Close()
+				os.Exit(0)
+			default: // -- TODO: What if the input is not recognized? Provide a default case.
+				fmt.Printf("Unknown option: %d\n", inputNumber)
+			}
+
 		}
 		conn.Close()
 	}
@@ -145,7 +157,7 @@ func listChatRoom() {
 	//we call the connection
 	conn, err := net.Dial("tcp", "localhost:12346")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("[ListenChatRoom Connection]\t", err)
 	}
 	//we make the request
 	mapListChatRoom := make(map[string]string)
@@ -260,7 +272,6 @@ func joinChatRoom(username string) {
 				mapSaveMessage["Username"] = username
 				mapSaveMessage["Content"] = messageContent
 				mapSaveMessage["NameChatRoom"] = string(chatName)
-				mapSaveMessage["Time"] = currentTime.Format(time.RFC3339)
 
 				requestSaveMessage := structs.OptionMessage{
 					Option: "7",
@@ -275,9 +286,9 @@ func joinChatRoom(username string) {
 					response := new(structs.OptionMessage)
 					//create a decoder object
 					gobResponse := gob.NewDecoder(connChating)
-					error := gobResponse.Decode(response)
-					if error != nil {
-						fmt.Println(error)
+					err := gobResponse.Decode(response)
+					if err != nil {
+						fmt.Printf("[DecodeResponseGob-ListenMessageResponse]\t", err)
 					}
 					if response.Data["Status"] != "ok" {
 						fmt.Println("There was an error in saving message")
@@ -285,14 +296,13 @@ func joinChatRoom(username string) {
 					} else {
 						//We update the time stamp of the last message
 						layoutTimeLast := time.RFC3339
-						currentTime, error = time.Parse(layoutTimeLast, response.Data["TimeLast"])
-						if error != nil {
-							fmt.Println(error)
+						currentTime, err = time.Parse(layoutTimeLast, response.Data["TimeLast"])
+						if err != nil {
+							fmt.Printf("[ListenMessageResponse]\t", err)
 						}
 						break
 					}
 				}
-				connChating.Close()
 			}
 		}
 	}
@@ -305,7 +315,7 @@ func listenMessages(username string, nameChatRoom string) {
 		//we call the connection
 		conn, err := net.Dial("tcp", "localhost:12346")
 		if err != nil {
-			fmt.Println(err)
+			fmt.Printf("[ListenMessages]\t", err)
 		}
 		//we make the request
 		mapListenMessages := make(map[string]string)
@@ -327,17 +337,18 @@ func listenMessages(username string, nameChatRoom string) {
 			if error != nil {
 				fmt.Println(error)
 			}
+			fmt.Println(len(response.Data))
 			if response.Data["Status"] == "ok" {
 				delete(response.Data, "Status")
-				message := response.Data
-				for k, v := range message {
+				messages := response.Data
+				for k, v := range messages {
 					fmt.Println(k + ": " + " " + v)
 				}
 				currentTime = time.Now()
-				break
 			}
-			time.Sleep(time.Second / 2)
+			break
 		}
+		time.Sleep(time.Second / 2)
 	}
 }
 
