@@ -43,7 +43,6 @@ func main() {
 		if error != nil {
 			fmt.Println(error)
 		}
-		fmt.Println("Option: " + requestOption.Option)
 		switch requestOption.Option {
 		case "1":
 			createClient(conn, requestOption)
@@ -97,6 +96,7 @@ func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
 	}
 	gobResCreateClient := gob.NewEncoder(conn)
 	gobResCreateClient.Encode(responseCreateClient)
+	conn.Close()
 }
 
 func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage) {
@@ -133,6 +133,7 @@ func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage)
 	}
 	gobResCreateChatRoom := gob.NewEncoder(conn)
 	gobResCreateChatRoom.Encode(responseCreateChatRoom)
+	conn.Close()
 }
 
 func listChatRoom(conn net.Conn) {
@@ -160,6 +161,7 @@ func listChatRoom(conn net.Conn) {
 	}
 	gobResListChatRoom := gob.NewEncoder(conn)
 	gobResListChatRoom.Encode(responseListChatRoom)
+	conn.Close()
 }
 
 func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.OptionMessage) {
@@ -193,7 +195,7 @@ func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.Opti
 	}
 	gobResPreviousMessages := gob.NewEncoder(conn)
 	gobResPreviousMessages.Encode(resPreviousMessages)
-
+	conn.Close()
 }
 func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	//First We get the parameters
@@ -232,6 +234,7 @@ func joinChatRoom(conn net.Conn, requestJoinChatRoom *structs.OptionMessage) {
 	}
 	gobResJoinChatRoom := gob.NewEncoder(conn)
 	gobResJoinChatRoom.Encode(responseJoinChatRoom)
+	conn.Close()
 }
 
 func leaveChatRoom(conn net.Conn, requestLeaveChatRoom *structs.OptionMessage) {
@@ -267,9 +270,8 @@ func leaveChatRoom(conn net.Conn, requestLeaveChatRoom *structs.OptionMessage) {
 	mapResLeaveChatRoom := make(map[string]string)
 	if !flagExists {
 		mapResLeaveChatRoom["Status"] = "ok"
-
 	} else {
-		mapResLeaveChatRoom["Status"] = "Client already exists"
+		mapResLeaveChatRoom["Status"] = "There was some error leaving chat room"
 	}
 	responseLeaveChatRoom := structs.OptionMessage{
 		Option: "response",
@@ -318,6 +320,8 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
 			chatRooms.Chats[counterChat].Messages = arrayMessages
 			//We save the messages in the response
+			fmt.Println(username + " :" + content + " Time: " + currentMessage.Time.Format(time.RFC3339))
+
 			mapResSaveMessage["Status"] = "ok"
 			break
 		}
@@ -331,6 +335,7 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 	}
 	gobResSaveMessage := gob.NewEncoder(conn)
 	gobResSaveMessage.Encode(responseSaveMessage)
+	conn.Close()
 }
 
 //Get messages
@@ -373,6 +378,7 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	}
 	gobResGetMessages := gob.NewEncoder(conn)
 	gobResGetMessages.Encode(responseGetMessages)
+	conn.Close()
 }
 
 //AddChat for append new chats

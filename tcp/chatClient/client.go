@@ -264,7 +264,7 @@ func joinChatRoom(username string) {
 
 				requestSaveMessage := structs.OptionMessage{
 					Option: "7",
-					Data:   mapJoinChatRoom,
+					Data:   mapSaveMessage,
 				}
 
 				//we make the call for saving messages
@@ -274,14 +274,14 @@ func joinChatRoom(username string) {
 				for {
 					response := new(structs.OptionMessage)
 					//create a decoder object
-					gobResponse := gob.NewDecoder(conn)
+					gobResponse := gob.NewDecoder(connChating)
 					error := gobResponse.Decode(response)
 					if error != nil {
 						fmt.Println(error)
 					}
 					if response.Data["Status"] != "ok" {
 						fmt.Println("There was an error in saving message")
-
+						break
 					} else {
 						//We update the time stamp of the last message
 						layoutTimeLast := time.RFC3339
@@ -289,8 +289,10 @@ func joinChatRoom(username string) {
 						if error != nil {
 							fmt.Println(error)
 						}
+						break
 					}
 				}
+				connChating.Close()
 			}
 		}
 	}
@@ -299,12 +301,81 @@ func joinChatRoom(username string) {
 
 //Listen constantly messages
 func listenMessages(username string, nameChatRoom string) {
-
+	for {
+		//we call the connection
+		conn, err := net.Dial("tcp", "localhost:12346")
+		if err != nil {
+			fmt.Println(err)
+		}
+		//we make the request
+		mapListenMessages := make(map[string]string)
+		mapListenMessages["Time"] = currentTime.Format(time.RFC3339)
+		mapListenMessages["Username"] = username
+		mapListenMessages["NameChatRoom"] = nameChatRoom
+		optionMessage := structs.OptionMessage{
+			Option: "8",
+			Data:   mapListenMessages,
+		}
+		gobReqListenMessages := gob.NewEncoder(conn)
+		gobReqListenMessages.Encode(optionMessage)
+		//We get the previous messages
+		for {
+			response := new(structs.OptionMessage)
+			//create a decoder object
+			gobResponse := gob.NewDecoder(conn)
+			error := gobResponse.Decode(response)
+			if error != nil {
+				fmt.Println(error)
+			}
+			if response.Data["Status"] == "ok" {
+				delete(response.Data, "Status")
+				message := response.Data
+				for k, v := range message {
+					fmt.Println(k + ": " + " " + v)
+				}
+				currentTime = time.Now()
+				break
+			}
+			time.Sleep(time.Second / 2)
+		}
+	}
 }
 
 //Leave chat room
 func leaveChatRoom(username string, nameChatRoom string) {
+	//we call the connection
+	conn, err := net.Dial("tcp", "localhost:12346")
+	if err != nil {
+		fmt.Println(err)
+	}
 
+	//we make the request
+	mapLeaveChatRoom := make(map[string]string)
+
+	mapLeaveChatRoom["NameChatRoom"] = nameChatRoom
+	mapLeaveChatRoom["Username"] = username
+
+	optionMessage := structs.OptionMessage{
+		Option: "6",
+		Data:   mapLeaveChatRoom,
+	}
+	gobReqLeaveMessage := gob.NewEncoder(conn)
+	gobReqLeaveMessage.Encode(optionMessage)
+	//We get the previous messages
+	for {
+		response := new(structs.OptionMessage)
+		//create a decoder object
+		gobResponse := gob.NewDecoder(conn)
+		error := gobResponse.Decode(response)
+		if error != nil {
+			fmt.Println(error)
+		}
+		if response.Data["Status"] == "ok" {
+			fmt.Println("Username " + username + " left the chat room")
+		} else {
+			fmt.Println(response.Data["Status"])
+		}
+	}
 }
 
 //Get previous messages
@@ -345,6 +416,7 @@ func getPreviousMessages(nameChatRoom string) {
 			break
 		} else {
 			fmt.Println(response.Data["Status"])
+			break
 		}
 	}
 }
