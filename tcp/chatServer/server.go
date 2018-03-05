@@ -46,9 +46,9 @@ func handleClient(conn net.Conn) {
 		requestOption := new(structs.OptionMessage)
 		//create a decoder object
 		gobRequestOption := gob.NewDecoder(conn)
-		error := gobRequestOption.Decode(requestOption)
-		if error != nil {
-			fmt.Println(error)
+		err := gobRequestOption.Decode(requestOption)
+		if err != nil {
+			fmt.Printf("[RequestOption]\t", err)
 		}
 		switch requestOption.Option {
 		case "1":

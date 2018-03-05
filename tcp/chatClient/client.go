@@ -23,13 +23,13 @@ func main() {
 	//optBinBuffer := new(bytes.Buffer)
 	conn, err := net.Dial("tcp", "localhost:12346")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("[Dial]\t", err)
 	}
 
 	username := bufio.NewReader(os.Stdin)
 	inputUserObject, err := username.ReadString('\n')
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("[RequestOption]\t", err)
 	}
 	inputUserObject = inputUserObject[:len(inputUserObject)-1]
 
@@ -104,7 +104,6 @@ func main() {
 			}
 
 		}
-		conn.Close()
 	}
 }
 
