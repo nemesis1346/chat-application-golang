@@ -353,6 +353,7 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	if error != nil {
 		fmt.Println(error)
 	}
+	fmt.Println("Time requested: " + string(timestamp.Format(time.RFC3339)))
 
 	//Variables to respond
 	mapResGetMessages := make(map[string]string)

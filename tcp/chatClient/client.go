@@ -336,7 +336,7 @@ func listenMessages(username string, nameChatRoom string) {
 			if error != nil {
 				fmt.Println(error)
 			}
-			fmt.Println(len(response.Data))
+			//fmt.Println(len(response.Data))
 			if response.Data["Status"] == "ok" {
 				delete(response.Data, "Status")
 				messages := response.Data
