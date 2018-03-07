@@ -266,7 +266,7 @@ func joinChatRoom(username string) {
 				leaveChatRoom(username, string(chatName))
 				break
 			} else {
-				//We submit request for the message
+				//We submit request to save the message
 				mapSaveMessage := make(map[string]string)
 				mapSaveMessage["Username"] = username
 				mapSaveMessage["Content"] = messageContent
@@ -291,16 +291,9 @@ func joinChatRoom(username string) {
 					}
 					if response.Data["Status"] != "ok" {
 						fmt.Println("There was an error in saving message")
-						break
-					} else {
-						//We update the time stamp of the last message
-						layoutTimeLast := time.RFC3339
-						currentTime, err = time.Parse(layoutTimeLast, response.Data["TimeLast"])
-						if err != nil {
-							fmt.Printf("[ListenMessageResponse]\t", err)
-						}
-						break
+
 					}
+					break
 				}
 			}
 		}
@@ -340,14 +333,17 @@ func listenMessages(username string, nameChatRoom string) {
 			if response.Data["Status"] == "ok" {
 				delete(response.Data, "Status")
 				messages := response.Data
+				fmt.Println(len(messages))
 				for k, v := range messages {
-					fmt.Println(k + ": " + " " + v)
+					fmt.Println("", k, "", v)
+					fmt.Println()
 				}
-				currentTime = time.Now()
 			}
 			break
 		}
-		time.Sleep(time.Second / 2)
+		currentTime = time.Now()
+
+		time.Sleep(time.Second * 1)
 	}
 }
 

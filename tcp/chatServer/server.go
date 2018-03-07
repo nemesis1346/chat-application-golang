@@ -152,8 +152,7 @@ func listChatRoom(conn net.Conn) {
 		for _, chatRoom := range chatRooms.Chats {
 			stringLength := strconv.Itoa(len(chatRoom.Clients.Clients))
 			mapResListChatRoom[chatRoom.NameChatRoom] = stringLength
-			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: ")
-			fmt.Printf("%d\n", len(chatRoom.Clients.Clients))
+			fmt.Print("Name ChatRoom: " + chatRoom.NameChatRoom + " Number of Clients: " + stringLength)
 			fmt.Println("")
 		}
 	} else {
@@ -353,7 +352,6 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	if error != nil {
 		fmt.Println(error)
 	}
-	fmt.Println("Time requested: " + string(timestamp.Format(time.RFC3339)))
 
 	//Variables to respond
 	mapResGetMessages := make(map[string]string)
@@ -366,10 +364,14 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
 				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
 					if message.Time.After(timestamp) {
-						mapResGetMessages[message.Username] = message.Content + " Time: " + string(message.Time.Format(time.RFC3339))
+						mapResGetMessages[message.Username+" : "+message.Content+" Time:"] = string(message.Time.Format(time.RFC3339))
 					}
+
 				}
 				mapResGetMessages["Status"] = "ok"
+			} else {
+				//There is not any message between that period of time
+				mapResGetMessages["Status"] = "There is no previous messages"
 			}
 			break
 		}
