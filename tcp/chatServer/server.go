@@ -318,6 +318,9 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 	content := requestSaveMessage.Data["Content"]
 	username := requestSaveMessage.Data["Username"]
 	nameChatRoom := requestSaveMessage.Data["NameChatRoom"]
+	timeRequestString := requestSaveMessage.Data["TimeRequest"]
+	layout := time.RFC3339
+	timeRequest, _ := time.Parse(layout, timeRequestString)
 
 	//First create message instance
 	currentMessage := structs.Message{
@@ -342,7 +345,8 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 			fmt.Println(username + " :" + content + " Time: " + currentMessage.Time.Format(time.RFC3339))
 
 			mapResSaveMessage["Status"] = "ok"
-			mapResSaveMessage["TimeLast"] = currentMessage.Time.Format(time.RFC3339)
+			//mapResSaveMessage["TimeLast"] = currentMessage.Time.Format(time.RFC3339)
+			mapResSaveMessage["TimeLast"] = timeRequest.Format(time.RFC3339)
 			break
 		}
 		counterChat++

@@ -202,7 +202,7 @@ func listChatRoom(conn net.Conn) {
 	}
 }
 func joinChatRoom(conn net.Conn, username string) {
-
+	listChatRoom(conn)
 	//Input of chatname
 	fmt.Print("Choose a name for joining chatRoom: ")
 
@@ -268,6 +268,7 @@ func joinChatRoom(conn net.Conn, username string) {
 				mapSaveMessage["Username"] = username
 				mapSaveMessage["Content"] = messageContent
 				mapSaveMessage["NameChatRoom"] = string(chatName)
+				mapSaveMessage["TimeRequest"] = currentTime.Format(time.RFC3339)
 
 				requestSaveMessage := structs.OptionMessage{
 					Option: "7",
@@ -301,9 +302,9 @@ func joinChatRoom(conn net.Conn, username string) {
 //Listen constantly messages
 func listenMessages(conn net.Conn, username string, nameChatRoom string) {
 	for {
+		//fmt.Println(string(currentTime.Format(time.RFC3339)))
 		//we make the request
 		mapListenMessages := make(map[string]string)
-		fmt.Println("currentTime: " + string(currentTime.Format(time.RFC3339)))
 		mapListenMessages["Time"] = currentTime.Format(time.RFC3339)
 		mapListenMessages["Username"] = username
 		mapListenMessages["NameChatRoom"] = nameChatRoom
@@ -321,20 +322,23 @@ func listenMessages(conn net.Conn, username string, nameChatRoom string) {
 			error := gobResponse.Decode(response)
 			if error != nil {
 				fmt.Println(error)
+				conn.Close()
+				break
 			}
+			//layout := time.RFC3339
 			//fmt.Println(len(response.Data))
 			if response.Data["Status"] == "ok" {
 				delete(response.Data, "Status")
 				messages := response.Data
-				fmt.Println(len(messages))
 				for k, v := range messages {
+					//timeMessage, _ := time.Parse(layout, v)
 					fmt.Println("", k, "", v)
 					fmt.Println()
 				}
 			}
+			currentTime = time.Now()
 			break
 		}
-		currentTime = time.Now()
 
 		time.Sleep(time.Second * 1)
 	}
