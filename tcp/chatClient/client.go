@@ -289,7 +289,6 @@ func joinChatRoom(conn net.Conn, username string) {
 					}
 					if response.Data["Status"] != "ok" {
 						fmt.Println("There was an error in saving message")
-
 					}
 					break
 				}
@@ -336,11 +335,11 @@ func listenMessages(conn net.Conn, username string, nameChatRoom string) {
 					fmt.Println()
 				}
 			}
-			currentTime = time.Now()
+
 			break
 		}
-
-		time.Sleep(time.Second * 1)
+		currentTime = time.Now()
+		time.Sleep(time.Second * 2)
 	}
 }
 
@@ -393,15 +392,15 @@ func getPreviousMessages(conn net.Conn, nameChatRoom string) {
 		response := new(structs.OptionMessage)
 		//create a decoder object
 		gobResponse := gob.NewDecoder(conn)
-		error := gobResponse.Decode(response)
-		if error != nil {
-			fmt.Println(error)
+		err := gobResponse.Decode(response)
+		if err != nil {
+			fmt.Printf("[GetPreviousMessages]\n", err)
 		}
 		if response.Data["Status"] == "ok" {
 			delete(response.Data, "Status")
 			message := response.Data
 			for k, v := range message {
-				fmt.Println("Username:", k, " message: ", v)
+				fmt.Println("", k, "", v)
 				fmt.Println()
 			}
 			break

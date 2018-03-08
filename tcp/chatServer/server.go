@@ -124,7 +124,6 @@ func createClient(conn net.Conn, requestCreateClient *structs.OptionMessage) {
 
 func createChatRoom(conn net.Conn, requestCreateChatRoom *structs.OptionMessage) {
 	flagExists := false
-	fmt.Println("entra aqui")
 	nameChatRoom := requestCreateChatRoom.Data["NameChatRoom"]
 	//We execute the creation of the chat room
 	for _, chatRoom := range chatRooms.Chats {
@@ -198,14 +197,14 @@ func getPreviousMessages(conn net.Conn, requestGetPreviousMessages *structs.Opti
 	for _, chatRoom := range chatRooms.Chats {
 		if chatRoom.NameChatRoom == nameChatRoom {
 			arrayMessages = chatRoom.Messages
-			resGetPreviousMessages["Status"] = "ok"
 			break
 		}
 	}
 	if len(arrayMessages.Messages) > 0 {
 		for _, message := range arrayMessages.Messages {
-			resGetPreviousMessages[message.Username] = message.Content
+			resGetPreviousMessages[message.Username+":"+message.Content+" Time: "] = message.Time.Format(time.RFC3339)
 		}
+		resGetPreviousMessages["Status"] = "ok"
 	} else {
 		resGetPreviousMessages["Status"] = "There are not previous messages..."
 	}
@@ -341,6 +340,7 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 		if chatRoom.NameChatRoom == nameChatRoom {
 			arrayMessages := AddMessagesInChatRoom(currentMessage, chatRoom.Messages)
 			chatRooms.Chats[counterChat].Messages = arrayMessages
+			fmt.Println("length: " + strconv.Itoa(len(chatRooms.Chats[counterChat].Messages.Messages)))
 			//We save the messages in the response
 			fmt.Println(username + " :" + content + " Time: " + currentMessage.Time.Format(time.RFC3339))
 
@@ -365,12 +365,13 @@ func saveMessage(conn net.Conn, requestSaveMessage *structs.OptionMessage) {
 func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	//First we get the parameters
 	timeRequestString := requestGetMessages.Data["Time"]
+	//fmt.Println("Request time : " + timeRequestString)
 	nameChatRoom := requestGetMessages.Data["NameChatRoom"]
 
 	layout := time.RFC3339
-	timestamp, error := time.Parse(layout, timeRequestString)
-	if error != nil {
-		fmt.Println(error)
+	timestamp, err := time.Parse(layout, timeRequestString)
+	if err != nil {
+		fmt.Printf("[GetMessages]\t", err)
 	}
 
 	//Variables to respond
@@ -382,6 +383,7 @@ func getMessages(conn net.Conn, requestGetMessages *structs.OptionMessage) {
 	for _, chatRoom := range chatRooms.Chats {
 		if chatRoom.NameChatRoom == nameChatRoom {
 			if len(chatRooms.Chats[counterChat].Messages.Messages) > 0 {
+				//fmt.Println("listening msn: " + strconv.Itoa(len(chatRooms.Chats[counterChat].Messages.Messages)))
 				for _, message := range chatRooms.Chats[counterChat].Messages.Messages {
 					if message.Time.After(timestamp) {
 						mapResGetMessages[message.Username+" : "+message.Content+" Time:"] = string(message.Time.Format(time.RFC3339))
