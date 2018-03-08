@@ -4,6 +4,8 @@ import (
 	"encoding/gob"
 	"fmt"
 	"net"
+	"os"
+	"os/signal"
 	"strconv"
 	"time"
 
@@ -15,8 +17,15 @@ import (
 //type ChatRooms structs.ChatRooms
 var chatRooms structs.ChatRooms
 var clients structs.Clients
+var conn net.Conn //for managing general connection and detect interrumption
+
+func cleanup() {
+	fmt.Println("cleanup")
+	conn.Close()
+}
 
 func main() {
+
 	chatRooms = structs.ChatRooms{}
 	clients = structs.Clients{}
 	clients.Clients = []structs.Client{}
@@ -29,8 +38,15 @@ func main() {
 		fmt.Printf("[Listener]\t", err)
 	}
 	for {
+		c := make(chan os.Signal, 1)
+		signal.Notify(c, os.Interrupt)
+		go func() {
+			<-c
+			cleanup()
+			os.Exit(1)
+		}()
 		//We accept the connection
-		conn, err := listener.Accept()
+		conn, err = listener.Accept()
 		if err != nil {
 			fmt.Printf("[Connection]\t", err)
 			conn.Close()
@@ -42,13 +58,13 @@ func main() {
 func handleClient(conn net.Conn) {
 	//Incomming option messages
 	for {
-
 		requestOption := new(structs.OptionMessage)
 		//create a decoder object
 		gobRequestOption := gob.NewDecoder(conn)
 		err := gobRequestOption.Decode(requestOption)
 		if err != nil {
 			fmt.Printf("[RequestOption]\t", err)
+			break
 		}
 		switch requestOption.Option {
 		case "1":

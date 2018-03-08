@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"os/signal"
 	"strconv"
 	"strings"
 	"time"
@@ -15,16 +16,33 @@ import (
 
 //var time
 var currentTime time.Time
+var conn net.Conn //for managing the entire app connection and to prevent it from interruption
+var c = make(chan os.Signal, 1)
+var usernameSession string
+var chatSession string
+
+func interruptionMain() {
+	<-c
+	fmt.Println(usernameSession)
+	fmt.Println(chatSession)
+	if len(usernameSession) > 0 && len(chatSession) > 0 {
+		leaveChatRoom(conn, usernameSession, chatSession)
+		fmt.Println("Client left...")
+	}
+	conn.Close()
+	os.Exit(1)
+}
 
 func main() {
+	//To handle signal interruption
+	signal.Notify(c, os.Interrupt)
+	go interruptionMain()
+
 	//Introduce credentials
 	fmt.Println("Enter a username: ")
 
 	//optBinBuffer := new(bytes.Buffer)
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Printf("[Dial]\t", err)
-	}
+	conn, _ = net.Dial("tcp", "localhost:12346")
 
 	username := bufio.NewReader(os.Stdin)
 	inputUserObject, err := username.ReadString('\n')
@@ -58,6 +76,7 @@ func main() {
 		if response.Data["Status"] == "ok" {
 			fmt.Println("User " + string(inputUserObject) + " created ...")
 			fmt.Println()
+			usernameSession = string(inputUserObject)
 			flagResponse = true
 			break
 		} else {
@@ -91,11 +110,11 @@ func main() {
 
 			switch inputNumber {
 			case 1:
-				createChatRoom()
+				createChatRoom(conn)
 			case 2:
-				listChatRoom()
+				listChatRoom(conn)
 			case 3:
-				joinChatRoom(string(inputUserObject))
+				joinChatRoom(conn, string(inputUserObject))
 			case 4:
 				conn.Close()
 				os.Exit(0)
@@ -107,12 +126,7 @@ func main() {
 	}
 }
 
-func createChatRoom() {
-	//we call the connection
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Println(err)
-	}
+func createChatRoom(conn net.Conn) {
 	//Input of chatname
 	fmt.Print("Choose a name for the chatRoom: ")
 
@@ -152,12 +166,7 @@ func createChatRoom() {
 	}
 }
 
-func listChatRoom() {
-	//we call the connection
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Printf("[ListenChatRoom Connection]\t", err)
-	}
+func listChatRoom(conn net.Conn) {
 	//we make the request
 	mapListChatRoom := make(map[string]string)
 
@@ -192,14 +201,7 @@ func listChatRoom() {
 		}
 	}
 }
-func joinChatRoom(username string) {
-	//First we show the chats available
-	listChatRoom()
-	//we call the connection
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Println(err)
-	}
+func joinChatRoom(conn net.Conn, username string) {
 
 	//Input of chatname
 	fmt.Print("Choose a name for joining chatRoom: ")
@@ -241,7 +243,7 @@ func joinChatRoom(username string) {
 		}
 	}
 	if flagResJoinChatRoom {
-		getPreviousMessages(string(chatName))
+		getPreviousMessages(conn, string(chatName))
 
 		//current message time TODO: the time should be the last time of the message
 		currentTime = time.Now()
@@ -249,21 +251,16 @@ func joinChatRoom(username string) {
 		fmt.Println("Start chating.....")
 		fmt.Println()
 
-		go listenMessages(username, string(chatName)) //Start listening messages
+		go listenMessages(conn, username, string(chatName)) //Start listening messages
 
 		//We stay in a loop for chating
 		for {
-			connChating, err := net.Dial("tcp", "localhost:12346")
-			if err != nil {
-				fmt.Println(err)
-			}
-
 			readerMessage := bufio.NewReader(os.Stdin)
 			messageContent, _ := readerMessage.ReadString('\n')
 			messageContent = messageContent[:len(messageContent)]
 			//First we detect the command exit
 			if strings.TrimRight(messageContent, "\n") == "exit" {
-				leaveChatRoom(username, string(chatName))
+				leaveChatRoom(conn, username, string(chatName))
 				break
 			} else {
 				//We submit request to save the message
@@ -278,13 +275,13 @@ func joinChatRoom(username string) {
 				}
 
 				//we make the call for saving messages
-				gobReqSaveMessage := gob.NewEncoder(connChating)
+				gobReqSaveMessage := gob.NewEncoder(conn)
 				gobReqSaveMessage.Encode(requestSaveMessage)
 
 				for {
 					response := new(structs.OptionMessage)
 					//create a decoder object
-					gobResponse := gob.NewDecoder(connChating)
+					gobResponse := gob.NewDecoder(conn)
 					err := gobResponse.Decode(response)
 					if err != nil {
 						fmt.Printf("[DecodeResponseGob-ListenMessageResponse]\t", err)
@@ -302,15 +299,11 @@ func joinChatRoom(username string) {
 }
 
 //Listen constantly messages
-func listenMessages(username string, nameChatRoom string) {
+func listenMessages(conn net.Conn, username string, nameChatRoom string) {
 	for {
-		//we call the connection
-		conn, err := net.Dial("tcp", "localhost:12346")
-		if err != nil {
-			fmt.Printf("[ListenMessages]\t", err)
-		}
 		//we make the request
 		mapListenMessages := make(map[string]string)
+		fmt.Println("currentTime: " + string(currentTime.Format(time.RFC3339)))
 		mapListenMessages["Time"] = currentTime.Format(time.RFC3339)
 		mapListenMessages["Username"] = username
 		mapListenMessages["NameChatRoom"] = nameChatRoom
@@ -348,13 +341,7 @@ func listenMessages(username string, nameChatRoom string) {
 }
 
 //Leave chat room
-func leaveChatRoom(username string, nameChatRoom string) {
-	//we call the connection
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Println(err)
-	}
-
+func leaveChatRoom(conn net.Conn, username string, nameChatRoom string) {
 	//we make the request
 	mapLeaveChatRoom := make(map[string]string)
 
@@ -385,13 +372,7 @@ func leaveChatRoom(username string, nameChatRoom string) {
 }
 
 //Get previous messages
-func getPreviousMessages(nameChatRoom string) {
-	//we call the connection
-	conn, err := net.Dial("tcp", "localhost:12346")
-	if err != nil {
-		fmt.Println(err)
-	}
-
+func getPreviousMessages(conn net.Conn, nameChatRoom string) {
 	//we make the request
 	mapGetPreviousMessages := make(map[string]string)
 
