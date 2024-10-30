@@ -1,4 +1,4 @@
-package blogServer
+package main
 
 import(
 	"bufio"
