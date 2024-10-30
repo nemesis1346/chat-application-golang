@@ -73,3 +73,6 @@ The `main` function prompts the user to select server or client mode:
 1. Run the following command:
    ```bash
    go run main.go
+
+### IMPORTANT:
+golang plaground is just a golang playground to test and tutorials
